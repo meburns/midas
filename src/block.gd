@@ -18,8 +18,7 @@ func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 		if body._get_water_touched() == false and touched == false:
 			set_physics_process(true)
 			touched = true
-			get_node("block-sprite").modulate = Color8(247, 238, 9, 255)
-			get_node("block-sprite").self_modulate = Color8(247, 238, 9, 255)
+			get_node("block-sprite").region_rect = Rect2(160, 0, 80, 80)
 
 
 func _on_BlockDetector_area_entered(area: Area2D) -> void:

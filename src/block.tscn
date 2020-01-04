@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/block.gd" type="Script" id=1]
-[ext_resource path="res://assets/block-1.png" type="Texture" id=2]
+[ext_resource path="res://assets/tileset.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40.3673, 40.249 )
@@ -26,9 +26,10 @@ __meta__ = {
 }
 
 [node name="block-sprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -2.4286, -39.9252 )
 texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 80, 80 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.45107, -39.9561 )
