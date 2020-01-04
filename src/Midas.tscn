@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Midas.gd" type="Script" id=1]
+[ext_resource path="res://assets/player.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 22.114, 36.3755 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 21.367, 36.0948 )
+
+[node name="Midas" type="KinematicBody2D"]
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.0933609, -40.2385 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.58714, -36.5975 )
+shape = SubResource( 1 )
+
+[node name="BlockDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockDetector"]
+position = Vector2( 1.49377, -36.7843 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="BlockDetector" to="." method="_on_BlockDetector_body_entered"]

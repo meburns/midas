@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/block.gd" type="Script" id=1]
+[ext_resource path="res://assets/block-1.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40.3673, 40.249 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 40.4798, 40.6084 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 41.2192, 10.2418 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 37.4062, 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 2.40703, 39.8814 )
+collision_layer = 4
+collision_mask = 5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -40.2466 ],
+"_edit_vertical_guides_": [ -40.1758, 40.0571 ]
+}
+
+[node name="block-sprite" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -2.4286, -39.9252 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.45107, -39.9561 )
+shape = SubResource( 1 )
+
+[node name="TouchDetector" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchDetector"]
+modulate = Color( 0.960784, 0.160784, 0.0509804, 1 )
+position = Vector2( -2.49047, -39.966 )
+shape = SubResource( 2 )
+
+[node name="BlockDetector" type="Area2D" parent="."]
+position = Vector2( -0.118591, 0 )
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockDetector"]
+modulate = Color( 0.392157, 0, 0, 1 )
+position = Vector2( -2.23468, -4.7504 )
+shape = SubResource( 3 )
+
+[node name="SmashDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmashDetector"]
+position = Vector2( -2.8045, -6.34059 )
+shape = SubResource( 4 )
+[connection signal="body_entered" from="TouchDetector" to="." method="_on_TouchDetector_body_entered"]
+[connection signal="area_entered" from="BlockDetector" to="." method="_on_BlockDetector_area_entered"]
+[connection signal="body_entered" from="SmashDetector" to="." method="_on_SmashDetector_body_entered"]
