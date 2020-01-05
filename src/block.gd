@@ -26,9 +26,8 @@ func _on_BlockDetector_area_entered(area: Area2D) -> void:
 
 
 func _on_SmashDetector_body_entered(body: PhysicsBody2D) -> void:
-	if body and body.get_name() == "Midas":
-		if touched == true:
-			body._set_smashed()
+	if body and body.get_name() == "Midas" and touched == true:
+		body._set_smashed()
 
 
 func _physics_process(delta: float) -> void:

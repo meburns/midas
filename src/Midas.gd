@@ -32,6 +32,8 @@ func _get_smashed() -> bool:
 func _set_smashed() -> void:
 	if smashed == false and is_on_floor():
 		smashed = true
+		get_node("Sprite").region_rect = Rect2(0, 160, 80, 80) # change to squashed sprite
+		get_node("CollisionBody").scale = Vector2(1, 0.4) # squash midas sprite
 
 
 func _physics_process(delta: float) -> void:
