@@ -10,6 +10,7 @@ extents = Vector2( 38.0807, 37.9437 )
 extents = Vector2( 40.5508, 40.3163 )
 
 [node name="Water" type="StaticBody2D"]
+position = Vector2( 38.6539, -38.4971 )
 collision_layer = 4
 collision_mask = 5
 script = ExtResource( 1 )

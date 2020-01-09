@@ -4,12 +4,13 @@
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 22.114, 36.3755 )
+extents = Vector2( 23.2527, 37.0287 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21.367, 36.0948 )
+extents = Vector2( 23.3461, 37.0286 )
 
 [node name="Midas" type="KinematicBody2D"]
+position = Vector2( 22.0332, 0 )
 collision_mask = 2
 script = ExtResource( 1 )
 
@@ -20,7 +21,7 @@ region_enabled = true
 region_rect = Rect2( 0, 80, 80, 80 )
 
 [node name="CollisionBody" type="CollisionShape2D" parent="."]
-position = Vector2( 1.58714, -36.5975 )
+position = Vector2( 1.58714, -37.4377 )
 shape = SubResource( 1 )
 
 [node name="BlockDetector" type="Area2D" parent="."]
@@ -28,6 +29,6 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlockDetector"]
-position = Vector2( 1.49377, -36.7843 )
+position = Vector2( 1.40041, -37.8113 )
 shape = SubResource( 2 )
 [connection signal="body_entered" from="BlockDetector" to="." method="_on_BlockDetector_body_entered"]

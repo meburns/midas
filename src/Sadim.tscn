@@ -4,12 +4,13 @@
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.2432, 39.7117 )
+extents = Vector2( 24.6962, 34.9169 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 26.8207, 40.4482 )
+extents = Vector2( 25.2322, 35.4495 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 21.7, 0.410984 )
 collision_layer = 0
 script = ExtResource( 1 )
 
@@ -20,12 +21,12 @@ region_enabled = true
 region_rect = Rect2( 80, 80, 80, 80 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.10464, -39.7664 )
+position = Vector2( 2.99517, -35.4921 )
 shape = SubResource( 1 )
 
 [node name="TouchDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TouchDetector"]
-position = Vector2( 1.47281, -39.3982 )
+position = Vector2( 2.78796, -36.0281 )
 shape = SubResource( 2 )
 [connection signal="body_entered" from="TouchDetector" to="." method="_on_TouchDetector_body_entered"]

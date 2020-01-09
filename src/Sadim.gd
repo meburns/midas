@@ -19,4 +19,6 @@ func _load_next_level() -> void:
 	if (get_tree().get_current_scene().get_name() == "Level1"):
 		get_tree().change_scene("res://src/levels/Level2.tscn")
 	if (get_tree().get_current_scene().get_name() == "Level2"):
+		get_tree().change_scene("res://src/levels/Level3.tscn")
+	if (get_tree().get_current_scene().get_name() == "Level3"):
 		get_tree().change_scene("res://src/levels/Level1.tscn")
