@@ -4,27 +4,29 @@
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 38.0807, 37.9437 )
+extents = Vector2( 38.0807, 38.9569 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 40.5508, 40.3163 )
 
 [node name="Water" type="StaticBody2D"]
-position = Vector2( 38.6539, -38.4971 )
+position = Vector2( 40.0855, -0.379429 )
 collision_layer = 4
 collision_mask = 5
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.81036, -40.1867 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 80, 0, 80, 80 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.0395889, 0.0579729 )
+position = Vector2( -1.77077, -40.1287 )
 shape = SubResource( 1 )
 
 [node name="MidasDetector" type="Area2D" parent="."]
+position = Vector2( -1.81036, -40.1867 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MidasDetector"]
 shape = SubResource( 2 )

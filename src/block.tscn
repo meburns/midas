@@ -15,7 +15,7 @@ extents = Vector2( 40.848, 40.6084 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 31.0896, 6.54963 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Block" type="KinematicBody2D"]
 position = Vector2( 41.8339, 0.454575 )
 collision_layer = 4
 collision_mask = 5
