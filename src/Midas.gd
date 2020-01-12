@@ -23,6 +23,12 @@ func _get_water_touched() -> bool:
 func _set_water_touched() -> void:
 	if waterTouched == false:
 		waterTouched = true
+		get_node("Sprite").region_rect = Rect2(0, 240, 80, 80) # change to water-1 sprite
+		yield(get_tree().create_timer(0.2), "timeout")
+		get_node("Sprite").region_rect = Rect2(0, 320, 80, 80) # change to water-2 sprite
+		yield(get_tree().create_timer(0.2), "timeout")
+		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
+
 
 # User's smashed status
 func _get_smashed() -> bool:
