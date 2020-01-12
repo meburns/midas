@@ -20,52 +20,49 @@ margin_bottom = 40.0
 texture = ExtResource( 1 )
 
 [node name="Midas" parent="." instance=ExtResource( 2 )]
-position = Vector2( 79.8814, 300 )
+position = Vector2( 18, 314 )
 
 [node name="Block-1" parent="." instance=ExtResource( 3 )]
-position = Vector2( 80, 390 )
+position = Vector2( 18, 392 )
 
 [node name="Block-7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 320, 390 )
+position = Vector2( 261, 392 )
 
 [node name="Block-5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 240, 390 )
+position = Vector2( 180, 392 )
 
 [node name="Block-9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 400, 390 )
+position = Vector2( 342, 392 )
 
 [node name="Block-2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 80, 470 )
+position = Vector2( 18, 470 )
 
 [node name="Block-6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 240, 470.075 )
+position = Vector2( 180, 470 )
 
 [node name="Block-8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 400, 470.15 )
+position = Vector2( 261, 470 )
 
 [node name="Block-3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 160, 390 )
-
-[node name="Block-11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 400, 160 )
+position = Vector2( 99, 392 )
 
 [node name="Block-4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 160, 470 )
+position = Vector2( 99, 470 )
 
 [node name="Block-12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 314.746, 170 )
+position = Vector2( 342, 470 )
 
 [node name="Block-14" parent="." instance=ExtResource( 3 )]
-position = Vector2( 480.04, 470.224 )
+position = Vector2( 423, 470 )
 
 [node name="Block-15" parent="." instance=ExtResource( 3 )]
-position = Vector2( 560, 390.224 )
+position = Vector2( 504, 392 )
 
 [node name="Block-16" parent="." instance=ExtResource( 3 )]
-position = Vector2( 560, 470.224 )
+position = Vector2( 504, 470 )
 
 [node name="Sadim" parent="." instance=ExtResource( 4 )]
-position = Vector2( 552.995, 310 )
+position = Vector2( 504, 314 )
 
 [node name="Outside" parent="." instance=ExtResource( 5 )]
 position = Vector2( 320, -160.075 )
@@ -75,4 +72,4 @@ position = Vector2( 320, 236.575 )
 current = true
 
 [node name="Water" parent="." instance=ExtResource( 6 )]
-position = Vector2( 477.808, 350 )
+position = Vector2( 423, 392 )
