@@ -15,6 +15,7 @@ extents = Vector2( 23.3461, 37.0286 )
 position = Vector2( 22.0332, 0 )
 collision_mask = 2
 script = ExtResource( 1 )
+gravity = 3000.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 7.09544, -40.4252 )
