@@ -10,6 +10,24 @@
 [node name="Level4" type="Node2D"]
 position = Vector2( 140, 101 )
 
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+anchor_left = -0.49707
+anchor_top = -0.501667
+anchor_right = -0.49707
+anchor_bottom = -0.501667
+margin_left = 328.0
+margin_top = 251.0
+margin_right = 1704.0
+margin_bottom = 939.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
 [node name="Water" parent="." instance=ExtResource( 1 )]
 position = Vector2( 579, 302.932 )
 
@@ -76,21 +94,3 @@ position = Vector2( 660, 302.932 )
 
 [node name="Block17" parent="." instance=ExtResource( 4 )]
 position = Vector2( 660, 380.932 )
-
-[node name="Background" type="CanvasLayer" parent="."]
-layer = -100
-
-[node name="TextureRect" type="TextureRect" parent="Background"]
-anchor_left = -0.49707
-anchor_top = -0.501667
-anchor_right = -0.49707
-anchor_bottom = -0.501667
-margin_left = 328.0
-margin_top = 251.0
-margin_right = 1704.0
-margin_bottom = 939.0
-texture = ExtResource( 3 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": true
-}
