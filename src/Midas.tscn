@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Midas.gd" type="Script" id=1]
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
@@ -8,6 +8,8 @@ extents = Vector2( 23.2527, 37.0287 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 23.3461, 37.0286 )
+
+[sub_resource type="AudioStreamSample" id=3]
 
 [node name="Midas" type="KinematicBody2D"]
 position = Vector2( 22.0332, 0 )
@@ -31,4 +33,7 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlockDetector"]
 position = Vector2( 1.40041, -37.8113 )
 shape = SubResource( 2 )
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource( 3 )
 [connection signal="body_entered" from="BlockDetector" to="." method="_on_BlockDetector_body_entered"]

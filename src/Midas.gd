@@ -59,8 +59,10 @@ func get_direction() -> Vector2:
 		x_val = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	return Vector2(	
 		x_val,
-		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() else 1.0
+		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() and !_get_smashed() else 1.0
 	)
+	if Input.is_action_just_pressed("jump") and is_on_floor() and !_get_smashed():
+		get_node("jump").play("jump")
 
 
 func calculate_move_velocity(
