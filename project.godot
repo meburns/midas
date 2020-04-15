@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Midas"
-run/main_scene="res://src/levels/Level1.tscn"
+run/main_scene="res://src/Menu.tscn"
 
 [input]
 
