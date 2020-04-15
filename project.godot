@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Midas",
 "language": "GDScript",
 "path": "res://src/Midas.gd"
+}, {
+"base": "RichTextEffect",
+"class": "RichTextGhost",
+"language": "GDScript",
+"path": "res://src/transitions/customGhostEffect.gd"
 } ]
 _global_script_class_icons={
-"Midas": ""
+"Midas": "",
+"RichTextGhost": ""
 }
 
 [application]
