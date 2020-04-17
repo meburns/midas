@@ -50,7 +50,7 @@ rect_scale = Vector2( 6.44, 6.04 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "
-[fill][wave freq=1]M I D A S[/wave][/fill]"
+[fill][wave freq=3]M I D A S[/wave][/fill]"
 text = "
 M I D A S"
 __meta__ = {
