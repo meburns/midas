@@ -11,4 +11,6 @@ func _ready() -> void:
 	if (get_tree().get_current_scene().get_name() == "Transition4"):
 		get_tree().change_scene("res://src/levels/Level5.tscn")
 	if (get_tree().get_current_scene().get_name() == "Transition5"):
+		get_tree().change_scene("res://src/levels/Level6.tscn")
+	if (get_tree().get_current_scene().get_name() == "Transition6"):
 		get_tree().change_scene("res://src/levels/Level1.tscn")
