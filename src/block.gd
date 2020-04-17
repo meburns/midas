@@ -13,11 +13,16 @@ func _ready() -> void:
 	set_physics_process(false)
 
 
+func _touch() -> void:
+	yield(get_tree().create_timer(0.4), "timeout")
+	touched = true
+
+
 func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 	if body.get_name() == "Midas":
 		if body._get_water_touched() == false and touched == false:
 			set_physics_process(true)
-			touched = true
+			_touch()
 			get_node("block-sprite").region_rect = Rect2(160, 0, 80, 80)
 
 
