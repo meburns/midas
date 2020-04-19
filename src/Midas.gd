@@ -10,7 +10,7 @@ var _velocity: = Vector2.ZERO
 export var stomp_impulse: = 1000.0
 export var waterTouched: = false
 export var smashed: = false
-
+export var frozen: = false
 
 func _on_BlockDetector_body_entered(body: PhysicsBody2D) -> void:
 	pass # Replace with function body.
@@ -28,6 +28,13 @@ func _set_water_touched() -> void:
 		get_node("Sprite").region_rect = Rect2(0, 320, 80, 80) # change to water-2 sprite
 		yield(get_tree().create_timer(0.2), "timeout")
 		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
+
+
+func _get_frozen() -> bool:
+	return frozen
+
+func _set_frozen() -> void:
+	frozen = true
 
 
 # User's smashed status
@@ -55,7 +62,7 @@ func _physics_process(delta: float) -> void:
 func get_direction() -> Vector2:
 	var x_val: = 0
 	# If the user is smashed, they can't moved left or right but can still fall
-	if !smashed:
+	if !smashed && !frozen:
 		x_val = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	return Vector2(	
 		x_val,

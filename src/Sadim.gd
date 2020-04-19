@@ -16,6 +16,7 @@ func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 			get_node("Sprite").region_rect = Rect2(80, 240, 80, 80)
 			var save_sound: = get_node("Save")
 			save_sound.play()
+			body._set_frozen()
 			_load_next_level()
 
 func _load_next_level() -> void:
