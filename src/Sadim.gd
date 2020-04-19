@@ -16,7 +16,6 @@ func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 
 func _load_next_level() -> void:
 	yield(get_tree().create_timer(1.0), "timeout")
-	MusicPlayer.stop()
 	if (get_tree().get_current_scene().get_name() == "Level1"):
 		get_tree().change_scene("res://src/transitions/Transition1.tscn")
 	if (get_tree().get_current_scene().get_name() == "Level2"):
