@@ -1,7 +1,9 @@
 extends Node2D
 
 func _ready() -> void:
-	yield(get_tree().create_timer(2.0), "timeout")
+	yield(get_tree().create_timer(0.5), "timeout")
+	MusicPlayer.play()
+	yield(get_tree().create_timer(1.5), "timeout")
 	if (get_tree().get_current_scene().get_name() == "Transition1"):
 		get_tree().change_scene("res://src/levels/Level2.tscn")
 	if (get_tree().get_current_scene().get_name() == "Transition2"):

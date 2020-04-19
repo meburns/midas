@@ -29,6 +29,10 @@ _global_script_class_icons={
 config/name="Midas"
 run/main_scene="res://src/Menu.tscn"
 
+[autoload]
+
+MusicPlayer="*res://src/MusicPlayer.tscn"
+
 [input]
 
 move_right={
