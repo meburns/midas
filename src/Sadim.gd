@@ -8,10 +8,14 @@ func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 		if body._get_water_touched() == false and touched == false:
 			touched = true
 			get_node("Sprite").region_rect = Rect2(80, 160, 80, 80)
+			var gold_sound: = get_node("Gold")
+			gold_sound.play()
 		# She is okay!
 		if body._get_water_touched() == true and touched == false:
 			touched = true
 			get_node("Sprite").region_rect = Rect2(80, 240, 80, 80)
+			var save_sound: = get_node("Save")
+			save_sound.play()
 			_load_next_level()
 
 func _load_next_level() -> void:

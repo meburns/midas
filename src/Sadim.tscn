@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Sadim.gd" type="Script" id=1]
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
+[ext_resource path="res://assets/gold.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/save.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.6962, 34.9169 )
@@ -29,4 +31,10 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TouchDetector"]
 position = Vector2( 2.78796, -36.0281 )
 shape = SubResource( 2 )
+
+[node name="Gold" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Save" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 [connection signal="body_entered" from="TouchDetector" to="." method="_on_TouchDetector_body_entered"]
