@@ -32,11 +32,17 @@ func _on_BlockDetector_area_entered(area: Area2D) -> void:
 
 func _on_SmashDetector_body_entered(body: PhysicsBody2D) -> void:
 	if body and body.get_name() == "Midas" and touched == true:
-		body._set_smashed()
+		body._set_smashable(true)
+
+
+func _on_SmashDetector_body_exited(body: Node) -> void:
+	if body and body.get_name() == "Midas" and touched == true:
+		body._set_smashable(false)
 
 
 func _physics_process(delta: float) -> void:
 	if touched == true:
 		_velocity.y += gravity * delta
 		_velocity.y = move_and_slide(_velocity, FLOOR_NORMAL).y
+
 

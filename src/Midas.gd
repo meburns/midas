@@ -9,6 +9,7 @@ export var gravity: = 3000.0
 var _velocity: = Vector2.ZERO
 export var stomp_impulse: = 1000.0
 export var waterTouched: = false
+export var smashable: = false
 export var smashed: = false
 export var frozen: = false
 
@@ -37,19 +38,23 @@ func _set_frozen() -> void:
 	frozen = true
 
 
+func _set_smashable(val: bool) -> void:
+	smashable = val
+
 # User's smashed status
 func _get_smashed() -> bool:
 	return smashed
 
 # Only allow users to be smashed if they are on the ground and not yet smashed
-func _set_smashed() -> void:
-	if smashed == false and is_on_floor():
+func _check_smashed() -> void:
+	if smashable == true and is_on_floor():
 		smashed = true
 		get_node("Sprite").region_rect = Rect2(0, 160, 80, 80) # change to squashed sprite
 		get_node("CollisionBody").scale = Vector2(1, 0.4) # squash midas sprite
 
 
 func _physics_process(delta: float) -> void:
+	_check_smashed() # Check if the user should be considered smashed
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction: = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
@@ -81,10 +86,11 @@ func calculate_move_velocity(
 	var out: = linear_velocity
 	out.x = speed.x * direction.x
 	out.y += gravity * get_physics_process_delta_time()
-	if direction.y == -1.0:
-		out.y = speed.y * direction.y
-	if is_jump_interrupted:
-		out.y = 0.0
+	if !smashed && !frozen:
+		if direction.y == -1.0:
+			out.y = speed.y * direction.y
+		if is_jump_interrupted:
+			out.y = 0.0
 	return out
 
 func stop_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
