@@ -47,7 +47,8 @@ func _get_smashed() -> bool:
 
 # Only allow users to be smashed if they are on the ground and not yet smashed
 func _check_smashed() -> void:
-	if smashable == true and is_on_floor():
+	if smashable == true and smashed == false and is_on_floor():
+		SFX.play("Squash")
 		smashed = true
 		get_node("Sprite").region_rect = Rect2(0, 160, 80, 80) # change to squashed sprite
 		get_node("CollisionBody").scale = Vector2(1, 0.4) # squash midas sprite
@@ -61,6 +62,7 @@ func _physics_process(delta: float) -> void:
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 	# reload the current level on "refresh" key pressed
 	if Input.is_action_just_pressed("refresh"):
+		SFX.play("Redo")
 		get_tree().reload_current_scene()
 
 

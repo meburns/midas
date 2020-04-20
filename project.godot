@@ -32,6 +32,7 @@ run/main_scene="res://src/Menu.tscn"
 [autoload]
 
 MusicPlayer="*res://src/MusicPlayer.tscn"
+SFX="*res://src/SFX.tscn"
 
 [input]
 
