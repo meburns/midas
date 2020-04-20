@@ -90,6 +90,7 @@ func calculate_move_velocity(
 	out.y += gravity * get_physics_process_delta_time()
 	if !smashed && !frozen:
 		if direction.y == -1.0:
+			SFX.play("Jump")
 			out.y = speed.y * direction.y
 		if is_jump_interrupted:
 			out.y = 0.0
