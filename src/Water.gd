@@ -8,7 +8,6 @@ func _set_touched() -> void:
 
 
 func _on_MidasDetector_body_entered(body: PhysicsBody2D) -> void:
-	print(touched)
 	if body.get_name() == "Midas" && touched == false:
 		_set_touched()
 		body._set_water_touched()
