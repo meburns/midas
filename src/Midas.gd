@@ -9,6 +9,7 @@ export var gravity: = 3000.0
 var _velocity: = Vector2.ZERO
 export var stomp_impulse: = 1000.0
 export var waterTouched: = false
+var waterAnimate: = false
 export var smashable: = false
 export var smashed: = false
 export var frozen: = false
@@ -23,12 +24,14 @@ func _get_water_touched() -> bool:
 # If the user has touched the water block, they can't make blocks turn gold
 func _set_water_touched() -> void:
 	if waterTouched == false:
+		waterAnimate = true
 		waterTouched = true
 		get_node("Sprite").region_rect = Rect2(0, 240, 80, 80) # change to water-1 sprite
 		yield(get_tree().create_timer(0.2), "timeout")
 		get_node("Sprite").region_rect = Rect2(0, 320, 80, 80) # change to water-2 sprite
 		yield(get_tree().create_timer(0.2), "timeout")
 		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
+		waterAnimate = false
 
 
 func _get_frozen() -> bool:
@@ -55,6 +58,8 @@ func _check_smashed() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if is_on_floor() and waterAnimate == false and smashed == false and frozen == false:
+		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
 	_check_smashed() # Check if the user should be considered smashed
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction: = get_direction()
@@ -71,6 +76,12 @@ func get_direction() -> Vector2:
 	# If the user is smashed, they can't moved left or right but can still fall
 	if !smashed && !frozen:
 		x_val = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+		if (x_val > 0 or x_val < 0) and is_on_floor() == true:
+			get_node("Sprite").region_rect = Rect2(0, 480, 80, 80) # change to run sprite
+			if x_val > 0:
+				get_node("Sprite").set_flip_h(false)
+			if x_val < 0:
+				get_node("Sprite").set_flip_h(true)
 	return Vector2(	
 		x_val,
 		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() and !_get_smashed() else 1.0
@@ -91,6 +102,7 @@ func calculate_move_velocity(
 	if !smashed && !frozen:
 		if direction.y == -1.0:
 			SFX.play("Jump")
+			get_node("Sprite").region_rect = Rect2(0, 400, 80, 80) # change to jump sprite
 			out.y = speed.y * direction.y
 		if is_jump_interrupted:
 			out.y = 0.0
