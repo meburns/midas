@@ -3,7 +3,7 @@ extends Node2D
 func _ready() -> void:
 	get_node("MenuMusic").play()
 
-func _input(ev):
+func _input(_ev):
 	if Input.is_action_pressed("ui_accept"):
 		start_game()
 

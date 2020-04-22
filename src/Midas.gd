@@ -14,7 +14,7 @@ export var smashable: = false
 export var smashed: = false
 export var frozen: = false
 
-func _on_BlockDetector_body_entered(body: PhysicsBody2D) -> void:
+func _on_BlockDetector_body_entered(_body: PhysicsBody2D) -> void:
 	pass # Replace with function body.
 
 # User water touched status
@@ -57,7 +57,7 @@ func _check_smashed() -> void:
 		get_node("CollisionBody").scale = Vector2(1, 0.4) # squash midas sprite
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_on_floor() and waterAnimate == false and smashed == false and frozen == false:
 		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
 	_check_smashed() # Check if the user should be considered smashed
@@ -86,8 +86,6 @@ func get_direction() -> Vector2:
 		x_val,
 		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() and !_get_smashed() else 1.0
 	)
-	if Input.is_action_just_pressed("jump") and is_on_floor() and !_get_smashed():
-		get_node("jump").play("jump")
 
 
 func calculate_move_velocity(
