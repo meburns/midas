@@ -33,6 +33,7 @@ run/main_scene="res://src/Menu.tscn"
 
 MusicPlayer="*res://src/MusicPlayer.tscn"
 SFX="*res://src/SFX.tscn"
+Globals="*res://src/Globals.gd"
 
 [input]
 
