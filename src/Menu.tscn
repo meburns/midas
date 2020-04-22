@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/background.png" type="Texture" id=1]
 [ext_resource path="res://src/Menu.gd" type="Script" id=2]
+[ext_resource path="res://assets/menu.wav" type="AudioStream" id=3]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource( 2 )
@@ -56,4 +57,7 @@ M I D A S"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

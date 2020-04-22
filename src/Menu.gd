@@ -1,8 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
-	pass
-	# play menu music
+	get_node("MenuMusic").play()
 
 func _input(ev):
 	if Input.is_action_pressed("ui_accept"):
