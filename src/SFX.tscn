@@ -20,6 +20,7 @@ stream = ExtResource( 2 )
 
 [node name="Redo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+volume_db = -20.0
 
 [node name="Transition" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
