@@ -7,7 +7,7 @@
 extents = Vector2( 24.6962, 34.9169 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 25.2322, 35.4495 )
+extents = Vector2( 28.184, 38.0304 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 position = Vector2( 21.7, 0.410984 )
