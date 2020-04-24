@@ -7,7 +7,7 @@
 [ext_resource path="res://src/Outside.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Midas.tscn" type="PackedScene" id=6]
 
-[node name="Level#" type="Node2D"]
+[node name="Level11" type="Node2D"]
 position = Vector2( 140, 101 )
 
 [node name="Background" type="CanvasLayer" parent="."]
