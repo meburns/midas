@@ -12,4 +12,6 @@ var transitionText: = [
 	"The water heals me...",
 	"But every morning I am cursed again...",
 	"I can not go on alone...",
+	"I am stuck here...",
+	"This world will not end...",
 ]
