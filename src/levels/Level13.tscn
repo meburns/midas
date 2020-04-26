@@ -42,10 +42,6 @@ position = Vector2( -59, 55 )
 [node name="Outside" parent="." instance=ExtResource( 5 )]
 position = Vector2( 325.142, -240 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 375, 200.044 )
-current = true
-
 [node name="Block" parent="." instance=ExtResource( 4 )]
 position = Vector2( -59, 133 )
 
