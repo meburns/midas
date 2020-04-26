@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/splash.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 38.0807, 38.9569 )
+extents = Vector2( 38.0807, 39.0791 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 40.5508, 40.3163 )

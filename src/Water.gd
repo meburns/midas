@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const FLOOR_NORMAL: = Vector2.UP
 var _velocity: = Vector2.ZERO
-var gravity: = 500.0
+var gravity: = 300.0
 var touched: = false
 
 
