@@ -12,16 +12,18 @@ position = Vector2( 140, 101 )
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -100
+follow_viewport_enable = true
+follow_viewport_scale = 2.0
 
 [node name="TextureRect" type="TextureRect" parent="Background"]
 anchor_left = -0.49707
 anchor_top = -0.501667
 anchor_right = -0.49707
 anchor_bottom = -0.501667
-margin_left = 328.0
-margin_top = 251.0
-margin_right = 1704.0
-margin_bottom = 939.0
+margin_left = 596.484
+margin_top = 401.334
+margin_right = 1796.48
+margin_bottom = 1201.33
 texture = ExtResource( 3 )
 expand = true
 __meta__ = {

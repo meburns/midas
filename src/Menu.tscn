@@ -9,10 +9,12 @@ script = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -100
+follow_viewport_enable = true
+follow_viewport_scale = 2.0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1200.0
+margin_bottom = 800.0
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
