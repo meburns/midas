@@ -1,5 +1,8 @@
-extends StaticBody2D
+extends KinematicBody2D
 
+const FLOOR_NORMAL: = Vector2.UP
+var _velocity: = Vector2.ZERO
+var gravity: = 500.0
 var touched: = false
 
 
@@ -13,3 +16,8 @@ func _on_MidasDetector_body_entered(body: PhysicsBody2D) -> void:
 		body._set_water_touched()
 		var player: = get_node("Splash")
 		player.play()
+
+
+func _physics_process(delta: float) -> void:
+	_velocity.y += gravity * delta
+	_velocity.y = move_and_slide(_velocity, FLOOR_NORMAL).y

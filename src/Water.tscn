@@ -10,7 +10,7 @@ extents = Vector2( 38.0807, 38.9569 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 40.5508, 40.3163 )
 
-[node name="Water" type="StaticBody2D"]
+[node name="Water" type="KinematicBody2D"]
 position = Vector2( 40.0855, -0.379429 )
 collision_layer = 4
 collision_mask = 5
