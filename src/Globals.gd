@@ -14,4 +14,5 @@ var transitionText: = [
 	"I can not go on alone...",
 	"I am stuck here...",
 	"This world will not end...",
+	"and will she know...",
 ]
