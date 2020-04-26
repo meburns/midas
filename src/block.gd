@@ -8,9 +8,11 @@ var speed: = Vector2(300.0, 500.0)
 var gravity: = 300.0
 
 var touched: = false
+var ORG_X: = 0
 
 func _ready() -> void:
 	set_physics_process(false)
+	ORG_X = position.x
 
 
 func _touch() -> void:
@@ -44,5 +46,5 @@ func _physics_process(delta: float) -> void:
 	if touched == true:
 		_velocity.y += gravity * delta
 		_velocity.y = move_and_slide(_velocity, FLOOR_NORMAL).y
-
+	position.x = ORG_X
 
