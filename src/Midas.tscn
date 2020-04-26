@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 23.2527, 37.0287 )
+extents = Vector2( 23.2527, 33.3537 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 23.3461, 37.0286 )
@@ -22,7 +22,7 @@ region_enabled = true
 region_rect = Rect2( 0, 80, 80, 80 )
 
 [node name="CollisionBody" type="CollisionShape2D" parent="."]
-position = Vector2( 1.58714, -37.4377 )
+position = Vector2( 1.58714, -34.0932 )
 shape = SubResource( 1 )
 
 [node name="BlockDetector" type="Area2D" parent="."]
