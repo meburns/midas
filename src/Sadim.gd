@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+const FLOOR_NORMAL: = Vector2.UP
+var _velocity: = Vector2.ZERO
+var gravity: = 500.0
 var touched: = false
 
 func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
@@ -20,3 +23,8 @@ func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 func _load_next_level() -> void:
 	yield(get_tree().create_timer(1.0), "timeout")
 	get_tree().change_scene("res://src/transitions/Transition.tscn")
+
+
+func _physics_process(delta: float) -> void:
+	_velocity.y += gravity * delta
+	_velocity.y = move_and_slide(_velocity, FLOOR_NORMAL).y
