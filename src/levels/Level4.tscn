@@ -30,65 +30,65 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Water" parent="." instance=ExtResource( 1 )]
-position = Vector2( 710, 289 )
-
-[node name="Midas" parent="." instance=ExtResource( 6 )]
-position = Vector2( 30, 289 )
-
-[node name="Sadim" parent="." instance=ExtResource( 2 )]
-position = Vector2( 795, 211 )
-
 [node name="Outside" parent="." instance=ExtResource( 5 )]
 position = Vector2( 325.142, -240 )
 
-[node name="Block" parent="." instance=ExtResource( 4 )]
-position = Vector2( 30, 367 )
+[node name="Water" parent="." instance=ExtResource( 1 )]
+position = Vector2( 795, 367 )
 
-[node name="Block2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 30, 445 )
-
-[node name="Block3" parent="." instance=ExtResource( 4 )]
+[node name="Midas" parent="." instance=ExtResource( 6 )]
 position = Vector2( 115, 367 )
 
-[node name="Block4" parent="." instance=ExtResource( 4 )]
+[node name="Sadim" parent="." instance=ExtResource( 2 )]
+position = Vector2( 880, 289 )
+
+[node name="Block" parent="." instance=ExtResource( 4 )]
 position = Vector2( 115, 445 )
 
-[node name="Block5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 200, 289 )
+[node name="Block2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 115, 523 )
 
-[node name="Block6" parent="." instance=ExtResource( 4 )]
+[node name="Block3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 200, 445 )
 
-[node name="Block7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 200, 367 )
+[node name="Block4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 200, 523 )
 
-[node name="Block8" parent="." instance=ExtResource( 4 )]
-position = Vector2( 285, 289 )
-
-[node name="Block9" parent="." instance=ExtResource( 4 )]
+[node name="Block5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 285, 367 )
 
-[node name="Block10" parent="." instance=ExtResource( 4 )]
-position = Vector2( 285, 211 )
+[node name="Block6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 285, 523 )
 
-[node name="Block11" parent="." instance=ExtResource( 4 )]
-position = Vector2( 370, 211 )
-
-[node name="Block12" parent="." instance=ExtResource( 4 )]
+[node name="Block7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 285, 445 )
 
+[node name="Block8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 370, 367 )
+
+[node name="Block9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 370, 445 )
+
+[node name="Block10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 370, 289 )
+
+[node name="Block11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 455, 289 )
+
+[node name="Block12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 370, 523 )
+
 [node name="Block13" parent="." instance=ExtResource( 4 )]
-position = Vector2( 625, 289 )
-
-[node name="Block14" parent="." instance=ExtResource( 4 )]
-position = Vector2( 625, 367 )
-
-[node name="Block15" parent="." instance=ExtResource( 4 )]
 position = Vector2( 710, 367 )
 
+[node name="Block14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 710, 445 )
+
+[node name="Block15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 795, 445 )
+
 [node name="Block16" parent="." instance=ExtResource( 4 )]
-position = Vector2( 795, 289 )
+position = Vector2( 880, 367 )
 
 [node name="Block17" parent="." instance=ExtResource( 4 )]
-position = Vector2( 795, 367 )
+position = Vector2( 880, 445 )
