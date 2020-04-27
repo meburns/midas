@@ -4,7 +4,7 @@
 [ext_resource path="res://src/Menu.gd" type="Script" id=2]
 [ext_resource path="res://assets/menu.wav" type="AudioStream" id=3]
 [ext_resource path="res://src/MainCamera.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/fonts/Baloo_Bhaina_2/baloo_bhaina_2.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/fonts/Baloo_Bhaina_2/main_menu.tres" type="DynamicFont" id=5]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource( 2 )
