@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Midas",
 "language": "GDScript",
-"path": "res://src/Midas.gd"
+"path": "res://src/players/Midas.gd"
 } ]
 _global_script_class_icons={
 "Midas": ""
