@@ -14,83 +14,73 @@ position = Vector2( 140, 101 )
 layer = -100
 
 [node name="TextureRect" type="TextureRect" parent="Background"]
-anchor_left = -0.49707
-anchor_top = -0.501667
-anchor_right = -0.49707
-anchor_bottom = -0.501667
-margin_left = 328.0
-margin_top = 251.0
-margin_right = 1704.0
-margin_bottom = 939.0
+margin_right = 1200.0
+margin_bottom = 800.0
 texture = ExtResource( 3 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Water" parent="." instance=ExtResource( 1 )]
-position = Vector2( 589, 367 )
-
-[node name="Midas" parent="." instance=ExtResource( 6 )]
-position = Vector2( 22, 289 )
-
-[node name="Sadim" parent="." instance=ExtResource( 2 )]
-position = Vector2( 670, 289 )
-
 [node name="Outside" parent="." instance=ExtResource( 5 )]
 position = Vector2( 325.142, -240 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 375, 200.044 )
-current = true
+[node name="Water" parent="." instance=ExtResource( 1 )]
+position = Vector2( 670, 445 )
 
-[node name="Block" parent="." instance=ExtResource( 4 )]
-position = Vector2( 22, 367 )
-
-[node name="Block2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 22, 445 )
-
-[node name="Block3" parent="." instance=ExtResource( 4 )]
+[node name="Midas" parent="." instance=ExtResource( 6 )]
 position = Vector2( 103, 367 )
 
-[node name="Block4" parent="." instance=ExtResource( 4 )]
+[node name="Sadim" parent="." instance=ExtResource( 2 )]
+position = Vector2( 751, 367 )
+
+[node name="Block" parent="." instance=ExtResource( 4 )]
 position = Vector2( 103, 445 )
 
-[node name="Block5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 184, 367 )
+[node name="Block2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 103, 523 )
 
-[node name="Block6" parent="." instance=ExtResource( 4 )]
+[node name="Block3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 184, 445 )
 
-[node name="Block7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 265, 367 )
+[node name="Block4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 184, 523 )
 
-[node name="Block8" parent="." instance=ExtResource( 4 )]
+[node name="Block5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 265, 445 )
 
-[node name="Block9" parent="." instance=ExtResource( 4 )]
-position = Vector2( 346, 367 )
+[node name="Block6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 265, 523 )
 
-[node name="Block10" parent="." instance=ExtResource( 4 )]
+[node name="Block7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 346, 445 )
 
-[node name="Block11" parent="." instance=ExtResource( 4 )]
-position = Vector2( 427, 367 )
+[node name="Block8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 346, 523 )
 
-[node name="Block12" parent="." instance=ExtResource( 4 )]
+[node name="Block9" parent="." instance=ExtResource( 4 )]
 position = Vector2( 427, 445 )
 
-[node name="Block13" parent="." instance=ExtResource( 4 )]
-position = Vector2( 508, 367 )
+[node name="Block10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 427, 523 )
 
-[node name="Block14" parent="." instance=ExtResource( 4 )]
+[node name="Block11" parent="." instance=ExtResource( 4 )]
 position = Vector2( 508, 445 )
 
-[node name="Block15" parent="." instance=ExtResource( 4 )]
+[node name="Block12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 508, 523 )
+
+[node name="Block13" parent="." instance=ExtResource( 4 )]
 position = Vector2( 589, 445 )
 
+[node name="Block14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 589, 523 )
+
+[node name="Block15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 670, 523 )
+
 [node name="Block16" parent="." instance=ExtResource( 4 )]
-position = Vector2( 670, 367 )
+position = Vector2( 751, 445 )
 
 [node name="Block17" parent="." instance=ExtResource( 4 )]
-position = Vector2( 670, 445 )
+position = Vector2( 751, 523 )
