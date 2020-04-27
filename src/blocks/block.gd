@@ -28,10 +28,6 @@ func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 			get_node("block-sprite").region_rect = Rect2(160, 0, 80, 80)
 
 
-func _on_BlockDetector_area_entered(_area: Area2D) -> void:
-	set_physics_process(false)
-
-
 func _on_SmashDetector_body_entered(body: PhysicsBody2D) -> void:
 	if body and body.get_name() == "Midas" and touched == true:
 		body._set_smashable(true)
