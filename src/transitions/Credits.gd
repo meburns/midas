@@ -22,6 +22,8 @@ func _add_text(arr: Array) -> void:
 			j += 1
 		i += 1
 		yield(get_tree().create_timer(2), "timeout")
+	yield(get_tree().create_timer(5), "timeout")
+	get_tree().change_scene("res://src/Menu.tscn")
 
 
 func _set_text(val: String) -> void:
