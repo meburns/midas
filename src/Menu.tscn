@@ -70,7 +70,7 @@ modulate = Color( 0.92549, 0.905882, 1, 1 )
 margin_left = 469.0
 margin_top = 601.0
 margin_right = 752.0
-margin_bottom = 675.0
+margin_bottom = 704.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
+	MusicPlayer.stop()
 	get_node("MenuMusic").play()
 	get_node("RichTextLabel").set_bbcode("[wave freq=3]M I D A S[/wave]")
 
