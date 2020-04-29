@@ -63,7 +63,6 @@ __meta__ = {
 stream = ExtResource( 3 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 602.076, 398.617 )
 
 [node name="CreditButton" type="Button" parent="."]
 modulate = Color( 0.92549, 0.905882, 1, 1 )
