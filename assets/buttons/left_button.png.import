@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/left_button.png-60e3404852f7289a7843e95c705453bc.stex"
+path="res://.import/left_button.png-68e467a9bf3506987dbd6373f7ef6df8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/left_button.png"
-dest_files=[ "res://.import/left_button.png-60e3404852f7289a7843e95c705453bc.stex" ]
+source_file="res://assets/buttons/left_button.png"
+dest_files=[ "res://.import/left_button.png-68e467a9bf3506987dbd6373f7ef6df8.stex" ]
 
 [params]
 
