@@ -29,6 +29,7 @@ MusicPlayer="*res://src/MusicPlayer.tscn"
 SFX="*res://src/SFX.tscn"
 Globals="*res://src/Globals.gd"
 TouchButtons="*res://src/TouchButtons.tscn"
+Background="*res://src/Background.tscn"
 
 [debug]
 
