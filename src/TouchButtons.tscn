@@ -8,21 +8,21 @@
 
 [node name="TouchLeft" type="TouchScreenButton" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 6.51825, 374.956 )
+position = Vector2( 14.0163, 648.631 )
 normal = ExtResource( 3 )
 action = "move_left"
 visibility_mode = 1
 
 [node name="TouchRight" type="TouchScreenButton" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 110.669, 591.846 )
+position = Vector2( 123.79, 867.395 )
 normal = ExtResource( 2 )
 action = "move_right"
 visibility_mode = 1
 
 [node name="TouchJump" type="TouchScreenButton" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 991.696, 585.956 )
+position = Vector2( 1690.88, 850.258 )
 normal = ExtResource( 1 )
 action = "jump"
 visibility_mode = 1
