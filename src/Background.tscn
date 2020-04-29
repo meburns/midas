@@ -7,8 +7,8 @@ layer = -100
 follow_viewport_enable = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1200.0
-margin_bottom = 800.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
