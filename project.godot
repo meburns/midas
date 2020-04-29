@@ -28,6 +28,7 @@ run/main_scene="res://src/Menu.tscn"
 MusicPlayer="*res://src/MusicPlayer.tscn"
 SFX="*res://src/SFX.tscn"
 Globals="*res://src/Globals.gd"
+TouchButtons="*res://src/TouchButtons.tscn"
 
 [debug]
 
@@ -64,6 +65,10 @@ refresh={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":82,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 

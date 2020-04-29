@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
+	TouchButtons.set_visible(false)
 	MusicPlayer.stop()
 	get_node("MenuMusic").play()
 	get_node("RichTextLabel").set_bbcode("[wave freq=3]M I D A S[/wave]")
@@ -14,6 +15,7 @@ func _on_Button_pressed() -> void:
 
 func start_game() -> void:
 	MusicPlayer.play()
+	TouchButtons.set_visible(true)
 	get_tree().change_scene("res://src/levels/Level1.tscn")
 
 
