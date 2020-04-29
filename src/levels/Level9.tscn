@@ -16,49 +16,58 @@ __meta__ = {
 position = Vector2( 789.142, 0 )
 
 [node name="Water" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1296, 685 )
+position = Vector2( 1296, 624 )
 
 [node name="Midas" parent="." instance=ExtResource( 6 )]
-position = Vector2( 648, 607 )
+position = Vector2( 648, 546 )
 
 [node name="Sadim" parent="." instance=ExtResource( 2 )]
-position = Vector2( 567, 607 )
+position = Vector2( 567, 546 )
 
 [node name="Block" parent="." instance=ExtResource( 4 )]
-position = Vector2( 567, 763 )
+position = Vector2( 567, 702 )
 
 [node name="Block2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 567, 685 )
+position = Vector2( 567, 624 )
 
 [node name="Block3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1215, 763 )
+position = Vector2( 1215, 702 )
+
+[node name="Block12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1134, 702 )
+
+[node name="Block10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 972, 702 )
 
 [node name="Block4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 648, 685 )
+position = Vector2( 648, 624 )
 
 [node name="Block5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 729, 685 )
+position = Vector2( 729, 624 )
 
 [node name="Block6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 648, 763 )
+position = Vector2( 648, 702 )
 
 [node name="Block7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 810, 685 )
+position = Vector2( 810, 624 )
+
+[node name="Block8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 810, 702 )
 
 [node name="Block9" parent="." instance=ExtResource( 4 )]
-position = Vector2( 891, 685 )
+position = Vector2( 891, 624 )
 
 [node name="Block11" parent="." instance=ExtResource( 4 )]
-position = Vector2( 972, 685 )
+position = Vector2( 972, 624 )
 
 [node name="Block13" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1053, 685 )
+position = Vector2( 1053, 624 )
 
 [node name="Block14" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1296, 763 )
+position = Vector2( 1296, 702 )
 
 [node name="Block15" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1134, 685 )
+position = Vector2( 1134, 624 )
 
 [node name="Block17" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1215, 685 )
+position = Vector2( 1215, 624 )
