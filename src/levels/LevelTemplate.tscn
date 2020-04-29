@@ -1,28 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/blocks/Water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/players/Sadim.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/background.png" type="Texture" id=3]
 [ext_resource path="res://src/blocks/block.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Outside.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/players/Midas.tscn" type="PackedScene" id=6]
 
-
-
 [node name="Level#" type="Node2D"]
 position = Vector2( 140, 101 )
-
-[node name="Background" type="CanvasLayer" parent="."]
-layer = -100
-
-[node name="TextureRect" type="TextureRect" parent="Background"]
-margin_right = 1200.0
-margin_bottom = 800.0
-texture = ExtResource( 3 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
 [node name="Outside" parent="." instance=ExtResource( 5 )]
 position = Vector2( 325.142, -240 )
