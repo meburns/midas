@@ -7,9 +7,9 @@
 script = ExtResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_top = 95.0
-margin_right = 1199.0
-margin_bottom = 727.0
+margin_top = 200.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
