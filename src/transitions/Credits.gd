@@ -3,7 +3,7 @@ extends Node2D
 func _ready() -> void:
 	_add_text([
 		"Created with love\n using Godot Engine",
-		"Heavily Inspiration from\n Wanderlands' Midas\n for Ludum Dare 22",
+		"Heavily Inspired by\n Wanderlands' Midas\n for Ludum Dare 22",
 		"Midas\n by meburns",
 	])
 
