@@ -3,8 +3,9 @@
 [ext_resource path="res://src/players/Midas.gd" type="Script" id=1]
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 23.2527, 33.3537 )
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 17.7843
+height = 36.4433
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 23.3461, 37.0286 )
@@ -22,8 +23,8 @@ region_enabled = true
 region_rect = Rect2( 0, 80, 80, 80 )
 
 [node name="CollisionBody" type="CollisionShape2D" parent="."]
-position = Vector2( 1.58714, -34.0932 )
-shape = SubResource( 1 )
+position = Vector2( 1.68503, -36.0508 )
+shape = SubResource( 3 )
 
 [node name="BlockDetector" type="Area2D" parent="."]
 collision_layer = 0
