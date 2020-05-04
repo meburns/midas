@@ -9,12 +9,13 @@ func _change_level() -> void:
 	# Disable touch buttons (if they are visible)
 	TouchButtons.set_visible(false)
 	# Then Figure out level infos and what message to display
-	var nextLevel := Globals.currentLevel + 1
+	var currentLevel := Database.get_level()
+	var nextLevel := currentLevel + 1
 	if (nextLevel > Globals.transitionText.size()):
 		get_tree().change_scene("res://src/transitions/Credits.tscn")
 	else:
-		get_node("RichTextLabel").append_bbcode("[center]" + Globals.transitionText[Globals.currentLevel] + "[/center]")
-		Globals.currentLevel = nextLevel
+		get_node("RichTextLabel").append_bbcode("[center]" + Globals.transitionText[currentLevel] + "[/center]")
+		Database.set_level(nextLevel)
 		# Finally wait for a few seconds and then load the next level
 		yield(get_tree().create_timer(2), "timeout")
 		TouchButtons.set_visible(true)

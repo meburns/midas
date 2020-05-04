@@ -16,7 +16,7 @@ func _on_Button_pressed() -> void:
 func start_game() -> void:
 	MusicPlayer.play()
 	TouchButtons.set_visible(true)
-	get_tree().change_scene("res://src/levels/Level1.tscn")
+	get_tree().change_scene("res://src/transitions/Transition.tscn")
 
 
 func _on_CreditButton_pressed() -> void:
