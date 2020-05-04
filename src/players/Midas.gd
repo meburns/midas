@@ -26,6 +26,7 @@ func _set_water_touched() -> void:
 	if waterTouched == false:
 		waterAnimate = true
 		waterTouched = true
+		get_node("Sprite").modulate = Color(0,0,255) # Set modulate color to blue overlay
 		get_node("Sprite").region_rect = Rect2(0, 240, 80, 80) # change to water-1 sprite
 		yield(get_tree().create_timer(0.2), "timeout")
 		get_node("Sprite").region_rect = Rect2(0, 320, 80, 80) # change to water-2 sprite
