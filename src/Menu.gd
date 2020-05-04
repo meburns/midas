@@ -16,6 +16,8 @@ func _on_Button_pressed() -> void:
 func start_game() -> void:
 	MusicPlayer.play()
 	TouchButtons.set_visible(true)
+	if Database.get_level() > 0:
+		Database.set_level(Database.get_level() - 1)
 	get_tree().change_scene("res://src/transitions/Transition.tscn")
 
 
