@@ -1,6 +1,5 @@
 extends Node
 
-var currentLevel: = 1
 var transitionText: = [
 	"Every day is the same...",
 	"So it begins... again...",
