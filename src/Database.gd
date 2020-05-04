@@ -7,7 +7,6 @@ var player_table: = "player"
 func _ready() -> void:
 	db = SQLite.new()
 	db.path = "res://data/game"
-	db.verbose_mode = true
 	db.open_db()
 
 	_initialize_if_not_exist()
