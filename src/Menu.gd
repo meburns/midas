@@ -5,6 +5,9 @@ func _ready() -> void:
 	MusicPlayer.stop()
 	get_node("MenuMusic").play()
 	get_node("RichTextLabel").set_bbcode("[wave freq=3]M I D A S[/wave]")
+	if Database.get_story_completed():
+		get_node("LevelSelect").visible = true
+		get_node("LevelSelect").disabled = false
 
 func _input(_ev):
 	if Input.is_action_pressed("ui_accept"):
