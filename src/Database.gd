@@ -39,5 +39,14 @@ func _get_player() -> Array:
 func get_level() -> int:
 	return _get_player()[0]["current_level"]
 
+
 func set_level(new_level: int) -> void:
 	db.update_rows(player_table, "id = 0", {"current_level": new_level})
+
+
+func get_story_completed() -> int:
+	return _get_player()[0]["story_mode_completed"]
+
+
+func set_story_completed(completed: bool) -> void:
+	db.update_rows(player_table, "id = 0", {"story_mode_completed": completed})
