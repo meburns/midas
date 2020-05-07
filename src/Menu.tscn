@@ -12,16 +12,16 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 570.746 ]
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 841.665
-margin_top = 570.972
-margin_right = 1130.67
-margin_bottom = 658.972
+[node name="StoryButton" type="Button" parent="."]
+margin_left = 600.138
+margin_top = 451.737
+margin_right = 889.143
+margin_bottom = 539.737
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Button"]
+[node name="Label" type="Label" parent="StoryButton"]
 margin_left = -0.446777
 margin_top = -11.7457
 margin_right = 288.553
@@ -35,37 +35,76 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LevelSelect" type="Button" parent="."]
+[node name="CreditsButton" type="Button" parent="."]
+modulate = Color( 0.92549, 0.905882, 1, 1 )
+margin_left = 604.238
+margin_top = 604.201
+margin_right = 887.243
+margin_bottom = 707.201
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CreditsButton"]
+margin_right = 284.0
+margin_bottom = 85.0
+custom_fonts/font = ExtResource( 6 )
+text = "Credits"
+align = 1
+valign = 1
+
+[node name="LevelsButton" type="Button" parent="."]
 visible = false
-margin_left = 1296.78
-margin_top = 572.433
-margin_right = 1585.79
-margin_bottom = 660.433
+margin_left = 1055.25
+margin_top = 453.198
+margin_right = 1344.26
+margin_bottom = 541.198
 disabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="LevelSelect"]
-margin_left = -0.446777
-margin_top = -11.7457
-margin_right = 288.553
-margin_bottom = 243.254
+[node name="Label" type="Label" parent="LevelsButton"]
+margin_left = 0.919922
+margin_top = -15.6798
+margin_right = 289.92
+margin_bottom = 110.32
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "LEVELS
-"
+text = "LEVELS"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 810.0
-margin_top = 312.0
-margin_right = 1154.0
-margin_bottom = 468.0
+[node name="EndlessButton" type="Button" parent="."]
+visible = false
+margin_left = 1055.56
+margin_top = 610.313
+margin_right = 1344.57
+margin_bottom = 698.313
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="EndlessButton"]
+margin_top = -11.9593
+margin_right = 290.0
+margin_bottom = 114.041
+custom_fonts/font = ExtResource( 6 )
+text = "ENDLESS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainTitle" type="RichTextLabel" parent="."]
+margin_left = 797.771
+margin_top = 212.128
+margin_right = 1141.77
+margin_bottom = 368.128
 custom_fonts/normal_font = ExtResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -80,24 +119,7 @@ __meta__ = {
 stream = ExtResource( 3 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
-
-[node name="CreditButton" type="Button" parent="."]
-modulate = Color( 0.92549, 0.905882, 1, 1 )
-margin_left = 845.765
-margin_top = 723.436
-margin_right = 1128.77
-margin_bottom = 826.436
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="CreditButton"]
-margin_right = 284.0
-margin_bottom = 85.0
-custom_fonts/font = ExtResource( 6 )
-text = "Credits"
-align = 1
-valign = 1
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="LevelSelect" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="CreditButton" to="." method="_on_CreditButton_pressed"]
+[connection signal="pressed" from="StoryButton" to="." method="_on_StoryButton_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="LevelsButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="EndlessButton" to="." method="_on_EndlessButton_pressed"]
