@@ -1,11 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://src/blocks/Water.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/players/Sadim.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/levels/EndlessLevel.gd" type="Script" id=3]
-[ext_resource path="res://src/blocks/block.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Outside.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/players/Midas.tscn" type="PackedScene" id=6]
 
 [node name="EndlessLevel" type="Node2D"]
 script = ExtResource( 3 )
@@ -16,24 +12,3 @@ __meta__ = {
 
 [node name="Outside" parent="." instance=ExtResource( 5 )]
 position = Vector2( 870.142, -78 )
-
-[node name="Water" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1620, 546 )
-
-[node name="Midas" parent="." instance=ExtResource( 6 )]
-position = Vector2( 162, 468 )
-
-[node name="Sadim" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1701, 468 )
-
-[node name="WaterBlock" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1701, 546 )
-
-[node name="MidasBlock" parent="." instance=ExtResource( 4 )]
-position = Vector2( 162, 546 )
-
-[node name="MidasBlock2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 162, 624 )
-
-[node name="SadimBlock" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1620, 624 )
