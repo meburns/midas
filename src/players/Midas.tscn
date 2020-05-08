@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/players/Midas.gd" type="Script" id=1]
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 17.7843
-height = 36.4433
+height = 21.8021
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 11.9325
+height = 20.199
+
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 23.3461, 37.0286 )
 
 [node name="Midas" type="KinematicBody2D"]
@@ -23,8 +27,13 @@ region_enabled = true
 region_rect = Rect2( 0, 80, 80, 80 )
 
 [node name="CollisionBody" type="CollisionShape2D" parent="."]
-position = Vector2( 1.68503, -36.0508 )
-shape = SubResource( 3 )
+position = Vector2( 1.91494, -37.1905 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.81, -12.0657 )
+rotation = 1.57885
+shape = SubResource( 2 )
 
 [node name="BlockDetector" type="Area2D" parent="."]
 collision_layer = 0
@@ -32,5 +41,5 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlockDetector"]
 position = Vector2( 1.40041, -37.8113 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 [connection signal="body_entered" from="BlockDetector" to="." method="_on_BlockDetector_body_entered"]
