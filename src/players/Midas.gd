@@ -38,6 +38,7 @@ func _set_water_touched() -> void:
 		get_node("Sprite").region_rect = Rect2(0, 320, 80, 80) # change to water-2 sprite
 		yield(get_tree().create_timer(0.2), "timeout")
 		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
+		wInstance.queue_free()
 		waterAnimate = false
 
 

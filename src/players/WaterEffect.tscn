@@ -6,10 +6,8 @@
 modulate = Color( 0, 0.439216, 1, 1 )
 position = Vector2( 0.275856, -24.4599 )
 rotation = 3.12983
-emitting = false
 amount = 100
 lifetime = 0.4
-one_shot = true
 explosiveness = 1.0
 randomness = 1.0
 process_material = ExtResource( 1 )
