@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/fonts/Baloo_Bhaina_2/normal_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/levels/LevelSelector.gd" type="Script" id=2]
+
+[sub_resource type="ButtonGroup" id=1]
+resource_name = "levelButtons"
+
+[node name="LevelSelector" type="Node2D"]
+
+[node name="Button1" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 81.0
+margin_top = 78.0
+margin_right = 324.0
+margin_bottom = 234.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button1"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 1"
+
+[node name="Button2" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 405.0
+margin_top = 78.0
+margin_right = 648.0
+margin_bottom = 234.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button2"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 2"
+
+[node name="Button3" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 729.0
+margin_top = 78.0
+margin_right = 972.0
+margin_bottom = 234.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button3"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 3"

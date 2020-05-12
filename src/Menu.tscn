@@ -121,5 +121,5 @@ stream = ExtResource( 3 )
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
 [connection signal="pressed" from="StoryButton" to="." method="_on_StoryButton_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
-[connection signal="pressed" from="LevelsButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="LevelsButton" to="." method="_on_LevelsButton_pressed"]
 [connection signal="pressed" from="EndlessButton" to="." method="_on_EndlessButton_pressed"]

@@ -34,3 +34,7 @@ func _on_CreditsButton_pressed() -> void:
 func _on_EndlessButton_pressed() -> void:
 	MusicPlayer.play()
 	get_tree().change_scene("res://src/levels/EndlessLevel.tscn")
+
+
+func _on_LevelsButton_pressed() -> void:
+	get_tree().change_scene("res://src/levels/LevelSelector.tscn")
