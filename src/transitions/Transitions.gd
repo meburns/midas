@@ -13,6 +13,7 @@ func _change_level() -> void:
 	var nextLevel := currentLevel + 1
 	if (nextLevel > Globals.transitionText.size()):
 		Database.set_story_completed(true)
+		Database.set_level(1)
 		get_tree().change_scene("res://src/transitions/Credits.tscn")
 	else:
 		get_node("RichTextLabel").append_bbcode("[center]" + Globals.transitionText[currentLevel] + "[/center]")
