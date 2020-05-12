@@ -70,3 +70,234 @@ margin_right = 211.0
 margin_bottom = 136.0
 custom_fonts/font = ExtResource( 1 )
 text = "Level 3"
+
+[node name="Button4" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 1053.0
+margin_top = 78.0
+margin_right = 1296.0
+margin_bottom = 234.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button4"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 4"
+
+[node name="Button5" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 1377.0
+margin_top = 78.0
+margin_right = 1620.0
+margin_bottom = 234.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button5"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 5"
+
+[node name="Button6" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 81.0
+margin_top = 312.0
+margin_right = 324.0
+margin_bottom = 468.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button6"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 6"
+
+[node name="Button7" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 405.0
+margin_top = 312.0
+margin_right = 648.0
+margin_bottom = 468.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button7"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 7"
+
+[node name="Button8" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 729.0
+margin_top = 312.0
+margin_right = 972.0
+margin_bottom = 468.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button8"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 8"
+
+[node name="Button9" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 1053.0
+margin_top = 312.0
+margin_right = 1296.0
+margin_bottom = 468.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button9"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 9"
+
+[node name="Button10" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 1377.0
+margin_top = 312.0
+margin_right = 1620.0
+margin_bottom = 468.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button10"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 10"
+
+[node name="Button11" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 81.0
+margin_top = 546.0
+margin_right = 324.0
+margin_bottom = 702.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button11"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 11"
+
+[node name="Button12" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 405.0
+margin_top = 546.0
+margin_right = 648.0
+margin_bottom = 702.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button12"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 12"
+
+[node name="Button13" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 729.0
+margin_top = 546.0
+margin_right = 972.0
+margin_bottom = 702.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button13"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 13"
+
+[node name="Button14" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 1053.0
+margin_top = 546.0
+margin_right = 1296.0
+margin_bottom = 702.0
+group = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button14"]
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 211.0
+margin_bottom = 136.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 14"
