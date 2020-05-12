@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/players/Midas.gd" type="Script" id=1]
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
+[ext_resource path="res://src/players/WaterEffect.tres" type="Material" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 17.7843
@@ -42,4 +43,16 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlockDetector"]
 position = Vector2( 1.40041, -37.8113 )
 shape = SubResource( 3 )
+
+[node name="WaterEffect" type="Particles2D" parent="."]
+modulate = Color( 0, 0.439216, 1, 1 )
+position = Vector2( 0.275856, -24.4599 )
+rotation = 3.12983
+emitting = false
+amount = 100
+lifetime = 0.4
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+process_material = ExtResource( 3 )
 [connection signal="body_entered" from="BlockDetector" to="." method="_on_BlockDetector_body_entered"]
