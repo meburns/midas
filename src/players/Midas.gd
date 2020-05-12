@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 class_name Midas
 
+const waterEffect = preload("res://src/players/WaterEffect.tscn")
 const FLOOR_NORMAL: = Vector2.UP
 
 export var speed: = Vector2(300.0, 1000.0)
@@ -28,14 +29,15 @@ func _set_water_touched() -> void:
 	if waterTouched == false:
 		waterAnimate = true
 		waterTouched = true
-		get_node("WaterEffect").emitting = true
+		var wInstance = waterEffect.instance()
+		wInstance.set_position(self.get_position())
+		get_tree().get_root().add_child(wInstance)
 		get_node("Sprite").modulate = Color(0,0,255) # Set modulate color to blue overlay
 		get_node("Sprite").region_rect = Rect2(0, 240, 80, 80) # change to water-1 sprite
 		yield(get_tree().create_timer(0.2), "timeout")
 		get_node("Sprite").region_rect = Rect2(0, 320, 80, 80) # change to water-2 sprite
 		yield(get_tree().create_timer(0.2), "timeout")
 		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
-		get_node("WaterEffect").emitting = false
 		waterAnimate = false
 
 
