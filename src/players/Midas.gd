@@ -13,6 +13,8 @@ var waterAnimate: = false
 export var smashable: = false
 export var smashed: = false
 export var frozen: = false
+var jump_buffer = 10
+var is_jumping = false
 
 func _on_BlockDetector_body_entered(_body: PhysicsBody2D) -> void:
 	pass # Replace with function body.
@@ -59,6 +61,11 @@ func _check_smashed() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	if is_on_floor():
+		jump_buffer = 10
+		is_jumping = false
+	jump_buffer -= 1
+
 	if is_on_floor() and waterAnimate == false and smashed == false and frozen == false:
 		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
 	_check_smashed() # Check if the user should be considered smashed
@@ -85,7 +92,7 @@ func get_direction() -> Vector2:
 				get_node("Sprite").set_flip_h(true)
 	return Vector2(	
 		x_val,
-		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() and !_get_smashed() else 1.0
+		-1.0 if Input.is_action_just_pressed("jump") and !is_jumping and jump_buffer > 0 and !_get_smashed() else 1.0
 	)
 
 
@@ -100,6 +107,7 @@ func calculate_move_velocity(
 	out.y += gravity * get_physics_process_delta_time()
 	if !smashed && !frozen:
 		if direction.y == -1.0:
+			is_jumping = true
 			SFX.play("Jump")
 			get_node("Sprite").region_rect = Rect2(0, 400, 80, 80) # change to jump sprite
 			out.y = speed.y * direction.y
