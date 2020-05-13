@@ -8,11 +8,11 @@ func _ready() -> void:
 	if Database.get_story_completed():
 		get_node("LevelsButton").visible = true
 		get_node("LevelsButton").disabled = false
-		get_node("EndlessButton").visible = true
-		get_node("EndlessButton").disabled = false
+		get_node("CreditsButton").visible = true
+		get_node("CreditsButton").disabled = false
 	else:
 		get_node("StoryButton").set_position(Vector2(825, 400))
-		get_node("CreditsButton").set_position(Vector2(825, 600))
+		get_node("EndlessButton").set_position(Vector2(825, 600))
 
 func _input(_ev):
 	if Input.is_action_pressed("ui_accept"):

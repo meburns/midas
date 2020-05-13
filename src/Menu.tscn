@@ -28,7 +28,7 @@ margin_right = 288.553
 margin_bottom = 114.254
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "PLAY"
+text = "STORY"
 align = 1
 valign = 1
 __meta__ = {
@@ -36,11 +36,13 @@ __meta__ = {
 }
 
 [node name="CreditsButton" type="Button" parent="."]
+visible = false
 modulate = Color( 0.92549, 0.905882, 1, 1 )
-margin_left = 604.238
-margin_top = 604.201
-margin_right = 887.243
-margin_bottom = 707.201
+margin_left = 1059.78
+margin_top = 625.602
+margin_right = 1342.78
+margin_bottom = 728.602
+disabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -79,12 +81,10 @@ __meta__ = {
 }
 
 [node name="EndlessButton" type="Button" parent="."]
-visible = false
-margin_left = 1055.56
-margin_top = 610.313
-margin_right = 1344.57
-margin_bottom = 698.313
-disabled = true
+margin_left = 603.079
+margin_top = 630.695
+margin_right = 892.089
+margin_bottom = 718.695
 __meta__ = {
 "_edit_use_anchors_": false
 }
