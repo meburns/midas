@@ -10,6 +10,9 @@ func _ready() -> void:
 		get_node("LevelsButton").disabled = false
 		get_node("EndlessButton").visible = true
 		get_node("EndlessButton").disabled = false
+	else:
+		get_node("StoryButton").set_position(Vector2(825, 400))
+		get_node("CreditsButton").set_position(Vector2(825, 600))
 
 func _input(_ev):
 	if Input.is_action_pressed("ui_accept"):
