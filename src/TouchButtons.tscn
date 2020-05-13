@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/buttons/up_button.png" type="Texture" id=1]
 [ext_resource path="res://assets/buttons/right_button.png" type="Texture" id=2]
 [ext_resource path="res://assets/buttons/left_button.png" type="Texture" id=3]
 [ext_resource path="res://assets/buttons/reset_button.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttons/menu_button.png" type="Texture" id=5]
 
 [node name="TouchButtons" type="Node2D"]
 
@@ -33,4 +34,11 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 1711.4, 33.7407 )
 normal = ExtResource( 4 )
 action = "refresh"
+visibility_mode = 1
+
+[node name="TouchMenu" type="TouchScreenButton" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 21.4795, 38.6631 )
+normal = ExtResource( 5 )
+action = "menu"
 visibility_mode = 1
