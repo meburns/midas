@@ -35,6 +35,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="EndlessButton" type="Button" parent="."]
+margin_left = 603.079
+margin_top = 630.695
+margin_right = 892.089
+margin_bottom = 718.695
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="EndlessButton"]
+margin_top = -11.9593
+margin_right = 290.0
+margin_bottom = 114.041
+custom_fonts/font = ExtResource( 6 )
+text = "ENDLESS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CreditsButton" type="Button" parent="."]
 visible = false
 modulate = Color( 0.92549, 0.905882, 1, 1 )
@@ -80,26 +100,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EndlessButton" type="Button" parent="."]
-margin_left = 603.079
-margin_top = 630.695
-margin_right = 892.089
-margin_bottom = 718.695
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="EndlessButton"]
-margin_top = -11.9593
-margin_right = 290.0
-margin_bottom = 114.041
-custom_fonts/font = ExtResource( 6 )
-text = "ENDLESS"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="MainTitle" type="RichTextLabel" parent="."]
 margin_left = 797.771
 margin_top = 212.128
@@ -120,6 +120,6 @@ stream = ExtResource( 3 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
 [connection signal="pressed" from="StoryButton" to="." method="_on_StoryButton_pressed"]
+[connection signal="pressed" from="EndlessButton" to="." method="_on_EndlessButton_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="LevelsButton" to="." method="_on_LevelsButton_pressed"]
-[connection signal="pressed" from="EndlessButton" to="." method="_on_EndlessButton_pressed"]

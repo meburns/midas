@@ -1,8 +1,10 @@
-extends Button
+extends Node2D
+
 
 func _ready() -> void:
 	TouchButtons.set_visible(false)
 	for button in get_tree().get_nodes_in_group("levelButtons"):
+		print(button.name)
 		button.connect("pressed", self, "_set_level", [button])
 
 func _set_level(button):
