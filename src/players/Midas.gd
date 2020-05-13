@@ -82,6 +82,9 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("refresh"):
 		SFX.play("Redo")
 		get_tree().reload_current_scene()
+	# reload the current level on "refresh" key pressed
+	if Input.is_action_just_pressed("menu"):
+		get_tree().change_scene("res://src/Menu.tscn")
 
 
 func get_direction() -> Vector2:
