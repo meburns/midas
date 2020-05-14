@@ -13,6 +13,7 @@ var water_x
 var water_y
 
 func _ready() -> void:
+	TouchButtons.set_visible(true)
 	var arr:= _create_array()
 	arr = _place_midas(arr)
 	arr = _place_sadim(arr)
