@@ -9,6 +9,9 @@ func _ready() -> void:
 func _initialize_if_not_exist() -> void:
 	var file2Check = File.new()
 	if !file2Check.file_exists(db):
+		var dir = Directory.new()
+		dir.open("res://")
+		dir.make_dir("data")
 		var f = File.new()
 		var init_data = JSON.parse('{ "current_level": 0, "story_mode_completed": false }').result
 		f.open(db, File.WRITE)
