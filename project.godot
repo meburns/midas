@@ -44,10 +44,6 @@ window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 
-[editor_plugins]
-
-enabled=PoolStringArray( "godot-sqlite" )
-
 [input]
 
 move_right={
