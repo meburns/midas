@@ -21,6 +21,8 @@ func _ready() -> void:
 	arr = _find_path(arr)
 	#arr = _randomize_array(arr)
 	_fill_array(arr)
+	$Highscore.text = str(Database.get_endless_highscore())
+	$CurrentLevel.text = str(Database.get_endless_level())
 
 
 func get_next_level() -> void:
@@ -29,6 +31,8 @@ func get_next_level() -> void:
 	var current_highscore = Database.get_endless_highscore()
 	if current_highscore < current_level:
 		Database.set_endless_highscore(current_level)
+	$Highscore.text = str(Database.get_endless_highscore())
+	$CurrentLevel.text = str(Database.get_endless_level())
 	get_tree().reload_current_scene()
 
 
