@@ -12,6 +12,5 @@ func _set_level(button):
 	start_level()
 
 func start_level() -> void:
-	MusicPlayer.play()
 	TouchButtons.set_visible(true)
 	get_tree().change_scene("res://src/transitions/Transition.tscn")

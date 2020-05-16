@@ -13,10 +13,10 @@ __meta__ = {
 }
 
 [node name="StoryButton" type="Button" parent="."]
-margin_left = 600.138
-margin_top = 451.737
-margin_right = 889.143
-margin_bottom = 539.737
+margin_left = 817.779
+margin_top = 432.604
+margin_right = 1106.78
+margin_bottom = 520.604
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -36,10 +36,10 @@ __meta__ = {
 }
 
 [node name="EndlessButton" type="Button" parent="."]
-margin_left = 603.079
-margin_top = 630.695
-margin_right = 892.089
-margin_bottom = 718.695
+margin_left = 820.72
+margin_top = 604.387
+margin_right = 1109.73
+margin_bottom = 692.387
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -56,12 +56,11 @@ __meta__ = {
 }
 
 [node name="CreditsButton" type="Button" parent="."]
-visible = false
 modulate = Color( 0.92549, 0.905882, 1, 1 )
-margin_left = 1059.78
-margin_top = 625.602
-margin_right = 1342.78
-margin_bottom = 728.602
+margin_left = 823.006
+margin_top = 761.926
+margin_right = 1106.01
+margin_bottom = 864.926
 disabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -74,31 +73,6 @@ custom_fonts/font = ExtResource( 6 )
 text = "Credits"
 align = 1
 valign = 1
-
-[node name="LevelsButton" type="Button" parent="."]
-visible = false
-margin_left = 1055.25
-margin_top = 453.198
-margin_right = 1344.26
-margin_bottom = 541.198
-disabled = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="LevelsButton"]
-margin_left = 0.919922
-margin_top = -15.6798
-margin_right = 289.92
-margin_bottom = 110.32
-custom_fonts/font = ExtResource( 6 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "LEVELS"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MainTitle" type="RichTextLabel" parent="."]
 margin_left = 797.771
@@ -122,4 +96,3 @@ stream = ExtResource( 3 )
 [connection signal="pressed" from="StoryButton" to="." method="_on_StoryButton_pressed"]
 [connection signal="pressed" from="EndlessButton" to="." method="_on_EndlessButton_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
-[connection signal="pressed" from="LevelsButton" to="." method="_on_LevelsButton_pressed"]
