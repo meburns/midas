@@ -10,7 +10,7 @@ func _initialize_if_not_exist() -> void:
 	var file2Check = File.new()
 	if !file2Check.file_exists(db):
 		var f = File.new()
-		var init_data = JSON.parse('{ "current_level": 0, "story_mode_completed": false, "highscore": 0 }').result
+		var init_data = JSON.parse('{ "current_level": 0, "story_mode_completed": false, "endless_level": 0, "endless_highscore": 0 }').result
 		f.open(db, File.WRITE)
 		f.store_string(JSON.print(init_data, "  ", true))
 		f.close()
@@ -49,9 +49,17 @@ func set_story_completed(completed: bool) -> void:
 	set_data("story_mode_completed", completed)
 
 
-func get_highscore() -> int:
-	var data = get_data()
-	return data["highscore"]
 
-func set_highscore(new_score: int) -> void:
-	set_data("highscore", new_score)
+func get_endless_level() -> int:
+	var data = get_data()
+	return data["endless_level"]
+
+func set_endless_level(new_level: int) -> void:
+	set_data("endless_level", new_level)
+
+func get_endless_highscore() -> int:
+	var data = get_data()
+	return data["endless_highscore"]
+
+func set_endless_highscore(new_score: int) -> void:
+	set_data("endless_highscore", new_score)
