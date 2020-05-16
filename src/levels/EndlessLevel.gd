@@ -23,6 +23,15 @@ func _ready() -> void:
 	_fill_array(arr)
 
 
+func get_next_level() -> void:
+	var current_level = Database.get_endless_level() + 1
+	Database.set_endless_level(current_level)
+	var current_highscore = Database.get_endless_highscore()
+	if current_highscore < current_level:
+		Database.set_endless_highscore(current_level)
+	get_tree().reload_current_scene()
+
+
 func _create_array() -> Array:
 	# 24x14 screen size
 	var arr:= [

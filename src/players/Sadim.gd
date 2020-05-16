@@ -32,8 +32,12 @@ func _goldify() -> void:
 	SFX.play("Gold")
 
 func _load_next_level() -> void:
-	yield(get_tree().create_timer(1.0), "timeout")
-	get_tree().change_scene("res://src/transitions/Transition.tscn")
+	if (get_tree().get_current_scene().get_name()) == "EndlessLevel":
+		yield(get_tree().create_timer(1.0), "timeout")
+		get_tree().get_current_scene().get_next_level()
+	else:
+		yield(get_tree().create_timer(1.0), "timeout")
+		get_tree().change_scene("res://src/transitions/Transition.tscn")
 
 
 func _physics_process(delta: float) -> void:

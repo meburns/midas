@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	Database.set_endless_level(0)
 	TouchButtons.set_visible(false)
 	MusicPlayer.stop()
 	get_node("MenuMusic").play()
