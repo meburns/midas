@@ -55,12 +55,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="SettingsButton" type="Button" parent="."]
+modulate = Color( 0.92549, 0.905882, 1, 1 )
+margin_left = 823.006
+margin_top = 753.773
+margin_right = 1106.01
+margin_bottom = 856.773
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SettingsButton"]
+margin_right = 284.0
+margin_bottom = 85.0
+custom_fonts/font = ExtResource( 6 )
+text = "Settings"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CreditsButton" type="Button" parent="."]
 modulate = Color( 0.92549, 0.905882, 1, 1 )
 margin_left = 823.006
-margin_top = 761.926
+margin_top = 898.486
 margin_right = 1106.01
-margin_bottom = 864.926
+margin_bottom = 1001.49
 disabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -73,6 +94,9 @@ custom_fonts/font = ExtResource( 6 )
 text = "Credits"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MainTitle" type="RichTextLabel" parent="."]
 margin_left = 797.771
@@ -95,4 +119,5 @@ stream = ExtResource( 3 )
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
 [connection signal="pressed" from="StoryButton" to="." method="_on_StoryButton_pressed"]
 [connection signal="pressed" from="EndlessButton" to="." method="_on_EndlessButton_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
