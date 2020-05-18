@@ -15,7 +15,7 @@ func _initialize_if_not_exist() -> void:
 			"story_mode_completed": false,
 			"endless_level": 0,
 			"endless_highscore": 0,
-			"touch_size": 0
+			"mobile_size": 0
 		}""").result
 		f.open(db, File.WRITE)
 		f.store_string(JSON.print(init_data, "  ", true))
@@ -71,9 +71,9 @@ func set_endless_highscore(new_score: int) -> void:
 	set_data("endless_highscore", new_score)
 
 
-func get_touch_size() -> int:
+func get_mobile_size() -> int:
 	var data = get_data()
-	return data["touch_size"]
+	return data["mobile_size"]
 
-func set_touch_size(new_size: int) -> void:
-	set_data("touch_size", new_size)
+func set_mobile_size(new_size: int) -> void:
+	set_data("mobile_size", new_size)
