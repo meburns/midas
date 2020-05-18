@@ -10,9 +10,13 @@ func _initialize_if_not_exist() -> void:
 	var file2Check = File.new()
 	if !file2Check.file_exists(db):
 		var f = File.new()
-		var init_data = JSON.parse(
-			'{"current_level": 0, "story_mode_completed": false, "endless_level": 0, "endless_highscore": 0, "touch_size": 0 }'
-		).result
+		var init_data = JSON.parse("""{
+			"current_level": 0,
+			"story_mode_completed": false,
+			"endless_level": 0,
+			"endless_highscore": 0,
+			"touch_size": 0
+		}""").result
 		f.open(db, File.WRITE)
 		f.store_string(JSON.print(init_data, "  ", true))
 		f.close()
