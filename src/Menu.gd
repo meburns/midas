@@ -8,10 +8,11 @@ func _ready() -> void:
 	get_node("MenuMusic").play()
 	get_node("MainTitle").set_bbcode("[wave freq=3]M I D A S[/wave]")
 	if Database.get_story_completed():
-		get_node("CreditsButton").visible = true
-		get_node("CreditsButton").disabled = false
+		$CreditsButton.visible = true
+		$CreditsButton.disabled = false
+		$MainTitle.add_color_override("font_color", Color( 229, 203, 33, 255 ))
 	else:
-		get_node("CreditsButton").visible = false
+		$CreditsButton.visible = false
 
 
 func _input(_ev):
