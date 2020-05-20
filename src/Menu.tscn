@@ -117,6 +117,15 @@ __meta__ = {
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[node name="TitleSparkle" type="CPUParticles2D" parent="."]
+position = Vector2( 962.79, 377.557 )
+emitting = false
+amount = 120
+emission_shape = 2
+emission_rect_extents = Vector2( 200, 50 )
+scale_amount = 3.0
+color = Color( 0.945098, 0.894118, 0.113725, 1 )
+
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 346.79, 241.557 )
 [connection signal="pressed" from="StoryButton" to="." method="_on_StoryButton_pressed"]

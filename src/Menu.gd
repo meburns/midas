@@ -11,6 +11,7 @@ func _ready() -> void:
 		$CreditsButton.visible = true
 		$CreditsButton.disabled = false
 		$MainTitle.add_color_override("font_color", Color( 229, 203, 33, 255 ))
+		$TitleSparkle.set_emitting(true)
 	else:
 		$CreditsButton.visible = false
 
