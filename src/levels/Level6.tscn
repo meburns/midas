@@ -7,116 +7,115 @@
 [ext_resource path="res://src/players/Midas.tscn" type="PackedScene" id=6]
 
 [node name="Level6" type="Node2D"]
-position = Vector2( -360, -192 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 1092.0 ],
 "_edit_vertical_guides_": [ 1944.0 ]
 }
 
 [node name="Outside" parent="." instance=ExtResource( 5 )]
-position = Vector2( 870.142, -78 )
+position = Vector2( 511.142, -256 )
 
 [node name="Water" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1377, 685 )
+position = Vector2( 1018, 507 )
 
 [node name="Midas" parent="." instance=ExtResource( 6 )]
-position = Vector2( 729, 607 )
+position = Vector2( 370, 429 )
 
 [node name="Sadim" parent="." instance=ExtResource( 2 )]
-position = Vector2( 567, 607 )
+position = Vector2( 208, 429 )
 
 [node name="Block" parent="." instance=ExtResource( 4 )]
-position = Vector2( 648, 685 )
+position = Vector2( 289, 507 )
 
 [node name="Block2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 648, 763 )
+position = Vector2( 289, 585 )
 
 [node name="Block32" parent="." instance=ExtResource( 4 )]
-position = Vector2( 567, 763 )
+position = Vector2( 208, 585 )
 
 [node name="Block3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 729, 685 )
+position = Vector2( 370, 507 )
 
 [node name="Block4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 729, 763 )
+position = Vector2( 370, 585 )
 
 [node name="Block5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 810, 685 )
+position = Vector2( 451, 507 )
 
 [node name="Block18" parent="." instance=ExtResource( 4 )]
-position = Vector2( 972, 529 )
+position = Vector2( 613, 351 )
 
 [node name="Block25" parent="." instance=ExtResource( 4 )]
-position = Vector2( 891, 451 )
+position = Vector2( 532, 273 )
 
 [node name="Block29" parent="." instance=ExtResource( 4 )]
-position = Vector2( 567, 685 )
+position = Vector2( 208, 507 )
 
 [node name="Block26" parent="." instance=ExtResource( 4 )]
-position = Vector2( 972, 451 )
+position = Vector2( 613, 273 )
 
 [node name="Block28" parent="." instance=ExtResource( 4 )]
-position = Vector2( 810, 451 )
+position = Vector2( 451, 273 )
 
 [node name="Block24" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1134, 451 )
+position = Vector2( 775, 273 )
 
 [node name="Block23" parent="." instance=ExtResource( 4 )]
-position = Vector2( 972, 685 )
+position = Vector2( 613, 507 )
 
 [node name="Block6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 810, 763 )
+position = Vector2( 451, 585 )
 
 [node name="Block7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 891, 685 )
+position = Vector2( 532, 507 )
 
 [node name="Block19" parent="." instance=ExtResource( 4 )]
-position = Vector2( 972, 607 )
+position = Vector2( 613, 429 )
 
 [node name="Block8" parent="." instance=ExtResource( 4 )]
-position = Vector2( 891, 763 )
+position = Vector2( 532, 585 )
 
 [node name="Block9" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1296, 685 )
+position = Vector2( 937, 507 )
 
 [node name="Block30" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1458, 685 )
+position = Vector2( 1099, 507 )
 
 [node name="Block20" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1215, 685 )
+position = Vector2( 856, 507 )
 
 [node name="Block10" parent="." instance=ExtResource( 4 )]
-position = Vector2( 972, 763 )
+position = Vector2( 613, 585 )
 
 [node name="Block11" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1053, 685 )
+position = Vector2( 694, 507 )
 
 [node name="Block21" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1053, 451 )
+position = Vector2( 694, 273 )
 
 [node name="Block27" parent="." instance=ExtResource( 4 )]
-position = Vector2( 891, 373 )
+position = Vector2( 532, 195 )
 
 [node name="Block12" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1053, 763 )
+position = Vector2( 694, 585 )
 
 [node name="Block13" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1134, 685 )
+position = Vector2( 775, 507 )
 
 [node name="Block22" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1053, 373 )
+position = Vector2( 694, 195 )
 
 [node name="Block14" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1134, 763 )
+position = Vector2( 775, 585 )
 
 [node name="Block15" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1215, 763 )
+position = Vector2( 856, 585 )
 
 [node name="Block16" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1377, 763 )
+position = Vector2( 1018, 585 )
 
 [node name="Block31" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1458, 763 )
+position = Vector2( 1099, 585 )
 
 [node name="Block17" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1296, 763 )
+position = Vector2( 937, 585 )

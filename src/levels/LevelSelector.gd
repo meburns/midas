@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func _set_level(button):
 	var level = button.name.replace("Button","").to_int()
-	Database.set_level(level)
+	Database.set_level(level - 1)
 	start_level()
 
 func start_level() -> void:
