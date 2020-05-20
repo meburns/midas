@@ -37,29 +37,25 @@ func get_next_level() -> void:
 
 
 func _create_array() -> Array:
-	# 24x14 screen size
+	# 24x14 for 1080p screen size
+	# 16x9 for 720p screen size
 	var arr:= [
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 	]
 	return arr
 
 
 func _place_midas(arr: Array) -> Array:
-	var y = floor(rand_range(2, 12))
-	var x = floor(rand_range(2, 22))
+	var y = floor(rand_range(2, 7))
+	var x = floor(rand_range(2, 14))
 	arr[y][x] = 2 #midas
 	arr[y+1][x] = 1
 	arr[y+2][x] = 1
@@ -68,11 +64,11 @@ func _place_midas(arr: Array) -> Array:
 	return arr
 
 func _place_sadim(arr: Array) -> Array:
-	var y = floor(rand_range(2, 12))
-	var x = floor(rand_range(2, 22))
+	var y = floor(rand_range(2, 7))
+	var x = floor(rand_range(2, 14))
 	while (arr[y][x] != 0 && arr[y+1][x] != 0 && arr[y+2][x] != 0):
-		y = floor(rand_range(2, 12))
-		x = floor(rand_range(2, 22))
+		y = floor(rand_range(2, 7))
+		x = floor(rand_range(2, 14))
 	arr[y][x] = 3 #sadim
 	arr[y+1][x] = 1
 	sadim_x = x
@@ -80,11 +76,11 @@ func _place_sadim(arr: Array) -> Array:
 	return arr
 
 func _place_water(arr: Array) -> Array:
-	var y = floor(rand_range(2, 12))
-	var x = floor(rand_range(2, 22))
+	var y = floor(rand_range(2, 7))
+	var x = floor(rand_range(2, 14))
 	while (arr[y][x] != 0 && arr[y+1][x] != 0 && arr[y+2][x] != 0):
-		y = floor(rand_range(2, 12))
-		x = floor(rand_range(2, 22))
+		y = floor(rand_range(2, 7))
+		x = floor(rand_range(2, 14))
 	arr[y][x] = 4 #water
 	arr[y+1][x] = 1
 	water_x = x

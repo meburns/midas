@@ -7,6 +7,7 @@
 [ext_resource path="res://src/players/Midas.tscn" type="PackedScene" id=6]
 
 [node name="Level4" type="Node2D"]
+position = Vector2( -320, -256 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 1092.0 ],
 "_edit_vertical_guides_": [ 1955.0 ]

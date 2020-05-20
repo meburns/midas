@@ -15,9 +15,9 @@ __meta__ = {
 position = Vector2( 870.142, -78 )
 
 [node name="HighscoreLabel" type="Label" parent="."]
-margin_left = 1116.76
+margin_left = 809.621
 margin_top = 15.4543
-margin_right = 1399.76
+margin_right = 1092.62
 margin_bottom = 141.454
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -27,9 +27,9 @@ __meta__ = {
 }
 
 [node name="Highscore" type="Label" parent="."]
-margin_left = 1407.34
+margin_left = 1100.2
 margin_top = 15.6935
-margin_right = 1515.34
+margin_right = 1208.2
 margin_bottom = 141.693
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -38,9 +38,9 @@ __meta__ = {
 }
 
 [node name="CurrentLevelLabel" type="Label" parent="."]
-margin_left = 384.161
+margin_left = 77.0219
 margin_top = 17.9719
-margin_right = 667.161
+margin_right = 360.022
 margin_bottom = 143.972
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -50,9 +50,9 @@ __meta__ = {
 }
 
 [node name="CurrentLevel" type="Label" parent="."]
-margin_left = 674.735
+margin_left = 367.596
 margin_top = 18.211
-margin_right = 782.735
+margin_right = 475.596
 margin_bottom = 144.211
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
