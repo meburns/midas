@@ -14,277 +14,347 @@ script = ExtResource( 2 )
 ]]
 margin_left = 81.0
 margin_top = 78.0
-margin_right = 324.0
-margin_bottom = 234.0
+margin_right = 255.0
+margin_bottom = 215.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button1"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 1"
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button2" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 405.0
+margin_left = 298.641
 margin_top = 78.0
-margin_right = 648.0
-margin_bottom = 234.0
+margin_right = 472.641
+margin_bottom = 215.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button2"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 2"
+text = "2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button3" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 729.0
+margin_left = 509.107
 margin_top = 78.0
-margin_right = 972.0
-margin_bottom = 234.0
+margin_right = 683.107
+margin_bottom = 215.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button3"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 3"
+text = "3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button4" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 1053.0
+margin_left = 721.964
 margin_top = 78.0
-margin_right = 1296.0
-margin_bottom = 234.0
+margin_right = 895.964
+margin_bottom = 215.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button4"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 4"
+text = "4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button5" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 1377.0
+margin_left = 939.605
 margin_top = 78.0
-margin_right = 1620.0
-margin_bottom = 234.0
+margin_right = 1113.61
+margin_bottom = 215.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button5"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 5"
+text = "5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button6" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 81.0
-margin_top = 312.0
-margin_right = 324.0
-margin_bottom = 468.0
+margin_left = 81.0001
+margin_top = 259.766
+margin_right = 255.0
+margin_bottom = 396.766
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button6"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 6"
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button7" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 405.0
-margin_top = 312.0
-margin_right = 648.0
-margin_bottom = 468.0
+margin_left = 298.641
+margin_top = 259.766
+margin_right = 472.641
+margin_bottom = 396.766
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button7"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 7"
+text = "7"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button8" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 729.0
-margin_top = 312.0
-margin_right = 972.0
-margin_bottom = 468.0
+margin_left = 511.499
+margin_top = 259.766
+margin_right = 685.499
+margin_bottom = 396.766
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button8"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 8"
+text = "8"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button9" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 1053.0
-margin_top = 312.0
-margin_right = 1296.0
-margin_bottom = 468.0
+margin_left = 721.964
+margin_top = 259.766
+margin_right = 895.964
+margin_bottom = 396.766
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button9"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 9"
+text = "9"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button10" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 1377.0
-margin_top = 312.0
-margin_right = 1620.0
-margin_bottom = 468.0
+margin_left = 937.214
+margin_top = 259.766
+margin_right = 1111.21
+margin_bottom = 396.766
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button10"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 10"
+text = "10"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button11" type="Button" parent="." groups=[
 "levelButtons",
 ]]
 margin_left = 81.0
-margin_top = 546.0
-margin_right = 324.0
-margin_bottom = 702.0
+margin_top = 436.749
+margin_right = 255.0
+margin_bottom = 573.749
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button11"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 11"
+text = "11"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button12" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 405.0
-margin_top = 546.0
-margin_right = 648.0
-margin_bottom = 702.0
+margin_left = 301.033
+margin_top = 436.749
+margin_right = 475.033
+margin_bottom = 573.749
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button12"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 12"
+text = "12"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button13" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 729.0
-margin_top = 546.0
-margin_right = 972.0
-margin_bottom = 702.0
+margin_left = 509.107
+margin_top = 436.749
+margin_right = 683.107
+margin_bottom = 573.749
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button13"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 13"
+text = "13"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button14" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 1053.0
-margin_top = 546.0
-margin_right = 1296.0
-margin_bottom = 702.0
+margin_left = 721.964
+margin_top = 436.749
+margin_right = 895.964
+margin_bottom = 573.749
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Button14"]
-margin_left = 36.0
-margin_top = 10.0
-margin_right = 211.0
-margin_bottom = 136.0
+margin_left = -4.3916
+margin_top = 5.0
+margin_right = 177.608
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
-text = "Level 14"
+text = "14"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
