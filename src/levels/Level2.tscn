@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/blocks/Water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/players/Sadim.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/overlays/BlinkUp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/blocks/block.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Outside.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/players/Midas.tscn" type="PackedScene" id=6]
@@ -78,3 +79,6 @@ position = Vector2( 963.722, 528.251 )
 
 [node name="Block18" parent="." instance=ExtResource( 4 )]
 position = Vector2( 963.722, 450.251 )
+
+[node name="BlinkUp" parent="." instance=ExtResource( 3 )]
+position = Vector2( 526.718, 204.347 )
