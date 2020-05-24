@@ -16,19 +16,18 @@ func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 		# She is okay!
 		if body._get_water_touched() == true and touched == false:
 			touched = true
-			get_node("Sprite").region_rect = Rect2(80, 240, 80, 80)
 			SFX.play("Save")
 			body._set_frozen()
 			_load_next_level()
 
 func _squashify() -> void:
-	get_node("CollisionShape2D").free()
+	$CollisionShape2D.free()
 	yield(get_tree().create_timer(0.65), "timeout")
-	get_node("Sprite").free()
+	$Sprite.free()
 
 func _goldify() -> void:
 	touched = true
-	get_node("Sprite").region_rect = Rect2(80, 160, 80, 80)
+	$Sprite.play("gold")
 	SFX.play("Gold")
 
 func _load_next_level() -> void:
