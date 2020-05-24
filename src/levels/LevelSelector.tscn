@@ -8,14 +8,18 @@ resource_name = "levelButtons"
 
 [node name="LevelSelector" type="Node2D"]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 702.0 ],
+"_edit_vertical_guides_": [ 1279.97 ]
+}
 
 [node name="Button1" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 81.0
-margin_top = 78.0
-margin_right = 255.0
-margin_bottom = 215.0
+margin_left = 50.0
+margin_top = 20.0
+margin_right = 224.0
+margin_bottom = 157.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -37,10 +41,10 @@ __meta__ = {
 [node name="Button2" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 298.641
-margin_top = 78.0
-margin_right = 472.641
-margin_bottom = 215.0
+margin_left = 250.0
+margin_top = 20.0
+margin_right = 424.0
+margin_bottom = 157.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -62,10 +66,10 @@ __meta__ = {
 [node name="Button3" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 509.107
-margin_top = 78.0
-margin_right = 683.107
-margin_bottom = 215.0
+margin_left = 450.0
+margin_top = 20.0
+margin_right = 624.0
+margin_bottom = 157.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -87,10 +91,10 @@ __meta__ = {
 [node name="Button4" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 721.964
-margin_top = 78.0
-margin_right = 895.964
-margin_bottom = 215.0
+margin_left = 650.0
+margin_top = 20.0
+margin_right = 824.0
+margin_bottom = 157.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -112,10 +116,10 @@ __meta__ = {
 [node name="Button5" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 939.605
-margin_top = 78.0
-margin_right = 1113.61
-margin_bottom = 215.0
+margin_left = 850.0
+margin_top = 20.0
+margin_right = 1024.01
+margin_bottom = 157.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -137,10 +141,10 @@ __meta__ = {
 [node name="Button6" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 81.0001
-margin_top = 259.766
-margin_right = 255.0
-margin_bottom = 396.766
+margin_left = 1050.0
+margin_top = 20.0
+margin_right = 1224.0
+margin_bottom = 157.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -162,10 +166,10 @@ __meta__ = {
 [node name="Button7" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 298.641
-margin_top = 259.766
-margin_right = 472.641
-margin_bottom = 396.766
+margin_left = 50.0
+margin_top = 180.0
+margin_right = 224.0
+margin_bottom = 317.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -187,10 +191,10 @@ __meta__ = {
 [node name="Button8" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 511.499
-margin_top = 259.766
-margin_right = 685.499
-margin_bottom = 396.766
+margin_left = 250.0
+margin_top = 180.0
+margin_right = 424.0
+margin_bottom = 317.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -212,10 +216,10 @@ __meta__ = {
 [node name="Button9" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 721.964
-margin_top = 259.766
-margin_right = 895.964
-margin_bottom = 396.766
+margin_left = 450.0
+margin_top = 180.0
+margin_right = 624.0
+margin_bottom = 317.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -237,10 +241,10 @@ __meta__ = {
 [node name="Button10" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 937.214
-margin_top = 259.766
-margin_right = 1111.21
-margin_bottom = 396.766
+margin_left = 650.0
+margin_top = 180.0
+margin_right = 823.996
+margin_bottom = 317.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -262,10 +266,10 @@ __meta__ = {
 [node name="Button11" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 81.0
-margin_top = 436.749
-margin_right = 255.0
-margin_bottom = 573.749
+margin_left = 850.0
+margin_top = 180.0
+margin_right = 1024.0
+margin_bottom = 317.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -287,10 +291,10 @@ __meta__ = {
 [node name="Button12" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 301.033
-margin_top = 436.749
-margin_right = 475.033
-margin_bottom = 573.749
+margin_left = 1050.0
+margin_top = 180.0
+margin_right = 1224.0
+margin_bottom = 317.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -312,10 +316,10 @@ __meta__ = {
 [node name="Button13" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 509.107
-margin_top = 436.749
-margin_right = 683.107
-margin_bottom = 573.749
+margin_left = 50.0
+margin_top = 340.0
+margin_right = 224.0
+margin_bottom = 477.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -337,10 +341,10 @@ __meta__ = {
 [node name="Button14" type="Button" parent="." groups=[
 "levelButtons",
 ]]
-margin_left = 721.964
-margin_top = 436.749
-margin_right = 895.964
-margin_bottom = 573.749
+margin_left = 250.0
+margin_top = 340.0
+margin_right = 424.0
+margin_bottom = 477.0
 group = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -353,6 +357,56 @@ margin_right = 177.608
 margin_bottom = 133.0
 custom_fonts/font = ExtResource( 1 )
 text = "14"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button15" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 450.0
+margin_top = 340.0
+margin_right = 624.0
+margin_bottom = 477.0
+group = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button15"]
+margin_left = -4.3916
+margin_top = 5.0
+margin_right = 177.608
+margin_bottom = 133.0
+custom_fonts/font = ExtResource( 1 )
+text = "15"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button16" type="Button" parent="." groups=[
+"levelButtons",
+]]
+margin_left = 650.0
+margin_top = 340.0
+margin_right = 824.0
+margin_bottom = 477.0
+group = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button16"]
+margin_left = -2.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 133.0
+custom_fonts/font = ExtResource( 1 )
+text = "16"
 align = 1
 valign = 1
 __meta__ = {
