@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://assets/buttons/default_button.png" type="Texture" id=1]
 [ext_resource path="res://src/Menu.gd" type="Script" id=2]
@@ -6,6 +6,105 @@
 [ext_resource path="res://src/MainCamera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/fonts/Baloo_Bhaina_2/main_menu.tres" type="DynamicFont" id=5]
 [ext_resource path="res://assets/fonts/Baloo_Bhaina_2/normal_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://assets/blocks/menu_blocks.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 100, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 200, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 300, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 400, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 500, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 600, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 700, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 800, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 900, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 1000, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 1100, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 1200, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 1300, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 1400, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 1500, 1280, 100 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "marquee",
+"speed": 1.0
+} ]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -46,32 +145,37 @@ animations = [ {
 } ]
 
 [node name="Menu" type="Node2D"]
-position = Vector2( -346.79, -241.557 )
+position = Vector2( -0.0674496, 0.0999546 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 720.0 ]
 }
 
+[node name="Blocks" type="AnimatedSprite" parent="."]
+position = Vector2( 640, 145 )
+scale = Vector2( 1.1, 1.1 )
+frames = SubResource( 8 )
+animation = "idle"
+
 [node name="MainTitle" type="RichTextLabel" parent="."]
-margin_left = 795.798
-margin_top = 305.557
-margin_right = 1139.8
-margin_bottom = 461.557
+margin_left = 449.682
+margin_top = 64.6265
+margin_right = 957.682
+margin_bottom = 220.626
 custom_fonts/normal_font = ExtResource( 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "M I D A S"
-text = "M I D A S"
+text = "M   I   D  A   S"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="StoryButton" type="TextureButton" parent="."]
-margin_left = 614.37
-margin_top = 476.182
-margin_right = 1014.37
-margin_bottom = 676.182
+margin_left = 267.874
+margin_top = 234.353
+margin_right = 667.874
+margin_bottom = 434.353
 rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -97,10 +201,10 @@ __meta__ = {
 }
 
 [node name="SettingsButton" type="TextureButton" parent="."]
-margin_left = 1076.14
-margin_top = 476.304
-margin_right = 1476.14
-margin_bottom = 676.304
+margin_left = 729.64
+margin_top = 234.476
+margin_right = 1129.64
+margin_bottom = 434.476
 rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -126,10 +230,10 @@ __meta__ = {
 }
 
 [node name="EndlessButton" type="TextureButton" parent="."]
-margin_left = 845.579
-margin_top = 709.352
-margin_right = 1245.58
-margin_bottom = 909.352
+margin_left = 499.084
+margin_top = 467.523
+margin_right = 899.084
+margin_bottom = 667.523
 rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -158,7 +262,7 @@ __meta__ = {
 stream = ExtResource( 3 )
 
 [node name="TitleSparkle" type="CPUParticles2D" parent="."]
-position = Vector2( 962.79, 377.557 )
+position = Vector2( 684.544, 145.231 )
 emitting = false
 amount = 120
 emission_shape = 2
@@ -167,7 +271,7 @@ scale_amount = 3.0
 color = Color( 0.945098, 0.894118, 0.113725, 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 346.79, 241.557 )
+position = Vector2( 0.294769, -0.271729 )
 [connection signal="button_down" from="StoryButton" to="." method="_on_StoryButton_button_down"]
 [connection signal="button_up" from="StoryButton" to="." method="_on_StoryButton_button_up"]
 [connection signal="button_down" from="SettingsButton" to="." method="_on_SettingsButton_button_down"]
