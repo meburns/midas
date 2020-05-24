@@ -13,6 +13,11 @@ func set_button() -> void:
 		$mobileSize.pressed = false
 
 
+func _on_CreditsButton_pressed() -> void:
+	MusicPlayer.play()
+	get_tree().change_scene("res://src/transitions/Credits.tscn")
+
+
 func _on_BackButton_pressed() -> void:
 	get_tree().change_scene("res://src/Menu.tscn")
 

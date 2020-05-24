@@ -46,5 +46,24 @@ toggle_mode = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CreditsButton" type="Button" parent="."]
+margin_left = 635.92
+margin_top = 758.212
+margin_right = 1035.92
+margin_bottom = 958.212
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CreditsButton"]
+margin_left = 1.01904
+margin_right = 401.019
+margin_bottom = 200.0
+custom_fonts/font = ExtResource( 1 )
+text = "CREDITS"
+align = 1
+valign = 1
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="pressed" from="mobileSize" to="." method="_on_mobileSize_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
