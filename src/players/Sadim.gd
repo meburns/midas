@@ -17,6 +17,7 @@ func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 		if body._get_water_touched() == true and touched == false:
 			touched = true
 			SFX.play("Save")
+			$Sprite.play("saved")
 			body._set_frozen()
 			_load_next_level()
 
