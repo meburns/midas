@@ -11,6 +11,7 @@
 [node name="TouchLeft" type="TouchScreenButton" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 5.4245, 512 )
+z_index = 1000
 normal = ExtResource( 3 )
 passby_press = true
 action = "move_left"
@@ -19,6 +20,7 @@ visibility_mode = 1
 [node name="TouchRight" type="TouchScreenButton" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 208, 512 )
+z_index = 1000
 normal = ExtResource( 2 )
 passby_press = true
 action = "move_right"
@@ -27,6 +29,7 @@ visibility_mode = 1
 [node name="TouchJump" type="TouchScreenButton" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 1072, 512 )
+z_index = 1000
 normal = ExtResource( 1 )
 action = "jump"
 visibility_mode = 1
@@ -34,6 +37,7 @@ visibility_mode = 1
 [node name="TouchReset" type="TouchScreenButton" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 1072, 8 )
+z_index = 1000
 normal = ExtResource( 4 )
 action = "refresh"
 visibility_mode = 1
@@ -41,6 +45,7 @@ visibility_mode = 1
 [node name="TouchMenu" type="TouchScreenButton" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 4.29591, 5.72795 )
+z_index = 1000
 normal = ExtResource( 5 )
 action = "menu"
 visibility_mode = 1
