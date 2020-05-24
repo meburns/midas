@@ -32,12 +32,12 @@ func _set_water_touched() -> void:
 		var wInstance = waterEffect.instance()
 		wInstance.set_position(self.get_position())
 		get_tree().get_root().add_child(wInstance)
-		get_node("Sprite").modulate = Color(0,0,255) # Set modulate color to blue overlay
-		get_node("Sprite").region_rect = Rect2(0, 240, 80, 80) # change to water-1 sprite
-		yield(get_tree().create_timer(0.2), "timeout")
-		get_node("Sprite").region_rect = Rect2(0, 320, 80, 80) # change to water-2 sprite
-		yield(get_tree().create_timer(0.2), "timeout")
-		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
+		$Sprite.modulate = Color(0,0,255) # Set modulate color to blue overlay
+#		get_node("Sprite").region_rect = Rect2(0, 240, 80, 80) # change to water-1 sprite
+#		yield(get_tree().create_timer(0.2), "timeout")
+#		get_node("Sprite").region_rect = Rect2(0, 320, 80, 80) # change to water-2 sprite
+#		yield(get_tree().create_timer(0.2), "timeout")
+#		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
 		wInstance.queue_free()
 		waterAnimate = false
 
@@ -71,8 +71,11 @@ func _physics_process(_delta: float) -> void:
 		is_jumping = false
 	jump_buffer -= 1
 
-	if is_on_floor() and waterAnimate == false and smashed == false and frozen == false:
-		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
+	var is_moving = Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
+
+	if is_on_floor() and waterAnimate == false and smashed == false and frozen == false and is_moving == 0:
+#		get_node("Sprite").region_rect = Rect2(0, 80, 80, 80) # change to normal sprite
+		$Sprite.play("idle")
 	_check_smashed() # Check if the user should be considered smashed
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction: = get_direction()
@@ -93,7 +96,8 @@ func get_direction() -> Vector2:
 	if !smashed && !frozen:
 		x_val = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		if (x_val > 0 or x_val < 0) and is_on_floor() == true:
-			get_node("Sprite").region_rect = Rect2(0, 480, 80, 80) # change to run sprite
+#			get_node("Sprite").region_rect = Rect2(0, 480, 80, 80) # change to run sprite
+			$Sprite.play("run")
 			if x_val > 0:
 				get_node("Sprite").set_flip_h(false)
 			if x_val < 0:
@@ -117,7 +121,8 @@ func calculate_move_velocity(
 		if direction.y == -1.0:
 			is_jumping = true
 			SFX.play("Jump")
-			get_node("Sprite").region_rect = Rect2(0, 400, 80, 80) # change to jump sprite
+#			get_node("Sprite").region_rect = Rect2(0, 400, 80, 80) # change to jump sprite
+			$Sprite.play("jump")
 			out.y = speed.y * direction.y
 		if is_jump_interrupted:
 			out.y = 0.0
