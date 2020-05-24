@@ -7,30 +7,31 @@
 [node name="EndlessLevel" type="Node2D"]
 script = ExtResource( 3 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 1080.8 ],
-"_edit_vertical_guides_": [ 1919.58 ]
+"_edit_horizontal_guides_": [ 720.179 ],
+"_edit_vertical_guides_": [ 1279.62 ]
 }
 
 [node name="Outside" parent="." instance=ExtResource( 5 )]
 position = Vector2( 510.792, -136.58 )
 
 [node name="HighscoreLabel" type="Label" parent="."]
-margin_left = 809.621
-margin_top = 15.4543
-margin_right = 1092.62
-margin_bottom = 141.454
+margin_left = 673.235
+margin_top = 28.8267
+margin_right = 956.235
+margin_bottom = 154.827
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Highscore:"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Highscore" type="Label" parent="."]
-margin_left = 1100.2
-margin_top = 15.6935
-margin_right = 1208.2
-margin_bottom = 141.693
+margin_left = 963.814
+margin_top = 29.0659
+margin_right = 1071.81
+margin_bottom = 155.066
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 __meta__ = {
@@ -38,22 +39,23 @@ __meta__ = {
 }
 
 [node name="CurrentLevelLabel" type="Label" parent="."]
-margin_left = 77.0219
-margin_top = 17.9719
-margin_right = 360.022
-margin_bottom = 143.972
+margin_left = 142.112
+margin_top = 31.3443
+margin_right = 425.113
+margin_bottom = 157.344
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level:"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CurrentLevel" type="Label" parent="."]
-margin_left = 367.596
-margin_top = 18.211
-margin_right = 475.596
-margin_bottom = 144.211
+margin_left = 432.686
+margin_top = 31.5834
+margin_right = 540.687
+margin_bottom = 157.583
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 __meta__ = {
