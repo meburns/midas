@@ -20,11 +20,6 @@ func _input(_ev):
 	if Input.is_action_pressed("ui_accept"):
 		start_game()
 
-
-func _on_StoryButton_pressed() -> void:
-	start_game()
-
-
 func start_game() -> void:
 	MusicPlayer.play()
 	TouchButtons.set_visible(true)
@@ -35,10 +30,24 @@ func start_game() -> void:
 	else:
 		get_tree().change_scene("res://src/transitions/Transition.tscn")
 
-func _on_EndlessButton_pressed() -> void:
+
+func _on_StoryButton_button_down() -> void:
+	$StoryButton/AnimatedSprite.play("press")
+
+func _on_StoryButton_button_up() -> void:
+	yield(get_tree().create_timer(0.1), "timeout")
+	start_game()
+
+func _on_SettingsButton_button_down() -> void:
+	$SettingsButton/AnimatedSprite.play("press")
+
+func _on_SettingsButton_button_up() -> void:
+	get_tree().change_scene("res://src/Settings.tscn")
+
+
+func _on_EndlessButton_button_down() -> void:
+	$EndlessButton/AnimatedSprite.play("press")
+
+func _on_EndlessButton_button_up() -> void:
 	MusicPlayer.play()
 	get_tree().change_scene("res://src/levels/EndlessLevel.tscn")
-
-
-func _on_SettingsButton_pressed() -> void:
-	get_tree().change_scene("res://src/Settings.tscn")

@@ -1,10 +1,49 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=13 format=2]
 
+[ext_resource path="res://assets/buttons/default_button.png" type="Texture" id=1]
 [ext_resource path="res://src/Menu.gd" type="Script" id=2]
 [ext_resource path="res://assets/menu.wav" type="AudioStream" id=3]
 [ext_resource path="res://src/MainCamera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/fonts/Baloo_Bhaina_2/main_menu.tres" type="DynamicFont" id=5]
 [ext_resource path="res://assets/fonts/Baloo_Bhaina_2/normal_font.tres" type="DynamicFont" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 400, 200 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 400, 200 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 400, 0, 400, 200 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 800, 0, 400, 200 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1200, 0, 400, 200 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": false,
+"name": "press",
+"speed": 24.0
+} ]
 
 [node name="Menu" type="Node2D"]
 position = Vector2( -346.79, -241.557 )
@@ -28,20 +67,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StoryButton" type="Button" parent="."]
-margin_left = 648.088
-margin_top = 520.107
-margin_right = 937.089
-margin_bottom = 608.107
+[node name="StoryButton" type="TextureButton" parent="."]
+margin_left = 614.37
+margin_top = 476.182
+margin_right = 1014.37
+margin_bottom = 676.182
+rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AnimatedSprite" type="AnimatedSprite" parent="StoryButton"]
+position = Vector2( 200, 100 )
+frames = SubResource( 6 )
+animation = "idle"
+
 [node name="Label" type="Label" parent="StoryButton"]
-margin_left = -0.446777
-margin_top = -11.7457
-margin_right = 288.553
-margin_bottom = 114.254
+margin_left = 14.55
+margin_top = 13.5419
+margin_right = 386.55
+margin_bottom = 193.542
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "STORY"
@@ -51,20 +96,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SettingsButton" type="Button" parent="."]
-modulate = Color( 0.92549, 0.905882, 1, 1 )
-margin_left = 1089.89
-margin_top = 510.274
-margin_right = 1372.89
-margin_bottom = 613.274
+[node name="SettingsButton" type="TextureButton" parent="."]
+margin_left = 1076.14
+margin_top = 476.304
+margin_right = 1476.14
+margin_bottom = 676.304
+rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AnimatedSprite" type="AnimatedSprite" parent="SettingsButton"]
+position = Vector2( 200, 100 )
+frames = SubResource( 6 )
+animation = "idle"
+
 [node name="Label" type="Label" parent="SettingsButton"]
-margin_right = 284.0
-margin_bottom = 85.0
+margin_left = 14.55
+margin_top = 13.5419
+margin_right = 386.55
+margin_bottom = 193.542
 custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SETTINGS"
 align = 1
 valign = 1
@@ -72,22 +125,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EndlessButton" type="Button" parent="."]
-margin_left = 885.25
-margin_top = 697.636
-margin_right = 1174.26
-margin_bottom = 785.636
+[node name="EndlessButton" type="TextureButton" parent="."]
+margin_left = 845.579
+margin_top = 709.352
+margin_right = 1245.58
+margin_bottom = 909.352
+rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AnimatedSprite" type="AnimatedSprite" parent="EndlessButton"]
+position = Vector2( 200, 100 )
+frames = SubResource( 6 )
+animation = "idle"
+
 [node name="Label" type="Label" parent="EndlessButton"]
-margin_top = -11.9593
-margin_right = 290.0
-margin_bottom = 114.041
+margin_left = 14.55
+margin_top = 13.5419
+margin_right = 386.55
+margin_bottom = 193.542
 custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "ENDLESS"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -106,6 +168,9 @@ color = Color( 0.945098, 0.894118, 0.113725, 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 346.79, 241.557 )
-[connection signal="pressed" from="StoryButton" to="." method="_on_StoryButton_pressed"]
-[connection signal="pressed" from="SettingsButton" to="." method="_on_SettingsButton_pressed"]
-[connection signal="pressed" from="EndlessButton" to="." method="_on_EndlessButton_pressed"]
+[connection signal="button_down" from="StoryButton" to="." method="_on_StoryButton_button_down"]
+[connection signal="button_up" from="StoryButton" to="." method="_on_StoryButton_button_up"]
+[connection signal="button_down" from="SettingsButton" to="." method="_on_SettingsButton_button_down"]
+[connection signal="button_up" from="SettingsButton" to="." method="_on_SettingsButton_button_up"]
+[connection signal="button_down" from="EndlessButton" to="." method="_on_EndlessButton_button_down"]
+[connection signal="button_up" from="EndlessButton" to="." method="_on_EndlessButton_button_up"]
