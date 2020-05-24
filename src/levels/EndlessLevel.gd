@@ -66,26 +66,26 @@ func _place_midas(arr: Array) -> Array:
 func _place_sadim(arr: Array) -> Array:
 	var y = floor(rand_range(2, 7))
 	var x = floor(rand_range(2, 14))
-	while (arr[y][x] != 0 && arr[y+1][x] != 0 && arr[y+2][x] != 0):
-		y = floor(rand_range(2, 7))
-		x = floor(rand_range(2, 14))
-	arr[y][x] = 3 #sadim
-	arr[y+1][x] = 1
-	sadim_x = x
-	sadim_y = y
-	return arr
+	if (arr[y][x] != 0 || arr[y+1][x] != 0 || arr[y+2][x] != 0):
+		return _place_sadim(arr)
+	else:
+		arr[y][x] = 3 #sadim
+		arr[y+1][x] = 1
+		sadim_x = x
+		sadim_y = y
+		return arr
 
 func _place_water(arr: Array) -> Array:
 	var y = floor(rand_range(2, 7))
 	var x = floor(rand_range(2, 14))
-	while (arr[y][x] != 0 && arr[y+1][x] != 0 && arr[y+2][x] != 0):
-		y = floor(rand_range(2, 7))
-		x = floor(rand_range(2, 14))
-	arr[y][x] = 4 #water
-	arr[y+1][x] = 1
-	water_x = x
-	water_y = y
-	return arr
+	if (arr[y][x] != 0 || arr[y+1][x] != 0 || arr[y+2][x] != 0):
+		return _place_water(arr)
+	else:
+		arr[y][x] = 4 #water
+		arr[y+1][x] = 1
+		water_x = x
+		water_y = y
+		return arr
 
 
 func _find_path(arr: Array) -> Array:
