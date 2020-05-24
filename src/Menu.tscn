@@ -29,10 +29,10 @@ __meta__ = {
 }
 
 [node name="StoryButton" type="Button" parent="."]
-margin_left = 418.79
-margin_top = 499.725
-margin_right = 707.791
-margin_bottom = 587.725
+margin_left = 648.088
+margin_top = 520.107
+margin_right = 937.089
+margin_bottom = 608.107
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -51,11 +51,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="SettingsButton" type="Button" parent="."]
+modulate = Color( 0.92549, 0.905882, 1, 1 )
+margin_left = 1089.89
+margin_top = 510.274
+margin_right = 1372.89
+margin_bottom = 613.274
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SettingsButton"]
+margin_right = 284.0
+margin_bottom = 85.0
+custom_fonts/font = ExtResource( 6 )
+text = "SETTINGS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="EndlessButton" type="Button" parent="."]
-margin_left = 808.817
-margin_top = 502.987
-margin_right = 1097.83
-margin_bottom = 590.987
+margin_left = 885.25
+margin_top = 697.636
+margin_right = 1174.26
+margin_bottom = 785.636
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -67,49 +88,6 @@ margin_bottom = 114.041
 custom_fonts/font = ExtResource( 6 )
 text = "ENDLESS"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SettingsButton" type="Button" parent="."]
-modulate = Color( 0.92549, 0.905882, 1, 1 )
-margin_left = 1192.82
-margin_top = 494.987
-margin_right = 1475.82
-margin_bottom = 597.987
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="SettingsButton"]
-margin_right = 284.0
-margin_bottom = 85.0
-custom_fonts/font = ExtResource( 6 )
-text = "Settings"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CreditsButton" type="Button" parent="."]
-modulate = Color( 0.92549, 0.905882, 1, 1 )
-margin_left = 816.817
-margin_top = 726.987
-margin_right = 1099.82
-margin_bottom = 829.991
-disabled = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="CreditsButton"]
-margin_right = 284.0
-margin_bottom = 85.0
-custom_fonts/font = ExtResource( 6 )
-text = "Credits"
-align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -129,6 +107,5 @@ color = Color( 0.945098, 0.894118, 0.113725, 1 )
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 346.79, 241.557 )
 [connection signal="pressed" from="StoryButton" to="." method="_on_StoryButton_pressed"]
-[connection signal="pressed" from="EndlessButton" to="." method="_on_EndlessButton_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_SettingsButton_pressed"]
-[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="EndlessButton" to="." method="_on_EndlessButton_pressed"]

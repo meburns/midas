@@ -8,12 +8,12 @@ func _ready() -> void:
 	get_node("MenuMusic").play()
 	get_node("MainTitle").set_bbcode("[wave freq=3]M I D A S[/wave]")
 	if Database.get_story_completed():
-		$CreditsButton.visible = true
-		$CreditsButton.disabled = false
+		$EndlessButton.visible = true
+		$EndlessButton.disabled = false
 		$MainTitle.add_color_override("font_color", Color( 229, 203, 33, 255 ))
 		$TitleSparkle.set_emitting(true)
 	else:
-		$CreditsButton.visible = false
+		$EndlessButton.visible = false
 
 
 func _input(_ev):
@@ -34,12 +34,6 @@ func start_game() -> void:
 		get_tree().change_scene("res://src/levels/LevelSelector.tscn")
 	else:
 		get_tree().change_scene("res://src/transitions/Transition.tscn")
-
-
-func _on_CreditsButton_pressed() -> void:
-	MusicPlayer.play()
-	get_tree().change_scene("res://src/transitions/Credits.tscn")
-
 
 func _on_EndlessButton_pressed() -> void:
 	MusicPlayer.play()
