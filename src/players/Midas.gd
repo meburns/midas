@@ -42,6 +42,7 @@ func _get_frozen() -> bool:
 
 func _set_frozen() -> void:
 	frozen = true
+	$Sprite.play("jump")
 
 
 func _set_smashable(val: bool) -> void:
@@ -63,27 +64,27 @@ func _check_smashed() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if is_on_floor():
-		jump_buffer = 10
-		is_jumping = false
-	jump_buffer -= 1
+	if !frozen:
+		if is_on_floor():
+			jump_buffer = 10
+			is_jumping = false
+		jump_buffer -= 1
 
-	var is_moving = Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
-
-	if is_on_floor() and waterAnimate == false and smashed == false and frozen == false and is_moving == 0:
-		$Sprite.play("idle")
-	_check_smashed() # Check if the user should be considered smashed
-	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
-	var direction: = get_direction()
-	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
-	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
-	# reload the current level on "refresh" key pressed
-	if Input.is_action_just_pressed("refresh"):
-		SFX.play("Redo")
-		get_tree().reload_current_scene()
-	# reload the current level on "refresh" key pressed
-	if Input.is_action_just_pressed("menu"):
-		get_tree().change_scene("res://src/Menu.tscn")
+		var is_moving = Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
+		if is_on_floor() and waterAnimate == false and smashed == false and frozen == false and is_moving == 0:
+			$Sprite.play("idle")
+		_check_smashed() # Check if the user should be considered smashed
+		var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
+		var direction: = get_direction()
+		_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
+		_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+		# reload the current level on "refresh" key pressed
+		if Input.is_action_just_pressed("refresh"):
+			SFX.play("Redo")
+			get_tree().reload_current_scene()
+		# reload the current level on "refresh" key pressed
+		if Input.is_action_just_pressed("menu"):
+			get_tree().change_scene("res://src/Menu.tscn")
 
 
 func get_direction() -> Vector2:
