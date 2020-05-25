@@ -10,7 +10,6 @@ export var gravity: = 3000.0
 var _velocity: = Vector2.ZERO
 export var stomp_impulse: = 1000.0
 export var waterTouched: = false
-var waterAnimate: = false
 export var smashable: = false
 export var smashed: = false
 export var frozen: = false
@@ -27,14 +26,14 @@ func _get_water_touched() -> bool:
 # If the user has touched the water block, they can't make blocks turn gold
 func _set_water_touched() -> void:
 	if waterTouched == false:
-		waterAnimate = true
 		waterTouched = true
 		var wInstance = waterEffect.instance()
 		wInstance.set_position(self.get_position())
+		wInstance.set_z_index(-100)
 		get_tree().get_root().add_child(wInstance)
 		$Sprite.modulate = Color(0,0,255) # Set modulate color to blue overlay
+		yield(get_tree().create_timer(0.5), "timeout")
 		wInstance.queue_free()
-		waterAnimate = false
 
 
 func _get_frozen() -> bool:
@@ -71,7 +70,7 @@ func _physics_process(_delta: float) -> void:
 		jump_buffer -= 1
 
 		var is_moving = Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
-		if is_on_floor() and waterAnimate == false and smashed == false and frozen == false and is_moving == 0:
+		if is_on_floor() and smashed == false and frozen == false and is_moving == 0:
 			$Sprite.play("idle")
 		_check_smashed() # Check if the user should be considered smashed
 		var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
