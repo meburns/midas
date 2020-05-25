@@ -148,7 +148,8 @@ animations = [ {
 position = Vector2( -0.0674496, 0.0999546 )
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 720.0 ]
+"_edit_horizontal_guides_": [ 720.359 ],
+"_edit_vertical_guides_": [ 1279.94 ]
 }
 
 [node name="Blocks" type="AnimatedSprite" parent="."]
