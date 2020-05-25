@@ -15,6 +15,7 @@ func _initialize_if_not_exist() -> void:
 			"story_mode_completed": false,
 			"endless_level": 0,
 			"endless_highscore": 0,
+			"quick_credits": 0,
 			"mobile_size": 0
 		}""").result
 		f.open(db, File.WRITE)
@@ -77,3 +78,11 @@ func get_mobile_size() -> int:
 
 func set_mobile_size(new_size: int) -> void:
 	set_data("mobile_size", new_size)
+
+
+func get_quick_credits() -> int:
+	var data = get_data()
+	return data["quick_credits"]
+
+func set_quick_credits(val: int) -> void:
+	set_data("quick_credits", val)
