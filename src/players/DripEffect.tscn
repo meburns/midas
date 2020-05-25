@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 25, 1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 3.0
+color = Color( 0.172549, 0.45098, 0.968627, 1 )
+
+[node name="Drip" type="Particles2D"]
+process_material = SubResource( 1 )

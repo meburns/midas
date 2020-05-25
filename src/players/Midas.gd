@@ -3,6 +3,7 @@ extends KinematicBody2D
 class_name Midas
 
 const waterEffect = preload("res://src/players/WaterEffect.tscn")
+const dripEffect = preload("res://src/players/DripEffect.tscn")
 const FLOOR_NORMAL: = Vector2.UP
 
 export var speed: = Vector2(300.0, 1000.0)
@@ -28,6 +29,12 @@ func _set_water_touched() -> void:
 	if waterTouched == false:
 		waterTouched = true
 		$Sprite.modulate = Color(0,0,255) # Set modulate color to blue overlay
+		# Set Water Drip Effect
+		var dInstance = dripEffect.instance()
+		dInstance.set_position(Vector2(0, -40))
+		dInstance.set_z_index(-10)
+		self.add_child(dInstance)
+		# Set Water Burst Effect
 		var wInstance = waterEffect.instance()
 		wInstance.set_position(Vector2(0, -50))
 		wInstance.set_z_index(-10)
@@ -35,6 +42,8 @@ func _set_water_touched() -> void:
 		wInstance.set_emitting(true)
 		yield(get_tree().create_timer(1.5), "timeout")
 		wInstance.queue_free()
+		yield(get_tree().create_timer(3), "timeout")
+		dInstance.queue_free()
 
 
 func _get_frozen() -> bool:
