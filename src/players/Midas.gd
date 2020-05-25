@@ -27,12 +27,13 @@ func _get_water_touched() -> bool:
 func _set_water_touched() -> void:
 	if waterTouched == false:
 		waterTouched = true
-		var wInstance = waterEffect.instance()
-		wInstance.set_position(self.get_position())
-		wInstance.set_z_index(-100)
-		get_tree().get_root().add_child(wInstance)
 		$Sprite.modulate = Color(0,0,255) # Set modulate color to blue overlay
-		yield(get_tree().create_timer(0.5), "timeout")
+		var wInstance = waterEffect.instance()
+		wInstance.set_position(Vector2(0, -50))
+		wInstance.set_z_index(-10)
+		self.add_child(wInstance)
+		wInstance.set_emitting(true)
+		yield(get_tree().create_timer(1.5), "timeout")
 		wInstance.queue_free()
 
 
