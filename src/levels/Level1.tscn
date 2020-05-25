@@ -78,4 +78,4 @@ position = Vector2( 963.722, 620.099 )
 position = Vector2( 963.722, 542.099 )
 
 [node name="BlinkRight" parent="." instance=ExtResource( 3 )]
-position = Vector2( 649.021, 308.099 )
+position = Vector2( 325.021, 308.099 )

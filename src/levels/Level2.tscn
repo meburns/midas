@@ -81,4 +81,4 @@ position = Vector2( 963.722, 528.251 )
 position = Vector2( 963.722, 450.251 )
 
 [node name="BlinkUp" parent="." instance=ExtResource( 3 )]
-position = Vector2( 526.718, 204.347 )
+position = Vector2( 553.174, 200.772 )
