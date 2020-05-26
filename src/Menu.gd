@@ -34,6 +34,8 @@ func start_game() -> void:
 
 func _on_StoryButton_button_down() -> void:
 	$StoryButton/AnimatedSprite.play("press")
+	var pos = $StoryButton/Label.get_position() 
+	$StoryButton/Label.set_position(Vector2(pos.x, pos.y + 5))
 
 func _on_StoryButton_button_up() -> void:
 	yield(get_tree().create_timer(0.1), "timeout")
@@ -41,6 +43,8 @@ func _on_StoryButton_button_up() -> void:
 
 func _on_SettingsButton_button_down() -> void:
 	$SettingsButton/AnimatedSprite.play("press")
+	var pos = $SettingsButton/Label.get_position() 
+	$SettingsButton/Label.set_position(Vector2(pos.x, pos.y + 5))
 
 func _on_SettingsButton_button_up() -> void:
 	get_tree().change_scene("res://src/Settings.tscn")
@@ -48,6 +52,8 @@ func _on_SettingsButton_button_up() -> void:
 
 func _on_EndlessButton_button_down() -> void:
 	$EndlessButton/AnimatedSprite.play("press")
+	var pos = $EndlessButton/Label.get_position() 
+	$EndlessButton/Label.set_position(Vector2(pos.x, pos.y + 5))
 
 func _on_EndlessButton_button_up() -> void:
 	MusicPlayer.play()

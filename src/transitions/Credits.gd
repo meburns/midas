@@ -24,6 +24,8 @@ func _ready() -> void:
 
 func _on_BackButton_button_down() -> void:
 	$BackButton/AnimatedSprite.play("press")
+	var pos = $BackButton/Label.get_position() 
+	$BackButton/Label.set_position(Vector2(pos.x, pos.y + 5))
 
 func _on_BackButton_button_up() -> void:
 	get_tree().change_scene("res://src/Menu.tscn")

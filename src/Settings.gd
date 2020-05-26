@@ -21,6 +21,8 @@ func _on_mobileSize_pressed() -> void:
 
 func _on_BackButton_button_down() -> void:
 	$BackButton/AnimatedSprite.play("press")
+	var pos = $BackButton/Label.get_position() 
+	$BackButton/Label.set_position(Vector2(pos.x, pos.y + 5))
 
 func _on_BackButton_button_up() -> void:
 	get_tree().change_scene("res://src/Menu.tscn")
@@ -28,6 +30,8 @@ func _on_BackButton_button_up() -> void:
 
 func _on_CreditsButton_button_down() -> void:
 	$CreditsButton/AnimatedSprite.play("press")
+	var pos = $CreditsButton/Label.get_position() 
+	$CreditsButton/Label.set_position(Vector2(pos.x, pos.y + 5))
 
 
 func _on_CreditsButton_button_up() -> void:
