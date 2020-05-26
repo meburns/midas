@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/fonts/Baloo_Bhaina_2/normal_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/levels/EndlessLevel.gd" type="Script" id=3]
 [ext_resource path="res://src/Outside.tscn" type="PackedScene" id=5]
+
 
 [node name="EndlessLevel" type="Node2D"]
 script = ExtResource( 3 )

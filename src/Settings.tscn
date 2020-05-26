@@ -1,9 +1,10 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/fonts/Baloo_Bhaina_2/main_menu.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/fonts/main_menu.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/Settings.gd" type="Script" id=2]
-[ext_resource path="res://assets/fonts/Baloo_Bhaina_2/normal_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/buttons/new_default.png" type="Texture" id=4]
+
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4

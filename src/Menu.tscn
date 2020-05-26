@@ -4,8 +4,8 @@
 [ext_resource path="res://src/Menu.gd" type="Script" id=2]
 [ext_resource path="res://assets/menu.wav" type="AudioStream" id=3]
 [ext_resource path="res://src/MainCamera.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/fonts/Baloo_Bhaina_2/main_menu.tres" type="DynamicFont" id=5]
-[ext_resource path="res://assets/fonts/Baloo_Bhaina_2/normal_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://src/fonts/main_menu.tres" type="DynamicFont" id=5]
+[ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=6]
 [ext_resource path="res://assets/blocks/menu_blocks.png" type="Texture" id=7]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -106,29 +106,29 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 200, 100 )
 
-[sub_resource type="AtlasTexture" id=29]
+[sub_resource type="AtlasTexture" id=20]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 200, 0, 200, 100 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=21]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 200, 100 )
 
-[sub_resource type="SpriteFrames" id=24]
+[sub_resource type="SpriteFrames" id=22]
 animations = [ {
-"frames": [ SubResource( 28 ), SubResource( 29 ) ],
+"frames": [ SubResource( 19 ), SubResource( 20 ) ],
 "loop": false,
 "name": "press",
 "speed": 24.0
 }, {
-"frames": [ SubResource( 27 ) ],
+"frames": [ SubResource( 21 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
@@ -175,7 +175,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StoryButton"]
 position = Vector2( 200, 100 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 24 )
+frames = SubResource( 22 )
 animation = "idle"
 
 [node name="Label" type="Label" parent="StoryButton"]
@@ -205,7 +205,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="SettingsButton"]
 position = Vector2( 200, 100 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 24 )
+frames = SubResource( 22 )
 animation = "idle"
 
 [node name="Label" type="Label" parent="SettingsButton"]
@@ -235,7 +235,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="EndlessButton"]
 position = Vector2( 200, 100 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 24 )
+frames = SubResource( 22 )
 animation = "idle"
 
 [node name="Label" type="Label" parent="EndlessButton"]
