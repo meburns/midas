@@ -1,8 +1,37 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/Baloo_Bhaina_2/main_menu.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/Settings.gd" type="Script" id=2]
 [ext_resource path="res://assets/fonts/Baloo_Bhaina_2/normal_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/buttons/new_default.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 200, 100 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": false,
+"name": "press",
+"speed": 24.0
+}, {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
 
 [node name="Settings" type="Node2D"]
 script = ExtResource( 2 )
@@ -12,9 +41,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 247.0
-margin_right = 1678.0
-margin_bottom = 224.0
+margin_left = 1.0
+margin_top = 3.0
+margin_right = 1277.0
+margin_bottom = 227.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Settings"
@@ -24,50 +54,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackButton" type="Button" parent="."]
-margin_right = 227.0
-margin_bottom = 211.0
+[node name="CreditsButton" type="TextureButton" parent="."]
+margin_left = 450.0
+margin_top = 160.0
+margin_right = 850.0
+margin_bottom = 360.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="BackButton"]
-margin_right = 235.0
-margin_bottom = 211.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "<="
-align = 1
-valign = 1
-
-[node name="mobileSize" type="CheckButton" parent="."]
-margin_left = 612.48
-margin_top = 181.401
-margin_right = 688.48
-margin_bottom = 221.401
-rect_scale = Vector2( 5, 5 )
-toggle_mode = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CreditsButton" type="Button" parent="."]
-margin_left = 605.347
-margin_top = 428.023
-margin_right = 1005.35
-margin_bottom = 628.023
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CreditsButton"]
+position = Vector2( 200, 100 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 4 )
+animation = "press"
 
 [node name="Label" type="Label" parent="CreditsButton"]
-margin_left = 1.01904
-margin_right = 401.019
+margin_right = 400.0
 margin_bottom = 200.0
-custom_fonts/font = ExtResource( 1 )
-text = "CREDITS"
+custom_fonts/font = ExtResource( 3 )
+text = "Credits"
 align = 1
 valign = 1
-[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
-[connection signal="pressed" from="mobileSize" to="." method="_on_mobileSize_pressed"]
-[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 450.0
+margin_top = 340.0
+margin_right = 850.0
+margin_bottom = 540.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="BackButton"]
+position = Vector2( 200, 100 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 4 )
+animation = "press"
+
+[node name="Label" type="Label" parent="BackButton"]
+margin_right = 400.0
+margin_bottom = 200.0
+custom_fonts/font = ExtResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="CreditsButton" to="." method="_on_CreditsButton_button_down"]
+[connection signal="button_up" from="CreditsButton" to="." method="_on_CreditsButton_button_up"]
+[connection signal="button_down" from="BackButton" to="." method="_on_BackButton_button_down"]
+[connection signal="button_up" from="BackButton" to="." method="_on_BackButton_button_up"]
