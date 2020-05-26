@@ -40,7 +40,7 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 595.5, 46.5 )
+position = Vector2( 590.5, 46.5 )
 scale = Vector2( 0.93, 0.93 )
 frames = SubResource( 4 )
 animation = "press"
