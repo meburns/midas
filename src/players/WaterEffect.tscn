@@ -9,6 +9,6 @@ rotation = 3.12983
 emitting = false
 amount = 100
 one_shot = true
-explosiveness = 0.55
+explosiveness = 0.8
 randomness = 1.0
 process_material = ExtResource( 1 )
