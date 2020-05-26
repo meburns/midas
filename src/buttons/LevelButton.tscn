@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/buttons/level_button.png" type="Texture" id=1]
+[ext_resource path="res://src/fonts/level_select_font.tres" type="DynamicFont" id=2]
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
@@ -48,8 +49,9 @@ animation = "press"
 margin_right = 1180.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 1180, 80 )
+custom_fonts/font = ExtResource( 2 )
 align = 1
-valign = 1
+valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
