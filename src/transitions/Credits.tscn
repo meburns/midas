@@ -1,46 +1,36 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/Baloo_Bhaina_2/main_menu.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/transitions/Credits.gd" type="Script" id=2]
 [ext_resource path="res://assets/fonts/Baloo_Bhaina_2/normal_font.tres" type="DynamicFont" id=3]
-[ext_resource path="res://assets/buttons/default_button.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttons/new_default.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 400, 200 )
+region = Rect2( 0, 0, 200, 100 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 400, 200 )
+region = Rect2( 200, 0, 200, 100 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 400, 0, 400, 200 )
+region = Rect2( 0, 0, 200, 100 )
 
-[sub_resource type="AtlasTexture" id=4]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 800, 0, 400, 200 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 1200, 0, 400, 200 )
-
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 1 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": false,
 "name": "press",
 "speed": 24.0
+}, {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
 } ]
 
 [node name="Credits" type="Node2D"]
@@ -51,11 +41,10 @@ __meta__ = {
 }
 
 [node name="Label1" type="Label" parent="."]
-visible = false
 margin_left = 10.2154
-margin_top = 370.718
-margin_right = 524.215
-margin_bottom = 625.718
+margin_top = 265.65
+margin_right = 547.215
+margin_bottom = 520.65
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Created by meburns
@@ -65,11 +54,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-visible = false
 margin_left = 743.584
-margin_top = 367.612
+margin_top = 262.544
 margin_right = 1266.58
-margin_bottom = 622.612
+margin_bottom = 517.544
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Heavily Inspired by
@@ -79,11 +67,10 @@ __meta__ = {
 }
 
 [node name="Label3" type="RichTextLabel" parent="."]
-visible = false
-margin_left = 351.0
-margin_top = 102.0
-margin_right = 874.0
-margin_bottom = 308.0
+margin_left = 352.91
+margin_top = 34.2731
+margin_right = 875.91
+margin_bottom = 240.273
 custom_fonts/normal_font = ExtResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -94,9 +81,9 @@ __meta__ = {
 }
 
 [node name="BackButton" type="TextureButton" parent="."]
-margin_left = 443.385
+margin_left = 454.071
 margin_top = 527.651
-margin_right = 822.385
+margin_right = 833.071
 margin_bottom = 704.651
 __meta__ = {
 "_edit_use_anchors_": false
@@ -104,7 +91,8 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="BackButton"]
 position = Vector2( 191.755, 83.3403 )
-frames = SubResource( 6 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 4 )
 animation = "idle"
 
 [node name="Label" type="Label" parent="BackButton"]
@@ -113,7 +101,7 @@ margin_top = -4.65973
 margin_right = 376.755
 margin_bottom = 175.34
 custom_fonts/font = ExtResource( 3 )
-text = "Main Menu"
+text = "Back"
 align = 1
 valign = 1
 __meta__ = {
