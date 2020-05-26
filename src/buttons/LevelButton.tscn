@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/buttons/level_button.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 100, 1280, 100 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 1280, 100 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
+"loop": false,
+"name": "press",
+"speed": 24.0
+}, {
+"frames": [ SubResource( 7 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[node name="LevelButton" type="TextureButton"]
+margin_right = 1180.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 1180, 80 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 595.5, 46.5 )
+scale = Vector2( 0.93, 0.93 )
+frames = SubResource( 4 )
+animation = "press"
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1180.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 1180, 80 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,6 +1,6 @@
 extends Node2D
 
-var buttonFont = preload("res://assets/fonts/Baloo_Bhaina_2/normal_font.tres")
+var levelButton = preload("res://src/buttons/LevelButton.tscn")
 
 func _ready() -> void:
 	TouchButtons.set_visible(false)
@@ -12,21 +12,20 @@ func _create_buttons() -> void:
 	var levels = Globals.transitionText
 	for i in range(levels.size()):
 		var lvl = levels[i]
-		var button = Button.new()
-		var label = Label.new()
-		# Create label
-		label.set_text(lvl)
-		label.set_align(1)
-		label.set_valign(1)
-		label.add_font_override("font", buttonFont)
-		label.get_font("font").set_size(40)
-		label.set_custom_minimum_size(Vector2(1180, 100))
-		# Create button
-		button.add_child(label)
-		button.connect("pressed", self, "_set_level", [i])
-		button.set_custom_minimum_size(Vector2(0, 100))
+#		# Load LevelButton Instance
+		var button = levelButton.instance()
+		# Map button to up/down functions
+		button.connect("button_down", self, "_button_down", [button])
+		button.connect("button_up", self, "_set_level", [i])
+		# Set button text
+		button.get_node("Label").set_text(lvl)
 		# Add button with label to scrollContainer
 		$ScrollContainer/VBoxContainer.add_child(button)
+
+func _button_down(button: TextureButton) -> void:
+	button.get_node("AnimatedSprite").play("press")
+	var pos = button.get_node("Label").get_position() 
+	button.get_node("Label").set_position(Vector2(pos.x, pos.y + 5))
 
 func _set_level(level):
 	Database.set_level(level)
