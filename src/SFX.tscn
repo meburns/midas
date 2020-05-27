@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/redo.wav" type="AudioStream" id=1]
 [ext_resource path="res://assets/squash.wav" type="AudioStream" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/gold.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/save.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/jump.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/splash.wav" type="AudioStream" id=8]
 
 [node name="SFX" type="Node"]
 script = ExtResource( 4 )
@@ -30,3 +31,6 @@ stream = ExtResource( 5 )
 
 [node name="Save" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+
+[node name="Splash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )

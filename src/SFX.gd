@@ -1,4 +1,5 @@
 extends Node
 
 func play(val: String) -> void:
-	get_node(val).play()
+	if Database.get_sfx_mute() == 0:
+		get_node(val).play()

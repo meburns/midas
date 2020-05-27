@@ -27,6 +27,7 @@ func _get_water_touched() -> bool:
 # If the user has touched the water block, they can't make blocks turn gold
 func _set_water_touched() -> void:
 	if waterTouched == false:
+		SFX.play("Splash")
 		waterTouched = true
 		$Sprite.modulate = Color(0,0,255) # Set modulate color to blue overlay
 		# Set Water Drip Effect
