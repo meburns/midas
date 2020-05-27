@@ -7,13 +7,21 @@ var _velocity: = Vector2.ZERO
 var speed: = Vector2(300.0, 500.0)
 var gravity: = 300.0
 
-var touched: = false
+export var touched: = false
 var ORG_X: = 0
 
 func _ready() -> void:
-	set_physics_process(false)
+	if touched:
+		_goldify()
+	else:
+		set_physics_process(false)
 	ORG_X = position.x
 
+
+func _goldify() -> void:
+	set_physics_process(true)
+	_touch()
+	get_node("block-sprite").region_rect = Rect2(160, 0, 80, 80)
 
 func _touch() -> void:
 	yield(get_tree().create_timer(0.4), "timeout")
@@ -23,9 +31,7 @@ func _touch() -> void:
 func _on_TouchDetector_body_entered(body: PhysicsBody2D) -> void:
 	if body.get_name() == "Midas":
 		if body._get_water_touched() == false and touched == false:
-			set_physics_process(true)
-			_touch()
-			get_node("block-sprite").region_rect = Rect2(160, 0, 80, 80)
+			_goldify()
 
 
 func _on_SmashDetector_body_entered(body: PhysicsBody2D) -> void:
