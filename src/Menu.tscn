@@ -1,8 +1,7 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/buttons/new_default.png" type="Texture" id=1]
 [ext_resource path="res://src/Menu.gd" type="Script" id=2]
-[ext_resource path="res://assets/menu.wav" type="AudioStream" id=3]
 [ext_resource path="res://src/MainCamera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/fonts/main_menu.tres" type="DynamicFont" id=5]
 [ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=6]
@@ -251,9 +250,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
 
 [node name="TitleSparkle" type="CPUParticles2D" parent="."]
 position = Vector2( 684.544, 145.231 )

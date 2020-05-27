@@ -4,8 +4,7 @@ extends Node2D
 func _ready() -> void:
 	Database.set_endless_level(0)
 	TouchButtons.set_visible(false)
-	MusicPlayer.stop()
-	get_node("MenuMusic").play()
+	Music.play("Menu")
 	get_node("MainTitle").set_bbcode("[wave freq=3]M   I   D  A   S[/wave]")
 	if Database.get_story_completed():
 		$EndlessButton.visible = true
@@ -22,7 +21,7 @@ func _input(_ev):
 		start_game()
 
 func start_game() -> void:
-	MusicPlayer.play()
+	Music.play("Main")
 	TouchButtons.set_visible(true)
 	if Database.get_level() > 0:
 		Database.set_level(Database.get_level() - 1)
@@ -56,5 +55,5 @@ func _on_EndlessButton_button_down() -> void:
 	$EndlessButton/Label.set_position(Vector2(pos.x, pos.y + 5))
 
 func _on_EndlessButton_button_up() -> void:
-	MusicPlayer.play()
+	Music.play("Main")
 	get_tree().change_scene("res://src/levels/EndlessLevel.tscn")

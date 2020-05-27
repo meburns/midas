@@ -25,12 +25,12 @@ run/main_scene="res://src/Menu.tscn"
 
 [autoload]
 
-MusicPlayer="*res://src/MusicPlayer.tscn"
-SFX="*res://src/SFX.tscn"
+SFX="*res://src/audio/SFX.tscn"
 Globals="*res://src/Globals.gd"
 TouchButtons="*res://src/TouchButtons.tscn"
 Background="*res://src/Background.tscn"
 Database="*res://src/Database.gd"
+Music="*res://src/audio/Music.tscn"
 
 [debug]
 

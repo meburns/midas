@@ -35,7 +35,7 @@ func _on_CreditsButton_button_down() -> void:
 
 
 func _on_CreditsButton_button_up() -> void:
-	MusicPlayer.play()
+	Music.play("Main")
 	get_tree().change_scene("res://src/transitions/Credits.tscn")
 
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/menu.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/background.wav" type="AudioStream" id=2]
+[ext_resource path="res://src/audio/Music.gd" type="Script" id=3]
+
+[node name="Music" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="Main" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
