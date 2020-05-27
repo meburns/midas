@@ -9,6 +9,7 @@ func _ready() -> void:
 		$EndlessButton.visible = true
 		$EndlessButton.disabled = false
 		$TitleSparkle.set_emitting(true)
+		$Title.play("play")
 	else:
 		$EndlessButton.visible = false
 

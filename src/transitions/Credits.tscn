@@ -41,10 +41,10 @@ __meta__ = {
 }
 
 [node name="Label1" type="Label" parent="."]
-margin_left = 10.2154
-margin_top = 82.2588
-margin_right = 564.215
-margin_bottom = 343.259
+margin_left = 9.2602
+margin_top = 109.959
+margin_right = 621.26
+margin_bottom = 370.959
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Created by meburns
@@ -54,10 +54,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 10.9742
-margin_top = 312.212
-margin_right = 550.974
-margin_bottom = 573.212
+margin_left = 10.019
+margin_top = 339.912
+margin_right = 656.019
+margin_bottom = 600.912
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Heavily Inspired by
@@ -67,10 +67,10 @@ __meta__ = {
 }
 
 [node name="Label4" type="Label" parent="."]
-margin_left = 721.0
-margin_top = 105.0
-margin_right = 1261.0
-margin_bottom = 521.0
+margin_left = 720.045
+margin_top = 132.7
+margin_right = 1842.04
+margin_bottom = 548.7
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Dedicated to my Dad
@@ -82,10 +82,10 @@ __meta__ = {
 }
 
 [node name="Label3" type="RichTextLabel" parent="."]
-margin_left = 341.448
-margin_top = -33.5435
-margin_right = 864.448
-margin_bottom = 172.456
+margin_left = 340.493
+margin_top = -5.84379
+margin_right = 863.493
+margin_bottom = 200.156
 custom_fonts/normal_font = ExtResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
