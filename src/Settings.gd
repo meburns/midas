@@ -16,7 +16,6 @@ func _ready() -> void:
 func _on_mobileSize_pressed() -> void:
 	var old_mobile_size = Database.get_mobile_size()
 	Database.set_mobile_size(!old_mobile_size)
-#	set_button()
 
 
 func _on_BackButton_button_down() -> void:
