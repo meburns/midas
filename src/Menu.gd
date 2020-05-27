@@ -5,13 +5,10 @@ func _ready() -> void:
 	Database.set_endless_level(0)
 	TouchButtons.set_visible(false)
 	Music.play("Menu")
-	get_node("MainTitle").set_bbcode("[wave freq=3]M   I   D  A   S[/wave]")
 	if Database.get_story_completed():
 		$EndlessButton.visible = true
 		$EndlessButton.disabled = false
-		$MainTitle.add_color_override("font_color", Color( 229, 203, 33, 255 ))
 		$TitleSparkle.set_emitting(true)
-		$Blocks.play("marquee")
 	else:
 		$EndlessButton.visible = false
 
