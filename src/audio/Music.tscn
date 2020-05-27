@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/menu.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/audio/rand_song_1.wav" type="AudioStream" id=1]
 [ext_resource path="res://assets/background.wav" type="AudioStream" id=2]
 [ext_resource path="res://src/audio/Music.gd" type="Script" id=3]
 
