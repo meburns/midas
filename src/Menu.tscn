@@ -162,10 +162,10 @@ __meta__ = {
 }
 
 [node name="StoryButton" type="TextureButton" parent="."]
-margin_left = 267.874
-margin_top = 234.353
-margin_right = 667.874
-margin_bottom = 434.353
+margin_left = 501.222
+margin_top = 233.023
+margin_right = 901.223
+margin_bottom = 433.023
 rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -192,10 +192,10 @@ __meta__ = {
 }
 
 [node name="SettingsButton" type="TextureButton" parent="."]
-margin_left = 729.64
-margin_top = 234.476
-margin_right = 1129.64
-margin_bottom = 434.476
+margin_left = 500.945
+margin_top = 402.645
+margin_right = 900.945
+margin_bottom = 602.645
 rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -222,10 +222,10 @@ __meta__ = {
 }
 
 [node name="EndlessButton" type="TextureButton" parent="."]
-margin_left = 499.084
-margin_top = 467.523
-margin_right = 899.084
-margin_bottom = 667.523
+margin_left = 502.408
+margin_top = 564.585
+margin_right = 902.408
+margin_bottom = 764.585
 rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
