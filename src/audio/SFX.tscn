@@ -14,14 +14,12 @@ script = ExtResource( 4 )
 
 [node name="Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -5.0
 
 [node name="Squash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 
 [node name="Redo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-volume_db = -20.0
 
 [node name="Transition" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
