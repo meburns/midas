@@ -79,10 +79,10 @@ __meta__ = {
 }
 
 [node name="CreditsButton" type="TextureButton" parent="."]
-margin_left = 450.0
-margin_top = 353.526
-margin_right = 850.0
-margin_bottom = 553.526
+margin_left = 447.529
+margin_top = 511.642
+margin_right = 847.529
+margin_bottom = 711.642
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -105,10 +105,10 @@ __meta__ = {
 }
 
 [node name="BackButton" type="TextureButton" parent="."]
-margin_left = 450.0
-margin_top = 533.526
-margin_right = 850.0
-margin_bottom = 733.526
+margin_left = 1.18323
+margin_top = 5.6521
+margin_right = 401.183
+margin_bottom = 205.652
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,10 +131,10 @@ __meta__ = {
 }
 
 [node name="MusicToggle" type="TextureButton" parent="."]
-margin_left = 439.758
-margin_top = 185.291
-margin_right = 839.758
-margin_bottom = 285.291
+margin_left = 513.875
+margin_top = 259.408
+margin_right = 913.875
+margin_bottom = 359.408
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -157,8 +157,37 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SFXToggle" type="TextureButton" parent="."]
+margin_left = 513.875
+margin_top = 409.288
+margin_right = 913.875
+margin_bottom = 509.288
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="SFXToggle"]
+position = Vector2( 200, 50 )
+frames = SubResource( 7 )
+animation = "off"
+
+[node name="Label" type="Label" parent="SFXToggle"]
+margin_left = -269.29
+margin_top = -36.2347
+margin_right = -11.2901
+margin_bottom = 150.765
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SFX"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_down" from="CreditsButton" to="." method="_on_CreditsButton_button_down"]
 [connection signal="button_up" from="CreditsButton" to="." method="_on_CreditsButton_button_up"]
 [connection signal="button_down" from="BackButton" to="." method="_on_BackButton_button_down"]
 [connection signal="button_up" from="BackButton" to="." method="_on_BackButton_button_up"]
 [connection signal="pressed" from="MusicToggle" to="." method="_on_MusicToggle_pressed"]
+[connection signal="pressed" from="SFXToggle" to="." method="_on_SFXToggle_pressed"]

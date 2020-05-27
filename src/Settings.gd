@@ -8,6 +8,10 @@ func _ready() -> void:
 	else:
 		$MusicToggle/AnimatedSprite.play("off")
 
+	if Database.get_sfx_mute() == 0:
+		$SFXToggle/AnimatedSprite.play("on")
+	else:
+		$SFXToggle/AnimatedSprite.play("off")
 
 func _on_mobileSize_pressed() -> void:
 	var old_mobile_size = Database.get_mobile_size()
@@ -42,3 +46,12 @@ func _on_MusicToggle_pressed() -> void:
 	else:
 		$MusicToggle/AnimatedSprite.play("on")
 		Database.set_music_mute(0)
+
+
+func _on_SFXToggle_pressed() -> void:
+	if Database.get_sfx_mute() == 0:
+		$SFXToggle/AnimatedSprite.play("off")
+		Database.set_sfx_mute(1)
+	else:
+		$SFXToggle/AnimatedSprite.play("on")
+		Database.set_sfx_mute(0)
