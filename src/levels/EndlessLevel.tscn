@@ -2,7 +2,8 @@
 
 [ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/levels/EndlessLevel.gd" type="Script" id=3]
-[ext_resource path="res://src/Outside.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/overlays/Outside.tscn" type="PackedScene" id=5]
+
 
 
 [node name="EndlessLevel" type="Node2D"]

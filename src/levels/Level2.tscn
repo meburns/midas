@@ -4,8 +4,9 @@
 [ext_resource path="res://src/players/Sadim.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/overlays/BlinkUp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/blocks/block.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Outside.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/overlays/Outside.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/players/Midas.tscn" type="PackedScene" id=6]
+
 
 [node name="Level2" type="Node2D"]
 position = Vector2( -1.02133, 3.90103 )

@@ -27,7 +27,7 @@ run/main_scene="res://src/Menu.tscn"
 
 SFX="*res://src/audio/SFX.tscn"
 Globals="*res://src/Globals.gd"
-TouchButtons="*res://src/TouchButtons.tscn"
+TouchButtons="*res://src/overlays/TouchButtons.tscn"
 Background="*res://src/Background.tscn"
 Database="*res://src/Database.gd"
 Music="*res://src/audio/Music.tscn"

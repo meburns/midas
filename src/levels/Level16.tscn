@@ -4,7 +4,8 @@
 [ext_resource path="res://src/blocks/Water.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/players/Midas.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/players/Sadim.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Outside.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/overlays/Outside.tscn" type="PackedScene" id=5]
+
 
 [node name="Level16" type="Node2D"]
 __meta__ = {
