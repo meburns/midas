@@ -19,5 +19,6 @@ var transitionText: = [
 	"She is far above me...",
 	"Why am I cursed...",
 	"Technical challenge...",
-	"Heart Question Mark..."
+	"Heart Question Mark...",
+	"I have a great burden..."
 ]
