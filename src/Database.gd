@@ -16,7 +16,8 @@ func _initialize_if_not_exist() -> void:
 			"endless_level": 0,
 			"endless_highscore": 0,
 			"quick_credits": 0,
-			"mobile_size": 0
+			"mobile_size": 0,
+			"music_mute": 0
 		}""").result
 		f.open(db, File.WRITE)
 		f.store_string(JSON.print(init_data, "  ", true))
@@ -86,3 +87,11 @@ func get_quick_credits() -> int:
 
 func set_quick_credits(val: int) -> void:
 	set_data("quick_credits", val)
+
+
+func get_music_mute() -> int:
+	var data = get_data()
+	return data["music_mute"]
+
+func set_music_mute(val: int) -> void:
+	set_data("music_mute", val)

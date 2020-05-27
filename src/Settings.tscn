@@ -1,10 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/fonts/main_menu.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/Settings.gd" type="Script" id=2]
 [ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/buttons/new_default.png" type="Texture" id=4]
-
+[ext_resource path="res://assets/buttons/toggle_button.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -34,6 +34,29 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 400, 100 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 100, 400, 100 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 5 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+} ]
+
 [node name="Settings" type="Node2D"]
 script = ExtResource( 2 )
 __meta__ = {
@@ -57,9 +80,9 @@ __meta__ = {
 
 [node name="CreditsButton" type="TextureButton" parent="."]
 margin_left = 450.0
-margin_top = 160.0
+margin_top = 353.526
 margin_right = 850.0
-margin_bottom = 360.0
+margin_bottom = 553.526
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -83,9 +106,9 @@ __meta__ = {
 
 [node name="BackButton" type="TextureButton" parent="."]
 margin_left = 450.0
-margin_top = 340.0
+margin_top = 533.526
 margin_right = 850.0
-margin_bottom = 540.0
+margin_bottom = 733.526
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -106,7 +129,36 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MusicToggle" type="TextureButton" parent="."]
+margin_left = 439.758
+margin_top = 185.291
+margin_right = 839.758
+margin_bottom = 285.291
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="MusicToggle"]
+position = Vector2( 200, 50 )
+frames = SubResource( 7 )
+animation = "off"
+
+[node name="Label" type="Label" parent="MusicToggle"]
+margin_left = -269.29
+margin_top = -36.2347
+margin_right = -11.2901
+margin_bottom = 150.765
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MUSIC"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_down" from="CreditsButton" to="." method="_on_CreditsButton_button_down"]
 [connection signal="button_up" from="CreditsButton" to="." method="_on_CreditsButton_button_up"]
 [connection signal="button_down" from="BackButton" to="." method="_on_BackButton_button_down"]
 [connection signal="button_up" from="BackButton" to="." method="_on_BackButton_button_up"]
+[connection signal="pressed" from="MusicToggle" to="." method="_on_MusicToggle_pressed"]

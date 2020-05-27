@@ -3,14 +3,10 @@ extends Node2D
 
 func _ready() -> void:
 	TouchButtons.set_visible(false)
-#	set_button()
-#
-#func set_button() -> void:
-#	var mobile_size = Database.get_mobile_size()
-#	if mobile_size == 1:
-#		$mobileSize.pressed = true
-#	else:
-#		$mobileSize.pressed = false
+	if Database.get_music_mute() == 0:
+		$MusicToggle/AnimatedSprite.play("on")
+	else:
+		$MusicToggle/AnimatedSprite.play("off")
 
 
 func _on_mobileSize_pressed() -> void:
@@ -37,3 +33,12 @@ func _on_CreditsButton_button_down() -> void:
 func _on_CreditsButton_button_up() -> void:
 	MusicPlayer.play()
 	get_tree().change_scene("res://src/transitions/Credits.tscn")
+
+
+func _on_MusicToggle_pressed() -> void:
+	if Database.get_music_mute() == 0:
+		$MusicToggle/AnimatedSprite.play("off")
+		Database.set_music_mute(1)
+	else:
+		$MusicToggle/AnimatedSprite.play("on")
+		Database.set_music_mute(0)
