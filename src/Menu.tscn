@@ -84,7 +84,17 @@ __meta__ = {
 position = Vector2( 640, 125 )
 frames = SubResource( 28 )
 animation = "play"
+frame = 3
 playing = true
+
+[node name="TitleSparkle" type="CPUParticles2D" parent="."]
+position = Vector2( 654.892, 34.7246 )
+emitting = false
+amount = 120
+emission_shape = 2
+emission_rect_extents = Vector2( 250, 150 )
+scale_amount = 5.0
+color = Color( 0.945098, 0.894118, 0.113725, 1 )
 
 [node name="StoryButton" type="TextureButton" parent="."]
 margin_left = 500.0
@@ -175,15 +185,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="TitleSparkle" type="CPUParticles2D" parent="."]
-position = Vector2( 684.544, 145.231 )
-emitting = false
-amount = 120
-emission_shape = 2
-emission_rect_extents = Vector2( 250, 50 )
-scale_amount = 3.0
-color = Color( 0.945098, 0.894118, 0.113725, 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0.294769, -0.271729 )
