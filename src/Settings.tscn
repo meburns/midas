@@ -79,10 +79,10 @@ __meta__ = {
 }
 
 [node name="CreditsButton" type="TextureButton" parent="."]
-margin_left = 447.529
-margin_top = 511.642
-margin_right = 847.529
-margin_bottom = 711.642
+margin_left = 876.582
+margin_top = 516.583
+margin_right = 1276.58
+margin_bottom = 716.583
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -105,10 +105,10 @@ __meta__ = {
 }
 
 [node name="BackButton" type="TextureButton" parent="."]
-margin_left = 1.18323
-margin_top = 5.6521
-margin_right = 401.183
-margin_bottom = 205.652
+margin_left = 0.359711
+margin_top = 513.762
+margin_right = 400.36
+margin_bottom = 713.762
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -132,9 +132,9 @@ __meta__ = {
 
 [node name="MusicToggle" type="TextureButton" parent="."]
 margin_left = 513.875
-margin_top = 259.408
+margin_top = 238.82
 margin_right = 913.875
-margin_bottom = 359.408
+margin_bottom = 338.82
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -160,9 +160,9 @@ __meta__ = {
 
 [node name="SFXToggle" type="TextureButton" parent="."]
 margin_left = 513.875
-margin_top = 409.288
+margin_top = 388.7
 margin_right = 913.875
-margin_bottom = 509.288
+margin_bottom = 488.7
 __meta__ = {
 "_edit_use_anchors_": false
 }
