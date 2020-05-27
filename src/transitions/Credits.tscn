@@ -5,7 +5,6 @@
 [ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/buttons/new_default.png" type="Texture" id=4]
 
-
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 4 )
@@ -14,24 +13,24 @@ region = Rect2( 0, 0, 200, 100 )
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 200, 0, 200, 100 )
+region = Rect2( 0, 0, 200, 100 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 200, 100 )
+region = Rect2( 200, 0, 200, 100 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
-"loop": false,
-"name": "press",
-"speed": 24.0
-}, {
-"frames": [ SubResource( 3 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": false,
+"name": "press",
+"speed": 24.0
 } ]
 
 [node name="Credits" type="Node2D"]
@@ -43,9 +42,9 @@ __meta__ = {
 
 [node name="Label1" type="Label" parent="."]
 margin_left = 10.2154
-margin_top = 265.65
-margin_right = 547.215
-margin_bottom = 520.65
+margin_top = 82.2588
+margin_right = 564.215
+margin_bottom = 343.259
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Created by meburns
@@ -55,10 +54,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 743.584
-margin_top = 262.544
-margin_right = 1266.58
-margin_bottom = 517.544
+margin_left = 10.9742
+margin_top = 312.212
+margin_right = 550.974
+margin_bottom = 573.212
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Heavily Inspired by
@@ -67,11 +66,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label4" type="Label" parent="."]
+margin_left = 721.0
+margin_top = 105.0
+margin_right = 1261.0
+margin_bottom = 521.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Dedicated to my Dad
+who gave me a love for games
+and to my Mom
+who gave me a love for creativity"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label3" type="RichTextLabel" parent="."]
-margin_left = 352.91
-margin_top = 34.2731
-margin_right = 875.91
-margin_bottom = 240.273
+margin_left = 341.448
+margin_top = -33.5435
+margin_right = 864.448
+margin_bottom = 172.456
 custom_fonts/normal_font = ExtResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
