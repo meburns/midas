@@ -21,7 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Midas"
-run/main_scene="res://src/Menu.tscn"
+run/main_scene="res://src/transitions/Splash.tscn"
+boot_splash/image="res://assets/icons/midas_boot_screen.png"
 
 [autoload]
 
