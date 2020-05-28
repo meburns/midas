@@ -37,7 +37,7 @@ func _set_water_touched() -> void:
 		self.add_child(dInstance)
 		# Set Water Burst Effect
 		var wInstance = waterEffect.instance()
-		wInstance.set_position(Vector2(self.get_position().x ,self.get_position().y - 30))
+		wInstance.set_position(Vector2(self.get_position().x ,self.get_position().y))
 		wInstance.set_z_index(-10)
 		get_tree().get_root().add_child(wInstance)
 		wInstance.set_emitting(true)
