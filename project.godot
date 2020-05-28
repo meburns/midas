@@ -26,11 +26,11 @@ boot_splash/image="res://assets/icons/midas_boot_screen.png"
 
 [autoload]
 
-SFX="*res://src/audio/SFX.tscn"
 Globals="*res://src/Globals.gd"
+Database="*res://src/Database.gd"
+SFX="*res://src/audio/SFX.tscn"
 TouchButtons="*res://src/overlays/TouchButtons.tscn"
 Background="*res://src/Background.tscn"
-Database="*res://src/Database.gd"
 Music="*res://src/audio/Music.tscn"
 
 [debug]

@@ -8,9 +8,7 @@ func _ready() -> void:
 
 func _initialize_if_not_exist() -> void:
 	var file2Check = File.new()
-	if !file2Check.file_exists(db):
-		var f = File.new()
-		var init_data = JSON.parse("""{
+	var default_json = JSON.parse("""{
 			"current_level": 0,
 			"story_mode_completed": false,
 			"endless_level": 0,
@@ -20,9 +18,24 @@ func _initialize_if_not_exist() -> void:
 			"music_mute": 0,
 			"sfx_mute": 0
 		}""").result
+	if !file2Check.file_exists(db):
+		var f = File.new()
+		var init_data = default_json
 		f.open(db, File.WRITE)
 		f.store_string(JSON.print(init_data, "  ", true))
 		f.close()
+	else:
+		var f = File.new()
+		f.open(db, File.READ)
+		var current_db = JSON.parse(f.get_as_text()).result
+		f.close()
+		for key in current_db:
+			default_json[key] = current_db[key]
+		var merged_db = File.new()
+		var init_data = default_json
+		merged_db.open(db, File.WRITE)
+		merged_db.store_string(JSON.print(init_data, "  ", true))
+		merged_db.close()
 
 
 func get_data() -> Array:
