@@ -14,24 +14,24 @@ region = Rect2( 0, 0, 200, 100 )
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 200, 0, 200, 100 )
+region = Rect2( 0, 0, 200, 100 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 200, 100 )
+region = Rect2( 200, 0, 200, 100 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
-"loop": false,
-"name": "press",
-"speed": 24.0
-}, {
-"frames": [ SubResource( 3 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": false,
+"name": "press",
+"speed": 24.0
 } ]
 
 [sub_resource type="AtlasTexture" id=5]
@@ -94,8 +94,9 @@ frames = SubResource( 4 )
 animation = "press"
 
 [node name="Label" type="Label" parent="CreditsButton"]
+margin_top = -5.0
 margin_right = 400.0
-margin_bottom = 200.0
+margin_bottom = 195.0
 custom_fonts/font = ExtResource( 3 )
 text = "Credits"
 align = 1
@@ -120,8 +121,9 @@ frames = SubResource( 4 )
 animation = "press"
 
 [node name="Label" type="Label" parent="BackButton"]
+margin_top = -5.0
 margin_right = 400.0
-margin_bottom = 200.0
+margin_bottom = 195.0
 custom_fonts/font = ExtResource( 3 )
 text = "Back"
 align = 1
