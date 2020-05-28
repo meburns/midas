@@ -21,5 +21,6 @@ var transitionText: = [
 	"Technical challenge...",
 	"Heart Question Mark...",
 	"I have a great burden...",
-	"Hard run..."
+	"Hard run...",
+	"Harder run..."
 ]
