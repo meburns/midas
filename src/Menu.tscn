@@ -234,6 +234,7 @@ playing = true
 
 [node name="TitleSparkle" type="CPUParticles2D" parent="."]
 position = Vector2( 650.864, 122.038 )
+emitting = false
 amount = 15
 emission_shape = 2
 emission_rect_extents = Vector2( 300, 100 )
