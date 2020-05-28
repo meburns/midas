@@ -20,5 +20,6 @@ var transitionText: = [
 	"Why am I cursed...",
 	"Technical challenge...",
 	"Heart Question Mark...",
-	"I have a great burden..."
+	"I have a great burden...",
+	"Hard run..."
 ]
