@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/icons/midas_boot_screen.png" type="Texture" id=1]
+[ext_resource path="res://src/transitions/Splash.gd" type="Script" id=2]
+
+[node name="Splash" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="midas_boot_screen" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+texture = ExtResource( 1 )
