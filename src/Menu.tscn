@@ -233,13 +233,13 @@ animation = "idle"
 playing = true
 
 [node name="TitleSparkle" type="CPUParticles2D" parent="."]
-position = Vector2( 654.892, 34.7246 )
-emitting = false
-amount = 120
+position = Vector2( 650.864, 122.038 )
+amount = 15
 emission_shape = 2
-emission_rect_extents = Vector2( 250, 150 )
+emission_rect_extents = Vector2( 300, 100 )
+gravity = Vector2( 0, 0 )
 scale_amount = 5.0
-color = Color( 0.945098, 0.894118, 0.113725, 1 )
+color = Color( 0.945098, 0.894118, 0.113725, 0.784314 )
 
 [node name="StoryButton" type="TextureButton" parent="."]
 margin_left = 500.0
