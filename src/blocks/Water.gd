@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+const waterEffect = preload("res://src/players/WaterEffect.tscn")
 const FLOOR_NORMAL: = Vector2.UP
 var _velocity: = Vector2.ZERO
 var gravity: = 300.0
@@ -8,6 +9,12 @@ var touched: = false
 
 func _set_touched() -> void:
 	touched = true
+	print("hel?")
+	var wInstance = waterEffect.instance()
+	wInstance.set_position(Vector2(0,-83))
+	wInstance.set_z_index(-10)
+	wInstance.set_emitting(true)
+	self.add_child(wInstance)
 
 
 func _on_MidasDetector_body_entered(body: PhysicsBody2D) -> void:

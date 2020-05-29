@@ -35,15 +35,8 @@ func _set_water_touched() -> void:
 		dInstance.set_position(Vector2(0, -40))
 		dInstance.set_z_index(-10)
 		self.add_child(dInstance)
-		# Set Water Burst Effect
-		var wInstance = waterEffect.instance()
-		wInstance.set_position(Vector2(self.get_position().x ,self.get_position().y))
-		wInstance.set_z_index(-10)
-		get_tree().get_root().add_child(wInstance)
-		wInstance.set_emitting(true)
-		yield(get_tree().create_timer(1.5), "timeout")
-		wInstance.queue_free()
-		yield(get_tree().create_timer(3), "timeout")
+		# Set Water Drip Effect
+		yield(get_tree().create_timer(5), "timeout")
 		dInstance.queue_free()
 
 
