@@ -74,9 +74,9 @@ margin_bottom = 548.7
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Dedicated to my Dad
-who gave me a love for games
+who taught me to challenge myself
 and to my Mom
-who gave me a love for creativity"
+who taught me to think creativity"
 __meta__ = {
 "_edit_use_anchors_": false
 }
