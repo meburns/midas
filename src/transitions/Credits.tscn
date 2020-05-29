@@ -1,37 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://src/fonts/main_menu.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/fonts/credits_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/transitions/Credits.gd" type="Script" id=2]
-[ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=3]
-[ext_resource path="res://assets/buttons/new_default.png" type="Texture" id=4]
-
-[sub_resource type="AtlasTexture" id=1]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 200, 100 )
-
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 200, 100 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 200, 0, 200, 100 )
-
-[sub_resource type="SpriteFrames" id=4]
-animations = [ {
-"frames": [ SubResource( 1 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 2 ), SubResource( 3 ) ],
-"loop": false,
-"name": "press",
-"speed": 24.0
-} ]
 
 [node name="Credits" type="Node2D"]
 script = ExtResource( 2 )
@@ -40,87 +10,29 @@ __meta__ = {
 "_edit_vertical_guides_": [ 1279.89 ]
 }
 
-[node name="Label1" type="Label" parent="."]
-margin_left = 9.2602
-margin_top = 109.959
-margin_right = 621.26
-margin_bottom = 370.959
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Created by meburns
-using Godot Engine"
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="."]
-margin_left = 10.019
-margin_top = 339.912
-margin_right = 656.019
-margin_bottom = 600.912
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Heavily Inspired by
-Wanderlands' Midas"
+[node name="CreditsContainer" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1280.0
+margin_bottom = 720.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label4" type="Label" parent="."]
-margin_left = 720.045
-margin_top = 132.7
-margin_right = 1842.04
-margin_bottom = 548.7
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Dedicated to my Dad
-who taught me to challenge myself
-and to my Mom
-who taught me to think creativity"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="RichTextLabel" parent="."]
-margin_left = 340.493
-margin_top = -5.84379
-margin_right = 863.493
-margin_bottom = 200.156
-custom_fonts/normal_font = ExtResource( 1 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "[center][wave freq=3]MIDAS[/wave][/center]"
-text = "MIDAS"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="BackButton" type="TextureButton" parent="."]
-margin_left = 454.071
-margin_top = 527.651
-margin_right = 833.071
-margin_bottom = 704.651
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="BackButton"]
-position = Vector2( 191.755, 83.3403 )
-scale = Vector2( 2, 2 )
-frames = SubResource( 4 )
-animation = "idle"
-
-[node name="Label" type="Label" parent="BackButton"]
-margin_left = 4.75513
-margin_top = -4.65973
-margin_right = 376.755
-margin_bottom = 175.34
-custom_fonts/font = ExtResource( 3 )
-text = "Back"
+[node name="Line" type="Label" parent="CreditsContainer"]
+anchor_right = 1.0
+margin_top = 720.0
+margin_bottom = 780.0
+custom_fonts/font = ExtResource( 1 )
 align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_down" from="BackButton" to="." method="_on_BackButton_button_down"]
-[connection signal="button_up" from="BackButton" to="." method="_on_BackButton_button_up"]
