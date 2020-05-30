@@ -5,3 +5,6 @@ func play(val: String) -> void:
 		node.stop()
 	if Database.get_music_mute() == 0:
 		get_node(val).play()
+
+func stop(val: String) -> void:
+	get_node(val).stop()

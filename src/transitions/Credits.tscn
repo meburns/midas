@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/fonts/credits_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/transitions/Credits.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/Game_logo_2_white.png" type="Texture" id=3]
 
 [sub_resource type="AnimatedTexture" id=1]
 
@@ -25,6 +26,11 @@ color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="FinalTitle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 646.639, 347.368 )
+texture = ExtResource( 3 )
 
 [node name="CreditsContainer" type="Control" parent="."]
 anchor_right = 1.0

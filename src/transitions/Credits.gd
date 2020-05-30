@@ -47,11 +47,7 @@ var credits = [
 		"Special thanks to",
 		"",
 		"My wife Meg and dog Murphy"
-	],[""],[""],[""],[
-		"Midas",
-		"",
-		""
-	]
+	],[""]
 ]
 
 
@@ -65,14 +61,12 @@ func _process(delta):
 	if section_next:
 		section_timer += delta * speed_up_multiplier if speed_up else delta
 		if section_timer >= section_time:
-			section_timer -= section_time
-			
+			section_timer -= section_time		
 			if credits.size() > 0:
 				started = true
 				section = credits.pop_front()
 				curr_line = 0
 				add_line()
-	
 	else:
 		line_timer += delta * speed_up_multiplier if speed_up else delta
 		if line_timer >= line_time:
@@ -95,7 +89,11 @@ func _process(delta):
 func finish():
 	if not finished:
 		finished = true
+		$FinalTitle.set_visible(true)
 		Database.set_quick_credits(1)
+		Music.play("Splash")
+		yield(get_tree().create_timer(1.2), "timeout")
+		Music.stop("Splash")
 		yield(get_tree().create_timer(2), "timeout")
 		get_tree().change_scene("res://src/Menu.tscn")
 
