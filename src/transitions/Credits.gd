@@ -50,7 +50,7 @@ var credits = [
 	],[""],[""],[""],[
 		"Midas",
 		"",
-		"A game by meburns"
+		""
 	]
 ]
 
