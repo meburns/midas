@@ -19,6 +19,7 @@ func _ready() -> void:
 	arr = _place_sadim(arr)
 	arr = _place_water(arr)
 	arr = _find_path(arr)
+	arr = _clean_path(arr)
 	#arr = _randomize_array(arr)
 	_fill_array(arr)
 	$Highscore.text = str(Database.get_endless_highscore())
@@ -91,14 +92,33 @@ func _place_water(arr: Array) -> Array:
 func _find_path(arr: Array) -> Array:
 	for i in arr.size():
 		# Set certain Y barriers for the blocks to stay inside
-		if ((i > midas_y && i < sadim_y) || (i > sadim_y && i < midas_y)):
+		if ((i > midas_y && i < sadim_y) || (i < midas_y && i > sadim_y) || (i == midas_y || i == sadim_y)):
 			for j in arr[i].size():
-				if ((j > midas_x && j < sadim_x) || (j > sadim_x && j < midas_x)):
+				if ((j > midas_x && j < sadim_x) || (j < midas_x && j > sadim_x) || (j == midas_x || j == sadim_x)):
+					if (arr[i][j] == 0):
+						arr[i][j] = 1
+		if ((i > midas_y && i < water_y) || (i < midas_y && i > water_y) || (i == midas_y || i == water_y)):
+			for j in arr[i].size():
+				if ((j > midas_x && j < water_x) || (j < midas_x && j > water_x) || (j == midas_x || j == water_x)):
 					if (arr[i][j] == 0):
 						arr[i][j] = 1
 				# Set certain X barriers for the blocks to stay inside
 				#if (j > 2 && j < arr[i].size()):
 					#arr[i][j] = 1
+	return arr
+
+func _clean_path(arr: Array) -> Array:
+	for i in arr.size():
+		if i < midas_y && arr[i][midas_x] == 1:
+				arr[i][midas_x] = 0
+	for i in arr.size():
+		if i < sadim_y && arr[i][sadim_x] == 1:
+				print("hit")
+				arr[i][sadim_x] = 0
+	for i in arr.size():
+		if i < water_y && arr[i][water_x] == 1:
+				arr[i][water_x] = 0
+
 	return arr
 
 func _randomize_array(arr: Array) -> Array:

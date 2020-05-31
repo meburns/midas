@@ -4,8 +4,6 @@
 [ext_resource path="res://src/levels/EndlessLevel.gd" type="Script" id=3]
 [ext_resource path="res://src/overlays/Outside.tscn" type="PackedScene" id=5]
 
-
-
 [node name="EndlessLevel" type="Node2D"]
 script = ExtResource( 3 )
 __meta__ = {
@@ -17,10 +15,10 @@ __meta__ = {
 position = Vector2( 510.792, -136.58 )
 
 [node name="HighscoreLabel" type="Label" parent="."]
-margin_left = 673.235
-margin_top = 28.8267
-margin_right = 956.235
-margin_bottom = 154.827
+margin_left = 637.076
+margin_top = -0.943945
+margin_right = 977.076
+margin_bottom = 125.056
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Highscore:"
@@ -30,10 +28,10 @@ __meta__ = {
 }
 
 [node name="Highscore" type="Label" parent="."]
-margin_left = 963.814
-margin_top = 29.0659
-margin_right = 1071.81
-margin_bottom = 155.066
+margin_left = 981.635
+margin_top = -0.594467
+margin_right = 1089.63
+margin_bottom = 125.406
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 __meta__ = {
@@ -41,10 +39,10 @@ __meta__ = {
 }
 
 [node name="CurrentLevelLabel" type="Label" parent="."]
-margin_left = 142.112
-margin_top = 31.3443
-margin_right = 425.113
-margin_bottom = 157.344
+margin_left = 197.874
+margin_top = -0.135162
+margin_right = 480.875
+margin_bottom = 125.865
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level:"
@@ -54,10 +52,10 @@ __meta__ = {
 }
 
 [node name="CurrentLevel" type="Label" parent="."]
-margin_left = 432.686
-margin_top = 31.5834
-margin_right = 540.687
-margin_bottom = 157.583
+margin_left = 477.366
+margin_top = -0.174484
+margin_right = 638.366
+margin_bottom = 125.826
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 __meta__ = {
