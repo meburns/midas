@@ -6,7 +6,7 @@
 [ext_resource path="res://src/overlays/Outside.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/players/Midas.tscn" type="PackedScene" id=6]
 
-[node name="Level2" type="Node2D"]
+[node name="ProLevel2" type="Node2D"]
 position = Vector2( -1.02133, 3.90103 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 780.0 ],
