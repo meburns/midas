@@ -28,9 +28,9 @@ func _button_down(button: TextureButton) -> void:
 	button.get_node("Label").set_position(Vector2(pos.x, pos.y + 5))
 
 func _set_level(level):
-	Database.set_level(level)
+	Database.set_pro_level(level)
 	start_level()
 
 func start_level() -> void:
 	TouchButtons.set_visible(true)
-	get_tree().change_scene("res://src/transitions/Transition.tscn")
+	get_tree().change_scene("res://src/transitions/ProTransition.tscn")
