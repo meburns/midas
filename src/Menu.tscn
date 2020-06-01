@@ -15,179 +15,179 @@ region = Rect2( 0, 0, 630, 210 )
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 210, 630, 210 )
+region = Rect2( 0, 0, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 420, 630, 210 )
+region = Rect2( 0, 210, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 630, 630, 210 )
+region = Rect2( 0, 420, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 840, 630, 210 )
+region = Rect2( 0, 630, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 1050, 630, 210 )
+region = Rect2( 0, 840, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 1260, 630, 210 )
+region = Rect2( 0, 1050, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 1470, 630, 210 )
+region = Rect2( 0, 1260, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 1680, 630, 210 )
+region = Rect2( 0, 1470, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 1890, 630, 210 )
+region = Rect2( 0, 1680, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 2100, 630, 210 )
+region = Rect2( 0, 1890, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 2310, 630, 210 )
+region = Rect2( 0, 2100, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 2520, 630, 210 )
+region = Rect2( 0, 2310, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 2730, 630, 210 )
+region = Rect2( 0, 2520, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 2940, 630, 210 )
+region = Rect2( 0, 2730, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 3150, 630, 210 )
+region = Rect2( 0, 2940, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 3360, 630, 210 )
+region = Rect2( 0, 3150, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 3570, 630, 210 )
+region = Rect2( 0, 3360, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 3780, 630, 210 )
+region = Rect2( 0, 3570, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 3990, 630, 210 )
+region = Rect2( 0, 3780, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 4200, 630, 210 )
+region = Rect2( 0, 3990, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 4410, 630, 210 )
+region = Rect2( 0, 4200, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 4620, 630, 210 )
+region = Rect2( 0, 4410, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 4830, 630, 210 )
+region = Rect2( 0, 4620, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 5040, 630, 210 )
+region = Rect2( 0, 4830, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 5250, 630, 210 )
+region = Rect2( 0, 5040, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 5460, 630, 210 )
+region = Rect2( 0, 5250, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 5670, 630, 210 )
+region = Rect2( 0, 5460, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 5880, 630, 210 )
+region = Rect2( 0, 5670, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 6090, 630, 210 )
+region = Rect2( 0, 5880, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 6300, 630, 210 )
+region = Rect2( 0, 6090, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 6510, 630, 210 )
+region = Rect2( 0, 6300, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 6720, 630, 210 )
+region = Rect2( 0, 6510, 630, 210 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 630, 210 )
+region = Rect2( 0, 6720, 630, 210 )
 
 [sub_resource type="SpriteFrames" id=35]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ) ],
-"loop": true,
-"name": "play",
-"speed": 20.0
-}, {
-"frames": [ SubResource( 34 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ), SubResource( 34 ) ],
+"loop": true,
+"name": "play",
+"speed": 20.0
 } ]
 
 [sub_resource type="AtlasTexture" id=36]
@@ -272,6 +272,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ProButton" type="TextureButton" parent="."]
+margin_left = 801.244
+margin_top = 260.0
+margin_right = 1201.24
+margin_bottom = 460.0
+rect_scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ProButton"]
+position = Vector2( 200, 112 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 39 )
+animation = "idle"
+
+[node name="Label" type="Label" parent="ProButton"]
+margin_left = 14.55
+margin_top = 13.5419
+margin_right = 386.55
+margin_bottom = 193.542
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "SPECIAL"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="SettingsButton" type="TextureButton" parent="."]
 margin_left = 500.0
 margin_top = 412.0
@@ -336,6 +366,8 @@ __meta__ = {
 position = Vector2( 0.294769, -0.271729 )
 [connection signal="button_down" from="StoryButton" to="." method="_on_StoryButton_button_down"]
 [connection signal="button_up" from="StoryButton" to="." method="_on_StoryButton_button_up"]
+[connection signal="button_down" from="ProButton" to="." method="_on_ProButton_button_down"]
+[connection signal="button_up" from="ProButton" to="." method="_on_ProButton_button_up"]
 [connection signal="button_down" from="SettingsButton" to="." method="_on_SettingsButton_button_down"]
 [connection signal="button_up" from="SettingsButton" to="." method="_on_SettingsButton_button_up"]
 [connection signal="button_down" from="EndlessButton" to="." method="_on_EndlessButton_button_down"]

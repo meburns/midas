@@ -6,12 +6,12 @@ func _ready() -> void:
 	TouchButtons.set_visible(false)
 	Music.play("Menu")
 	if Database.get_story_completed():
-		$EndlessButton.visible = true
-		$EndlessButton.disabled = false
+		$ProButton.visible = true
+		$ProButton.disabled = false
 		$TitleSparkle.set_emitting(true)
 		$Title.play("play")
 	else:
-		$EndlessButton.visible = false
+		$ProButton.visible = false
 
 
 func _input(_ev):
@@ -55,3 +55,13 @@ func _on_EndlessButton_button_down() -> void:
 func _on_EndlessButton_button_up() -> void:
 	Music.play("Main")
 	get_tree().change_scene("res://src/levels/EndlessLevel.tscn")
+
+
+func _on_ProButton_button_down() -> void:
+	$ProButton/AnimatedSprite.play("press")
+	var pos = $ProButton/Label.get_position()
+	$ProButton/Label.set_position(Vector2(pos.x, pos.y + 5))
+
+
+func _on_ProButton_button_up() -> void:
+	get_tree().change_scene("res://src/proLevels/ProLevelSelector.tscn")
