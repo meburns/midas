@@ -17,9 +17,12 @@ var transitionText: = [
 	"And will she know...",
 	"I am trapped...",
 	"She is far above me...",
+	"Heart Question Mark..."
+]
+
+var proLevels: = [
 	"Why am I cursed...",
 	"Technical challenge...",
-	"Heart Question Mark...",
 	"I have a great burden...",
 	"Hard run...",
 	"Harder run..."
