@@ -11,6 +11,8 @@ func _initialize_if_not_exist() -> void:
 	var default_json = JSON.parse("""{
 			"current_level": 0,
 			"story_mode_completed": false,
+			"pro_level": 0,
+			"pro_mode_completed": false,
 			"endless_level": 0,
 			"endless_highscore": 0,
 			"quick_credits": 0,
@@ -70,6 +72,21 @@ func get_story_completed() -> bool:
 func set_story_completed(completed: bool) -> void:
 	set_data("story_mode_completed", completed)
 
+
+func get_pro_level() -> int:
+	var data = get_data()
+	return data["pro_level"]
+
+func set_pro_level(new_level: int) -> void:
+	set_data("pro_level", new_level)
+
+
+func get_pro_completed() -> bool:
+	var data = get_data()
+	return data["pro_mode_completed"]
+
+func set_pro_completed(completed: bool) -> void:
+	set_data("pro_mode_completed", completed)
 
 
 func get_endless_level() -> int:
