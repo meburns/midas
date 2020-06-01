@@ -42,7 +42,11 @@ var credits = [
 	],[
 		"Developed using Godot Engine",
 		"",
-		"https://godotengine.org/license"
+		"godotengine.org/license"
+	],[
+		"Code and Assets",
+		"",
+		"github.com/meburns/midas"
 	],[
 		"Special thanks to",
 		"",
