@@ -32,9 +32,12 @@ func _goldify() -> void:
 	SFX.play("Gold")
 
 func _load_next_level() -> void:
-	if (get_tree().get_current_scene().get_name()) == "EndlessLevel":
+	if (get_tree().get_current_scene().get_name() == "EndlessLevel"):
 		yield(get_tree().create_timer(1.25), "timeout")
 		get_tree().get_current_scene().get_next_level()
+	elif (get_tree().get_current_scene().get_name().substr(0,8) == "ProLevel"):
+		yield(get_tree().create_timer(1.25), "timeout")
+		get_tree().change_scene("res://src/transitions/ProTransition.tscn")
 	else:
 		yield(get_tree().create_timer(1.25), "timeout")
 		get_tree().change_scene("res://src/transitions/Transition.tscn")

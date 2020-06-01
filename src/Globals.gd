@@ -21,9 +21,14 @@ var transitionText: = [
 ]
 
 var proLevels: = [
-	"Why am I cursed...",
-	"Technical challenge...",
-	"I have a great burden...",
-	"Hard run...",
-	"Harder run..."
+	"Special Level #1",
+	"Special Level #2",
+	"Special Level #3",
+	"Special Level #4",
+	"Special Level #5",
+	"Special Level #6",
+	"Special Level #7",
+	"Special Level #8",
+	"Special Level #9",
+	"Special Level #10"
 ]
