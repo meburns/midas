@@ -64,4 +64,11 @@ func _on_ProButton_button_down() -> void:
 
 
 func _on_ProButton_button_up() -> void:
-	get_tree().change_scene("res://src/proLevels/ProLevelSelector.tscn")
+	Music.play("Main")
+	TouchButtons.set_visible(true)
+	if Database.get_pro_level() > 0:
+		Database.set_pro_level(Database.get_pro_level() - 1)
+	if Database.get_pro_completed():
+		get_tree().change_scene("res://src/proLevels/ProLevelSelector.tscn")
+	else:
+		get_tree().change_scene("res://src/transitions/ProTransition.tscn")
