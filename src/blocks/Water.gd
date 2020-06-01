@@ -9,7 +9,6 @@ var touched: = false
 
 func _set_touched() -> void:
 	touched = true
-	print("hel?")
 	var wInstance = waterEffect.instance()
 	wInstance.set_position(Vector2(0,-83))
 	wInstance.set_z_index(-10)
