@@ -46,9 +46,9 @@ frames = SubResource( 4 )
 animation = "press"
 
 [node name="Label" type="Label" parent="."]
-margin_top = -19.7227
+margin_top = -16.7227
 margin_right = 1180.0
-margin_bottom = 60.2773
+margin_bottom = 63.2773
 rect_min_size = Vector2( 1180, 80 )
 custom_fonts/font = ExtResource( 2 )
 align = 1

@@ -4,5 +4,5 @@
 font_path = "res://assets/fonts/VT323/VT323-Regular.ttf"
 
 [resource]
-size = 32
+size = 42
 font_data = SubResource( 1 )
