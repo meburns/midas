@@ -21,4 +21,4 @@ func _change_level() -> void:
 		# Finally wait for a few seconds and then load the next level
 		yield(get_tree().create_timer(2), "timeout")
 		TouchButtons.set_visible(true)
-		get_tree().change_scene("res://src/Prolevels/ProLevel" + str(nextLevel) + ".tscn")
+		get_tree().change_scene("res://src/proLevels/ProLevel" + str(nextLevel) + ".tscn")
