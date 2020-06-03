@@ -1,23 +1,23 @@
 extends Node
 
 var transitionText: = [
-	"So it begins... again...",
 	"Every day is the same...",
-	"She is so far away...",
-	"I want to reach her...",
-	"She is distant...",
-	"I wish we could be together...",
-	"Every day I start again...",
-	"The water heals me...",
-	"I can not get over her",
-	"But every morning I am cursed again...",
-	"I can not go on alone...",
-	"I am stuck here...",
-	"This world will not end...",
-	"And will she know...",
-	"I am trapped...",
-	"She is far above me...",
-	"Heart Question Mark..."
+		"Everything I touch turns to gold...",
+			"I am cursed...",
+				"Who can I blame...",
+					"The water helps...",
+						"But the curse returns each day...",
+							"What can I do...",
+								"All my actions are in vain...",
+									"I am a fool...",
+								"I chose to be vain...",
+							"What have I done...",
+						"Each day reminds me...",
+					"Nothing can heal me...",
+				"I am to blame...",
+			"I have cursed myself...",
+		"Everything I touch falls apart...",
+	"Every day is the same..."
 ]
 
 var proLevels: = [
