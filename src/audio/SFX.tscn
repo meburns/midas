@@ -5,15 +5,15 @@
 [ext_resource path="res://assets/audio/source/page_flip.wav" type="AudioStream" id=3]
 [ext_resource path="res://src/audio/SFX.gd" type="Script" id=4]
 [ext_resource path="res://assets/audio/source/golden.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/audio/save.wav" type="AudioStream" id=6]
-[ext_resource path="res://assets/audio/source/jump.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/audio/source/jump.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/audio/save3.wav" type="AudioStream" id=7]
 [ext_resource path="res://assets/audio/source/water_drop.wav" type="AudioStream" id=8]
 
 [node name="SFX" type="Node"]
 script = ExtResource( 4 )
 
 [node name="Jump" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 6 )
 
 [node name="Squash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
@@ -28,7 +28,7 @@ stream = ExtResource( 3 )
 stream = ExtResource( 5 )
 
 [node name="Save" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 
 [node name="Splash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
