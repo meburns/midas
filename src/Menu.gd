@@ -5,11 +5,12 @@ func _ready() -> void:
 	Database.set_endless_level(0)
 	TouchButtons.set_visible(false)
 	Music.play("Menu")
+	if Database.get_pro_completed():
+		$TitleSparkle.set_emitting(true)
+		$Title.play("play")
 	if Database.get_story_completed():
 		$ProButton.visible = true
 		$ProButton.disabled = false
-		$TitleSparkle.set_emitting(true)
-		$Title.play("play")
 	else:
 		$ProButton.visible = false
 
