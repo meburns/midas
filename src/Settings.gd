@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	Music.stop("Menu")
 	TouchButtons.set_visible(false)
 	if Database.get_music_mute() == 0:
 		$MusicToggle/AnimatedSprite.play("on")
