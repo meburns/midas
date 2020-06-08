@@ -113,7 +113,6 @@ func _clean_path(arr: Array) -> Array:
 				arr[i][midas_x] = 0
 	for i in arr.size():
 		if i < sadim_y && arr[i][sadim_x] == 1:
-				print("hit")
 				arr[i][sadim_x] = 0
 	for i in arr.size():
 		if i < water_y && arr[i][water_x] == 1:
