@@ -16,6 +16,7 @@ export var smashed: = false
 export var frozen: = false
 var jump_buffer = 10
 var is_jumping = false
+var sparkle_on = Database.get_pro_completed()
 
 func _on_BlockDetector_body_entered(_body: PhysicsBody2D) -> void:
 	pass # Replace with function body.
@@ -71,6 +72,8 @@ func _physics_process(_delta: float) -> void:
 		if is_on_floor():
 			jump_buffer = 10
 			is_jumping = false
+			if sparkle_on:
+				$Trail.set_emitting(false)
 		jump_buffer -= 1
 
 		var is_moving = Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
@@ -88,6 +91,9 @@ func _physics_process(_delta: float) -> void:
 		# reload the current level on "refresh" key pressed
 		if Input.is_action_just_pressed("menu"):
 			get_tree().change_scene("res://src/Menu.tscn")
+	else:
+		if sparkle_on:
+			$Trail.set_emitting(false)
 
 
 func get_direction() -> Vector2:
@@ -115,6 +121,8 @@ func calculate_move_velocity(
 	if !smashed && !frozen:
 		if direction.y == -1.0:
 			is_jumping = true
+			if sparkle_on:
+				$Trail.set_emitting(true)
 			SFX.play("Jump")
 			$Sprite.play("jump")
 			out.y = speed.y * direction.y

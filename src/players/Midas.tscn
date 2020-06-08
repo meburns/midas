@@ -1,6 +1,7 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://src/players/Midas.gd" type="Script" id=1]
+[ext_resource path="res://assets/player/sparkle.png" type="Texture" id=2]
 [ext_resource path="res://assets/player/midas_idle.png" type="Texture" id=3]
 [ext_resource path="res://assets/player/midas_jump.png" type="Texture" id=4]
 [ext_resource path="res://assets/player/midas_run.png" type="Texture" id=5]
@@ -19,153 +20,153 @@ extents = Vector2( 23.3461, 37.0286 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 128, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 256, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 384, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 512, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 640, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 768, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 896, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 1024, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 5 )
+atlas = ExtResource( 6 )
 region = Rect2( 1152, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 1280, 0, 128, 128 )
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 1408, 0, 128, 128 )
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 128, 128 )
+atlas = ExtResource( 4 )
+region = Rect2( 256, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 128, 0, 128, 128 )
+atlas = ExtResource( 4 )
+region = Rect2( 384, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 256, 0, 128, 128 )
+atlas = ExtResource( 4 )
+region = Rect2( 512, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 384, 0, 128, 128 )
+atlas = ExtResource( 4 )
+region = Rect2( 640, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 512, 0, 128, 128 )
+atlas = ExtResource( 4 )
+region = Rect2( 768, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 640, 0, 128, 128 )
+atlas = ExtResource( 4 )
+region = Rect2( 896, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 768, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 896, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 128, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 1024, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 256, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 1152, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 384, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 512, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 128, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 640, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 256, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 768, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 384, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 896, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 512, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 1024, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 640, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 1152, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 768, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 1280, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 896, 0, 128, 128 )
+atlas = ExtResource( 5 )
+region = Rect2( 1408, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
@@ -194,19 +195,19 @@ region = Rect2( 512, 0, 128, 128 )
 
 [sub_resource type="SpriteFrames" id=39]
 animations = [ {
-"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
-"loop": true,
-"name": "run",
-"speed": 24.0
-}, {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": false,
 "name": "squash",
 "speed": 48.0
 }, {
-"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": false,
 "name": "jump",
+"speed": 24.0
+}, {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"loop": true,
+"name": "run",
 "speed": 24.0
 }, {
 "frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
@@ -214,6 +215,22 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 } ]
+
+[sub_resource type="Gradient" id=40]
+colors = PoolColorArray( 1, 1, 1, 0.768627, 0.992157, 0.992157, 1, 0 )
+
+[sub_resource type="GradientTexture" id=41]
+gradient = SubResource( 40 )
+
+[sub_resource type="ParticlesMaterial" id=42]
+emission_shape = 2
+emission_box_extents = Vector3( 20, 1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.5
+color_ramp = SubResource( 41 )
 
 [node name="Midas" type="KinematicBody2D"]
 position = Vector2( 22.0332, 0 )
@@ -242,4 +259,11 @@ position = Vector2( 2.2069, -41.7818 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 39 )
 animation = "idle"
+
+[node name="Trail" type="Particles2D" parent="."]
+emitting = false
+speed_scale = 2.0
+local_coords = false
+process_material = SubResource( 42 )
+texture = ExtResource( 2 )
 [connection signal="body_entered" from="BlockDetector" to="." method="_on_BlockDetector_body_entered"]
