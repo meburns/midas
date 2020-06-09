@@ -30,7 +30,7 @@ Globals="*res://src/Globals.gd"
 Database="*res://src/Database.gd"
 SFX="*res://src/audio/SFX.tscn"
 TouchButtons="*res://src/overlays/TouchButtons.tscn"
-Background="*res://src/Background.tscn"
+Background="*res://src/overlays/Background.tscn"
 Music="*res://src/audio/Music.tscn"
 
 [debug]
