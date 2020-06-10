@@ -55,7 +55,7 @@ func _create_array() -> Array:
 
 
 func _place_midas(arr: Array) -> Array:
-	var y = floor(rand_range(2, 7))
+	var y = floor(rand_range(3, 7))
 	var x = floor(rand_range(2, 14))
 	arr[y][x] = 2 #midas
 	arr[y+1][x] = 1
@@ -65,7 +65,7 @@ func _place_midas(arr: Array) -> Array:
 	return arr
 
 func _place_sadim(arr: Array) -> Array:
-	var y = floor(rand_range(2, 7))
+	var y = floor(rand_range(3, 7))
 	var x = floor(rand_range(2, 14))
 	if (arr[y][x] != 0 || arr[y+1][x] != 0 || arr[y+2][x] != 0):
 		return _place_sadim(arr)
@@ -77,7 +77,7 @@ func _place_sadim(arr: Array) -> Array:
 		return arr
 
 func _place_water(arr: Array) -> Array:
-	var y = floor(rand_range(2, 7))
+	var y = floor(rand_range(3, 7))
 	var x = floor(rand_range(2, 14))
 	if (arr[y][x] != 0 || arr[y+1][x] != 0 || arr[y+2][x] != 0):
 		return _place_water(arr)
@@ -90,18 +90,28 @@ func _place_water(arr: Array) -> Array:
 
 
 func _find_path(arr: Array) -> Array:
+	var over = true
 	for i in arr.size():
 		# Set certain Y barriers for the blocks to stay inside
 		if ((i > midas_y && i < sadim_y) || (i < midas_y && i > sadim_y) || (i == midas_y || i == sadim_y)):
 			for j in arr[i].size():
 				if ((j > midas_x && j < sadim_x) || (j < midas_x && j > sadim_x) || (j == midas_x || j == sadim_x)):
 					if (arr[i][j] == 0):
-						arr[i][j] = 1
+						if over:
+							arr[i][j] = 1
+							over = false
+						else:
+							over = true
+						
 		if ((i > midas_y && i < water_y) || (i < midas_y && i > water_y) || (i == midas_y || i == water_y)):
 			for j in arr[i].size():
 				if ((j > midas_x && j < water_x) || (j < midas_x && j > water_x) || (j == midas_x || j == water_x)):
 					if (arr[i][j] == 0):
-						arr[i][j] = 1
+						if over:
+							arr[i][j] = 1
+							over = false
+						else:
+							over = true
 				# Set certain X barriers for the blocks to stay inside
 				#if (j > 2 && j < arr[i].size()):
 					#arr[i][j] = 1
