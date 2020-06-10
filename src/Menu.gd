@@ -7,10 +7,10 @@ func _ready() -> void:
 	Music.play("Menu")
 	if Database.get_pro_completed():
 		$TitleSparkle.set_emitting(true)
-		$Title.play("play")
 	if Database.get_story_completed():
 		$ProButton.visible = true
 		$ProButton.disabled = false
+		$Title.play("play")
 	else:
 		$ProButton.visible = false
 
