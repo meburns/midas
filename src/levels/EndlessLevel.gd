@@ -5,6 +5,9 @@ const water = preload("res://src/blocks/Water.tscn")
 const midas = preload("res://src/players/Midas.tscn")
 const sadim = preload("res://src/players/Sadim.tscn")
 
+var arr
+var levelNode
+
 var midas_x
 var midas_y
 var sadim_x
@@ -14,7 +17,7 @@ var water_y
 
 func _ready() -> void:
 	TouchButtons.set_visible(true)
-	var arr:= _create_array()
+	arr = _create_array()
 	arr = _place_midas(arr)
 	arr = _place_sadim(arr)
 	arr = _place_water(arr)
@@ -24,6 +27,13 @@ func _ready() -> void:
 	_fill_array(arr)
 	$Highscore.text = str(Database.get_endless_highscore())
 	$CurrentLevel.text = str(Database.get_endless_level())
+
+
+# Special endless level reload logic
+func reload_level() -> void:
+	for child in $level.get_children():
+		child.queue_free()
+	_fill_array(arr)
 
 
 func get_next_level() -> void:
@@ -112,9 +122,6 @@ func _find_path(arr: Array) -> Array:
 							over = false
 						else:
 							over = true
-				# Set certain X barriers for the blocks to stay inside
-				#if (j > 2 && j < arr[i].size()):
-					#arr[i][j] = 1
 	return arr
 
 func _clean_path(arr: Array) -> Array:
@@ -145,6 +152,7 @@ func _randomize_array(arr: Array) -> Array:
 
 
 func _fill_array(arr: Array) -> void:
+	var level = Node2D.new()
 	for i in arr.size():
 		var x_val = (i * 80) + 1
 		for j in arr[i].size():
@@ -152,16 +160,17 @@ func _fill_array(arr: Array) -> void:
 			if (arr[i][j] == 1):
 				var bInstance = block.instance()
 				bInstance.set_position(Vector2(y_val, x_val))
-				self.add_child(bInstance)
+				level.add_child(bInstance)
 			if (arr[i][j] == 2):
 				var mInstance = midas.instance()
 				mInstance.set_position(Vector2(y_val, x_val))
-				self.add_child(mInstance)
+				level.add_child(mInstance)
 			if (arr[i][j] == 3):
 				var sInstance = sadim.instance()
 				sInstance.set_position(Vector2(y_val, x_val))
-				self.add_child(sInstance)
+				level.add_child(sInstance)
 			if (arr[i][j] == 4):
 				var wInstance = water.instance()
 				wInstance.set_position(Vector2(y_val, x_val))
-				self.add_child(wInstance)
+				level.add_child(wInstance)
+	$level.add_child(level)
