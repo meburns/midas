@@ -35,6 +35,10 @@ func reload_level() -> void:
 		child.queue_free()
 	_fill_array(arr)
 
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("skip"):
+		get_tree().reload_current_scene()
+
 
 func get_next_level() -> void:
 	var current_level = Database.get_endless_level() + 1

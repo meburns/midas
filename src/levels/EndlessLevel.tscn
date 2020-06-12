@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/levels/EndlessLevel.gd" type="Script" id=3]
 [ext_resource path="res://src/overlays/Outside.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 75, 50 )
 
 [node name="EndlessLevel" type="Node2D"]
 script = ExtResource( 3 )
@@ -63,3 +66,21 @@ __meta__ = {
 }
 
 [node name="level" type="Node2D" parent="."]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 537.957, 633.358 )
+shape = SubResource( 1 )
+action = "skip"
+visibility_mode = 1
+
+[node name="Label" type="Label" parent="TouchScreenButton"]
+margin_left = 7.36646
+margin_top = 7.36639
+margin_right = 143.366
+margin_bottom = 92.3664
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SKIP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
