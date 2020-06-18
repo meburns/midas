@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/audio/source/page_flip.wav" type="AudioStream" id=3]
 [ext_resource path="res://src/audio/SFX.gd" type="Script" id=4]
 [ext_resource path="res://assets/audio/source/golden.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/audio/source/jump.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/audio/source/meg_jump.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/audio/save3.wav" type="AudioStream" id=7]
 [ext_resource path="res://assets/audio/source/water_drop.wav" type="AudioStream" id=8]
 
