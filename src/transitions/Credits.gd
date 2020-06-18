@@ -35,6 +35,10 @@ var credits = [
 		"",
 		"meburns"
 	],[
+		"Design Direction and Asset Creation",
+		"",
+		"Megan Burns"
+	],[
 		"Heavily Inspired by",
 		"",
 		"Midas by Harry Lee & Jarrel Seah",
@@ -50,7 +54,7 @@ var credits = [
 	],[
 		"Special thanks to",
 		"",
-		"My wife Meg and dog Murphy"
+		"My dog Murphy"
 	],[""]
 ]
 
