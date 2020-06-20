@@ -1,12 +1,38 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/fonts/normal_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/buttons/new_default.png" type="Texture" id=2]
 [ext_resource path="res://src/endless/EndlessLevel.gd" type="Script" id=3]
+[ext_resource path="res://src/fonts/credits_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://src/overlays/Outside.tscn" type="PackedScene" id=5]
 
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 200, 100 )
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 75, 50 )
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 200, 0, 200, 100 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": false,
+"name": "press",
+"speed": 24.0
+} ]
 
 [node name="EndlessLevel" type="Node2D"]
 script = ExtResource( 3 )
@@ -68,20 +94,30 @@ __meta__ = {
 
 [node name="level" type="Node2D" parent="."]
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2( 537.957, 633.358 )
-shape = SubResource( 1 )
-action = "skip"
-visibility_mode = 1
+[node name="SkipButton" type="TextureButton" parent="."]
+margin_left = 583.507
+margin_top = 623.572
+margin_right = 743.507
+margin_bottom = 703.572
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Label" type="Label" parent="TouchScreenButton"]
-margin_left = 7.36646
-margin_top = 7.36639
-margin_right = 143.366
-margin_bottom = 92.3664
-custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="SkipButton"]
+position = Vector2( 81.3556, 41.4727 )
+frames = SubResource( 2 )
+animation = "idle"
+
+[node name="Label" type="Label" parent="SkipButton"]
+margin_left = 35.2425
+margin_top = 8.08459
+margin_right = 131.242
+margin_bottom = 68.0846
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SKIP"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="button_down" from="SkipButton" to="." method="_on_SkipButton_button_down"]
+[connection signal="button_up" from="SkipButton" to="." method="_on_SkipButton_button_up"]

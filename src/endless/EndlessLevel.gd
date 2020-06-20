@@ -35,9 +35,12 @@ func reload_level() -> void:
 		child.queue_free()
 	_fill_array(arr)
 
+func skip_level() -> void:
+	get_tree().reload_current_scene()
+
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("skip"):
-		get_tree().reload_current_scene()
+		skip_level()
 
 
 func get_next_level() -> void:
@@ -178,3 +181,16 @@ func _fill_array(arr: Array) -> void:
 				wInstance.set_position(Vector2(y_val, x_val))
 				level.add_child(wInstance)
 	$level.add_child(level)
+
+
+func _on_SkipButton_button_down() -> void:
+	$SkipButton/AnimatedSprite.play("press")
+	var pos = $SkipButton/Label.get_position()
+	$SkipButton/Label.set_position(Vector2(pos.x, pos.y + 5))
+	yield(get_tree().create_timer(0.3), "timeout")
+	skip_level()
+
+func _on_SkipButton_button_up() -> void:
+	$SkipButton/AnimatedSprite.play("idle")
+	var pos = $SkipButton/Label.get_position()
+	$SkipButton/Label.set_position(Vector2(pos.x, pos.y - 5))
