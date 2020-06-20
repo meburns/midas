@@ -55,7 +55,7 @@ func _on_EndlessButton_button_down() -> void:
 
 func _on_EndlessButton_button_up() -> void:
 	Music.play("Main")
-	get_tree().change_scene("res://src/levels/EndlessLevel.tscn")
+	get_tree().change_scene("res://src/endless/EndlessLevel.tscn")
 
 
 func _on_ProButton_button_down() -> void:
